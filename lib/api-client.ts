@@ -5,7 +5,7 @@
  * Deploy your backend first, then update the API_URL below
  */
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://nirmanpatel036--clinical-trial-api-web.modal.run';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://nirman-leo9--clinical-trial-api-web.modal.run';
 
 // Types
 export interface SearchRequest {

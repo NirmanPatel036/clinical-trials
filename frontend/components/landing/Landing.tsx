@@ -139,7 +139,7 @@ export default class Landing extends Component<object, State> {
     const step = Math.min(3, Math.floor(state.howP * 4 * 0.999));
     const panel = (i: number) => {
       const on = i === step;
-      return { f: on ? "1 1 0px" : `0 0 calc(clamp(52px,6vw,84px) + ${i ? 24 : 0}px)`, eo: on ? 1 : 0, co: on ? 0 : 1, d: on ? ".3s" : "0s",
+      return { f: on ? "1 1 0px" : `0 0 calc(var(--how-tab) + ${i ? 24 : 0}px)`, eo: on ? 1 : 0, co: on ? 0 : 1, d: on ? ".3s" : "0s",
         vt: on ? "translate(0,0)" : "translate(60px,40px)", cur: on ? "default" : "pointer", go: () => this.goStep(i) };
     };
     const chipDefs: [string, string, boolean][] = [["PHASE", "PHASE3", true], ["STATUS", "RECRUITING", true], ["SEX", "FEMALE", true], ["IN", "texas", true], ["RANKS", "breast cancer", false], ["RANKS", "HER2", false]];

@@ -455,3 +455,19 @@ Open work is tracked in `backend/TASKS.md`; evaluation detail is in `backend/EVA
   shared image: there is no separate Twitter image; Next.js points `twitter:image` at the Open Graph one and sets
   the large card (`summary_large_image`) by itself.
 - "Ask AI" on trial cards now uses a blue sparkle icon (`ICON.sparkle` in `ui.tsx`) instead of the chat bubble.
+
+### 41. Mobile pass
+- Checked every page at phone size (390×844 and 360 wide, plus 768) in headless Chrome. The workbench was driven
+  with a fake two-factor session and canned search, match and chat data from the local index; no Supabase or
+  paid model calls. No page scrolls sideways.
+- Landing: below 640px the nav keeps only the logo and "Open workbench" (the four section links wrapped into a
+  tall bubble over the content). "How it works": closed panels are 34px tabs and the page padding 14px, so the
+  open panel gets the width (it was squeezed to about 170px); its preview card starts lower so the text is not
+  covered. Criterion rows put the INCLUSION/EXCLUSION tag above the text. Values are CSS variables in
+  `landing.css`; desktop sizes are unchanged.
+- Workbench: on short pages (Saved trials, How we searched) the top bar stretched to 186px; it now keeps its own
+  height (`grid-template-rows: auto 1fr`). About the data: the three index numbers scale with the screen, so
+  "10,676" no longer runs into the next figure.
+- Already fine on phones and unchanged: sign-in, sign-up and profile forms, Find trials (cards, filters,
+  pagination), Ask (composer, source, research and code cards), Match form and data-handling checklist, Match
+  results (facts card, scores, criterion review).

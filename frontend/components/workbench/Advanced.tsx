@@ -128,7 +128,7 @@ export function System({ stats }: { stats: Stats | null }) {
       </div>
       <div style={s("display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px")}>
         {([[stats.trials.toLocaleString("en-US"), "trials"], [(stats.chunk_count ?? 0).toLocaleString("en-US"), "evidence chunks"], [stats.snapshot_age_days ?? "—", "days since snapshot"]] as const).map(([value, name]) => (
-          <div key={name}><div style={s(`${SLIM};font-weight:300;font-size:36px;line-height:1;letter-spacing:-.02em`)}>{value}</div><div style={s("font-size:12px;color:#7A8293")}>{name}</div></div>
+          <div key={name} style={s("min-width:0")}><div style={s(`${SLIM};font-weight:300;font-size:clamp(24px,7vw,36px);line-height:1;letter-spacing:-.02em`)}>{value}</div><div style={s("font-size:12px;color:#7A8293")}>{name}</div></div>
         ))}
       </div>
       <dl style={s(`${MONO};font-size:11.5px;line-height:1.8;color:#4B5568;border-top:1px solid #EEECE5;padding-top:10px;margin:0;overflow-wrap:anywhere`)}>

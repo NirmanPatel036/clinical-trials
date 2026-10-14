@@ -28,3 +28,13 @@
   .ld-switch{background:#0045FD}.ld-thumb{transform:translateX(11px)}
   .ld-strike{animation:none;background-size:100% 1.5px;color:#9AA3B5}
 }
+/* Phones: section links leave the nav (logo and "Open workbench" stay); How it works gets thin closed tabs and less padding. */
+.ld-how{--how-tab:clamp(52px,6vw,84px);--how-pad:32px;--how-top:clamp(250px,44%,320px)}
+@media (max-width:640px){
+  .ld-navlinks{display:none !important}
+  .ld-navcta{margin-left:auto}
+  .ld-how{--how-tab:34px;--how-pad:14px;--how-top:54%}
+  /* Criterion rows: the INCLUSION/EXCLUSION tag sits above the text instead of taking a column. */
+  .ld-critrow{grid-template-columns:minmax(0,1fr) auto !important;gap:6px 10px !important}
+  .ld-critrow>span:first-child{grid-column:1/-1}
+}

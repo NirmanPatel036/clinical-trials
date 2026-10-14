@@ -15,13 +15,13 @@ export function LandingView(vals: LandingVals) {
 <nav style={s(`position:fixed;top:14px;left:0;right:0;z-index:50;display:flex;justify-content:center;padding:0 16px;pointer-events:none`)}>
   <div style={s(`pointer-events:auto;width:100%;max-width:1180px;display:flex;align-items:center;gap:20px;padding:10px 10px 10px 20px;border-radius:999px;background:rgba(247,246,242,.72);backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);border:1px solid rgba(20,34,55,.08)`)}>
     <img src={A["orvant-wordmark.png"]} alt="orvant" style={s(`height:22px;width:auto;display:block`)} />
-    <div style={s(`display:flex;gap:4px;margin-left:auto;font-size:14px;flex-wrap:wrap`)}>
+    <div className="ld-navlinks" style={s(`display:flex;gap:4px;margin-left:auto;font-size:14px;flex-wrap:wrap`)}>
       <a href="#how" style={s(`color:#142237;padding:8px 12px;border-radius:999px`)} className="hv0">How it works</a>
       <a href="#criteria" style={s(`color:#142237;padding:8px 12px;border-radius:999px`)} className="hv0">Scoring</a>
       <a href="#limits" style={s(`color:#142237;padding:8px 12px;border-radius:999px`)} className="hv0">Limits</a>
       <a href="#data" style={s(`color:#142237;padding:8px 12px;border-radius:999px`)} className="hv0">Data</a>
     </div>
-    <a href="/workbench" style={s(`font-size:14px;padding:9px 18px;border-radius:999px;background:#142237;color:#F7F6F2;white-space:nowrap`)} className="hv1">Open workbench</a>
+    <a href="/workbench" style={s(`font-size:14px;padding:9px 18px;border-radius:999px;background:#142237;color:#F7F6F2;white-space:nowrap`)} className="hv1 ld-navcta">Open workbench</a>
   </div>
 </nav>
 
@@ -82,8 +82,8 @@ export function LandingView(vals: LandingVals) {
 </section>
 
 {/* HOW (horizontal sticky) */}
-<section id="how" ref={howRef} data-screen-label="How it works" style={s(`position:relative;height:420vh;background:#F7F6F2`)}>
-  <div style={s(`position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:90px 32px 32px`)}>
+<section id="how" ref={howRef} className="ld-how" data-screen-label="How it works" style={s(`position:relative;height:420vh;background:#F7F6F2`)}>
+  <div style={s(`position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:90px var(--how-pad) 32px`)}>
     <div style={s(`width:100%;max-width:1240px;margin:0 auto;display:flex;flex-direction:column;gap:22px`)}>
       <div style={s(`display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap`)}>
         <div style={s(`display:flex;align-items:center;gap:12px`)}><span style={s(`font-family:var(--font-mono),ui-monospace,monospace;font-size:12px;letter-spacing:.08em;color:#0045FD`)}>HOW A SENTENCE BECOMES EVIDENCE</span></div>
@@ -91,7 +91,7 @@ export function LandingView(vals: LandingVals) {
       </div>
       <div style={s(`display:flex;height:min(620px,calc(100vh - 190px));min-height:460px`)}>
       <div onClick={P0.go} style={s(`position:relative;z-index:1;flex:${P0.f};min-width:0;margin-left:0;border-radius:24px;background:#FFFFFF;border:1px solid #E3E0D7;overflow:hidden;clip-path:inset(0 round 24px);isolation:isolate;cursor:${P0.cur};transition:flex .8s cubic-bezier(.65,0,.2,1)`)}>
-        <div style={s(`position:absolute;top:0;bottom:0;left:0;width:calc(min(1240px,100vw - 64px) - 3 * clamp(52px,6vw,84px));opacity:${P0.eo};transition:opacity .5s ease ${P0.d}`)}>
+        <div style={s(`position:absolute;top:0;bottom:0;left:0;width:calc(min(1240px,100vw - 2 * var(--how-pad)) - 3 * var(--how-tab));opacity:${P0.eo};transition:opacity .5s ease ${P0.d}`)}>
           <div style={s(`position:absolute;width:760px;height:760px;left:-320px;bottom:-360px;border-radius:50%;background:radial-gradient(circle at 35% 65%,rgba(236,104,52,.85),rgba(244,170,120,.7) 30%,rgba(240,180,210,.5) 48%,rgba(255,255,255,0) 66%);filter:blur(10px)`)}></div>
           <div style={s(`position:absolute;left:0;right:0;top:0;height:46%;background:linear-gradient(#FFFFFF 40%,rgba(255,255,255,0))`)}></div>
           <div style={s(`position:absolute;inset:0;background-image:url(${A["grain.svg"]});opacity:.25;mix-blend-mode:multiply`)}></div>
@@ -100,7 +100,7 @@ export function LandingView(vals: LandingVals) {
             <h3 style={s(`margin:0;font-weight:400;font-size:clamp(30px,3.2vw,44px);letter-spacing:-.025em;line-height:1.05`)}>Ask in a sentence</h3>
             <p style={s(`margin:0;color:#4B5568;font-size:clamp(16px,1.4vw,19px);line-height:1.45;text-wrap:pretty`)}>Type the question the way you would say it. Six worked examples are one click away.</p>
           </div>
-          <div style={s(`position:absolute;left:clamp(20px,13%,170px);right:0;top:clamp(250px,44%,320px);bottom:0;border-radius:22px 0 0 0;background:rgba(255,255,255,.45);border:1px solid rgba(227,224,215,.9);border-right:0;border-bottom:0;padding:10px 0 0 10px;box-shadow:0 -20px 60px -30px rgba(20,34,55,.25);transform:${P0.vt};transition:transform .9s cubic-bezier(.2,.8,.2,1)`)}>
+          <div style={s(`position:absolute;left:clamp(20px,13%,170px);right:0;top:var(--how-top);bottom:0;border-radius:22px 0 0 0;background:rgba(255,255,255,.45);border:1px solid rgba(227,224,215,.9);border-right:0;border-bottom:0;padding:10px 0 0 10px;box-shadow:0 -20px 60px -30px rgba(20,34,55,.25);transform:${P0.vt};transition:transform .9s cubic-bezier(.2,.8,.2,1)`)}>
             <div style={s(`height:100%;border-radius:16px 0 0 0;background:#FBFAF7;border:1px solid #E3E0D7;border-right:0;border-bottom:0;padding:24px;overflow:hidden`)}>
               <div style={s(`width:100%;max-width:640px;display:flex;flex-direction:column;gap:14px`)}><div style={s(`background:#FFFFFF;border:1px solid #E3E0D7;border-radius:16px;padding:18px 20px;font-size:clamp(16px,1.5vw,20px);line-height:1.4`)}>phase 3 recruiting <span style={s(`color:#0045FD`)}>HER2-positive</span> breast cancer trials for women in Texas</div>
                 <div style={s(`font-size:13px;color:#7A8293`)}>Try an example</div>
@@ -117,7 +117,7 @@ export function LandingView(vals: LandingVals) {
         </div>
       </div>
       <div onClick={P1.go} style={s(`position:relative;z-index:2;flex:${P1.f};min-width:0;margin-left:-24px;border-radius:24px;background:#FFFFFF;border:1px solid #E3E0D7;overflow:hidden;clip-path:inset(0 round 24px);isolation:isolate;cursor:${P1.cur};transition:flex .8s cubic-bezier(.65,0,.2,1)`)}>
-        <div style={s(`position:absolute;top:0;bottom:0;left:0;width:calc(min(1240px,100vw - 64px) - 3 * clamp(52px,6vw,84px) + 24px);opacity:${P1.eo};transition:opacity .5s ease ${P1.d}`)}>
+        <div style={s(`position:absolute;top:0;bottom:0;left:0;width:calc(min(1240px,100vw - 2 * var(--how-pad)) - 3 * var(--how-tab) + 24px);opacity:${P1.eo};transition:opacity .5s ease ${P1.d}`)}>
           <div style={s(`position:absolute;width:760px;height:760px;left:-320px;bottom:-360px;border-radius:50%;background:radial-gradient(circle at 35% 65%,rgba(0,69,253,.6),rgba(120,150,255,.45) 32%,rgba(244,170,120,.3) 50%,rgba(255,255,255,0) 66%);filter:blur(10px)`)}></div>
           <div style={s(`position:absolute;left:0;right:0;top:0;height:46%;background:linear-gradient(#FFFFFF 40%,rgba(255,255,255,0))`)}></div>
           <div style={s(`position:absolute;inset:0;background-image:url(${A["grain.svg"]});opacity:.25;mix-blend-mode:multiply`)}></div>
@@ -126,7 +126,7 @@ export function LandingView(vals: LandingVals) {
             <h3 style={s(`margin:0;font-weight:400;font-size:clamp(30px,3.2vw,44px);letter-spacing:-.025em;line-height:1.05`)}>Read the query plan</h3>
             <p style={s(`margin:0;color:#4B5568;font-size:clamp(16px,1.4vw,19px);line-height:1.45;text-wrap:pretty`)}>Phase, status, sex, age, location and NCT IDs become strict filters. Conditions and biomarkers steer ranking only. Anything it cannot map is shown, not guessed.</p>
           </div>
-          <div style={s(`position:absolute;left:clamp(20px,13%,170px);right:0;top:clamp(250px,44%,320px);bottom:0;border-radius:22px 0 0 0;background:rgba(255,255,255,.45);border:1px solid rgba(227,224,215,.9);border-right:0;border-bottom:0;padding:10px 0 0 10px;box-shadow:0 -20px 60px -30px rgba(20,34,55,.25);transform:${P1.vt};transition:transform .9s cubic-bezier(.2,.8,.2,1)`)}>
+          <div style={s(`position:absolute;left:clamp(20px,13%,170px);right:0;top:var(--how-top);bottom:0;border-radius:22px 0 0 0;background:rgba(255,255,255,.45);border:1px solid rgba(227,224,215,.9);border-right:0;border-bottom:0;padding:10px 0 0 10px;box-shadow:0 -20px 60px -30px rgba(20,34,55,.25);transform:${P1.vt};transition:transform .9s cubic-bezier(.2,.8,.2,1)`)}>
             <div style={s(`height:100%;border-radius:16px 0 0 0;background:#FBFAF7;border:1px solid #E3E0D7;border-right:0;border-bottom:0;padding:24px;overflow:hidden`)}>
               <div style={s(`width:100%;max-width:640px;display:flex;flex-direction:column;gap:14px`)}><div style={s(`font-family:var(--font-mono),ui-monospace,monospace;font-size:11px;letter-spacing:.06em;color:#7A8293`)}>QUERY PLAN · intent: search</div>
                 <div><div style={s(`font-size:13px;color:#4B5568;margin-bottom:8px`)}>Hard filters · fail closed</div><div style={s(`display:flex;flex-wrap:wrap;gap:8px`)}><span style={s(`font-size:14px;padding:7px 12px;border-radius:10px;background:#E3E9FF;color:#0036C8`)}>PHASE3</span><span style={s(`font-size:14px;padding:7px 12px;border-radius:10px;background:#E3E9FF;color:#0036C8`)}>RECRUITING</span><span style={s(`font-size:14px;padding:7px 12px;border-radius:10px;background:#E3E9FF;color:#0036C8`)}>FEMALE</span><span style={s(`font-size:14px;padding:7px 12px;border-radius:10px;background:#E3E9FF;color:#0036C8`)}>texas</span></div></div>
@@ -144,7 +144,7 @@ export function LandingView(vals: LandingVals) {
         </div>
       </div>
       <div onClick={P2.go} style={s(`position:relative;z-index:3;flex:${P2.f};min-width:0;margin-left:-24px;border-radius:24px;background:#FFFFFF;border:1px solid #E3E0D7;overflow:hidden;clip-path:inset(0 round 24px);isolation:isolate;cursor:${P2.cur};transition:flex .8s cubic-bezier(.65,0,.2,1)`)}>
-        <div style={s(`position:absolute;top:0;bottom:0;left:0;width:calc(min(1240px,100vw - 64px) - 3 * clamp(52px,6vw,84px) + 24px);opacity:${P2.eo};transition:opacity .5s ease ${P2.d}`)}>
+        <div style={s(`position:absolute;top:0;bottom:0;left:0;width:calc(min(1240px,100vw - 2 * var(--how-pad)) - 3 * var(--how-tab) + 24px);opacity:${P2.eo};transition:opacity .5s ease ${P2.d}`)}>
           <div style={s(`position:absolute;width:760px;height:760px;left:-320px;bottom:-360px;border-radius:50%;background:radial-gradient(circle at 35% 65%,rgba(236,104,52,.85),rgba(244,170,120,.7) 30%,rgba(240,180,210,.5) 48%,rgba(255,255,255,0) 66%);filter:blur(10px)`)}></div>
           <div style={s(`position:absolute;left:0;right:0;top:0;height:46%;background:linear-gradient(#FFFFFF 40%,rgba(255,255,255,0))`)}></div>
           <div style={s(`position:absolute;inset:0;background-image:url(${A["grain.svg"]});opacity:.25;mix-blend-mode:multiply`)}></div>
@@ -153,7 +153,7 @@ export function LandingView(vals: LandingVals) {
             <h3 style={s(`margin:0;font-weight:400;font-size:clamp(30px,3.2vw,44px);letter-spacing:-.025em;line-height:1.05`)}>Two retrievers, one ranking</h3>
             <p style={s(`margin:0;color:#4B5568;font-size:clamp(16px,1.4vw,19px);line-height:1.45;text-wrap:pretty`)}>Dense and BM25 search run side by side over 10,676 registry chunks; reciprocal-rank fusion merges them into one list.</p>
           </div>
-          <div style={s(`position:absolute;left:clamp(20px,13%,170px);right:0;top:clamp(250px,44%,320px);bottom:0;border-radius:22px 0 0 0;background:rgba(255,255,255,.45);border:1px solid rgba(227,224,215,.9);border-right:0;border-bottom:0;padding:10px 0 0 10px;box-shadow:0 -20px 60px -30px rgba(20,34,55,.25);transform:${P2.vt};transition:transform .9s cubic-bezier(.2,.8,.2,1)`)}>
+          <div style={s(`position:absolute;left:clamp(20px,13%,170px);right:0;top:var(--how-top);bottom:0;border-radius:22px 0 0 0;background:rgba(255,255,255,.45);border:1px solid rgba(227,224,215,.9);border-right:0;border-bottom:0;padding:10px 0 0 10px;box-shadow:0 -20px 60px -30px rgba(20,34,55,.25);transform:${P2.vt};transition:transform .9s cubic-bezier(.2,.8,.2,1)`)}>
             <div style={s(`height:100%;border-radius:16px 0 0 0;background:#FBFAF7;border:1px solid #E3E0D7;border-right:0;border-bottom:0;padding:24px;overflow:hidden`)}>
               <div style={s(`width:100%;max-width:640px;display:flex;flex-direction:column;gap:14px`)}><div style={s(`display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px`)}><div style={s(`background:#FFFFFF;border:1px solid #E3E0D7;border-radius:14px;padding:14px 16px`)}><div style={s(`font-size:26px;line-height:1`)}>100</div><div style={s(`font-size:12px;color:#0036C8`)}>dense chunk hits</div></div><div style={s(`background:#FFFFFF;border:1px solid #E3E0D7;border-radius:14px;padding:14px 16px`)}><div style={s(`font-size:26px;line-height:1`)}>100</div><div style={s(`font-size:12px;color:#7A4A2A`)}>BM25 chunk hits</div></div></div>
                 <div style={s(`background:#142237;color:#F7F6F2;border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;gap:8px`)}>
@@ -173,7 +173,7 @@ export function LandingView(vals: LandingVals) {
         </div>
       </div>
       <div onClick={P3.go} style={s(`position:relative;z-index:4;flex:${P3.f};min-width:0;margin-left:-24px;border-radius:24px;background:#FFFFFF;border:1px solid #E3E0D7;overflow:hidden;clip-path:inset(0 round 24px);isolation:isolate;cursor:${P3.cur};transition:flex .8s cubic-bezier(.65,0,.2,1)`)}>
-        <div style={s(`position:absolute;top:0;bottom:0;left:0;width:calc(min(1240px,100vw - 64px) - 3 * clamp(52px,6vw,84px) + 24px);opacity:${P3.eo};transition:opacity .5s ease ${P3.d}`)}>
+        <div style={s(`position:absolute;top:0;bottom:0;left:0;width:calc(min(1240px,100vw - 2 * var(--how-pad)) - 3 * var(--how-tab) + 24px);opacity:${P3.eo};transition:opacity .5s ease ${P3.d}`)}>
           <div style={s(`position:absolute;width:760px;height:760px;left:-320px;bottom:-360px;border-radius:50%;background:radial-gradient(circle at 35% 65%,rgba(0,69,253,.6),rgba(120,150,255,.45) 32%,rgba(244,170,120,.3) 50%,rgba(255,255,255,0) 66%);filter:blur(10px)`)}></div>
           <div style={s(`position:absolute;left:0;right:0;top:0;height:46%;background:linear-gradient(#FFFFFF 40%,rgba(255,255,255,0))`)}></div>
           <div style={s(`position:absolute;inset:0;background-image:url(${A["grain.svg"]});opacity:.25;mix-blend-mode:multiply`)}></div>
@@ -182,7 +182,7 @@ export function LandingView(vals: LandingVals) {
             <h3 style={s(`margin:0;font-weight:400;font-size:clamp(30px,3.2vw,44px);letter-spacing:-.025em;line-height:1.05`)}>Open the evidence</h3>
             <p style={s(`margin:0;color:#4B5568;font-size:clamp(16px,1.4vw,19px);line-height:1.45;text-wrap:pretty`)}>Every result shows the registry text that matched, the section it came from, and a link to the source record.</p>
           </div>
-          <div style={s(`position:absolute;left:clamp(20px,13%,170px);right:0;top:clamp(250px,44%,320px);bottom:0;border-radius:22px 0 0 0;background:rgba(255,255,255,.45);border:1px solid rgba(227,224,215,.9);border-right:0;border-bottom:0;padding:10px 0 0 10px;box-shadow:0 -20px 60px -30px rgba(20,34,55,.25);transform:${P3.vt};transition:transform .9s cubic-bezier(.2,.8,.2,1)`)}>
+          <div style={s(`position:absolute;left:clamp(20px,13%,170px);right:0;top:var(--how-top);bottom:0;border-radius:22px 0 0 0;background:rgba(255,255,255,.45);border:1px solid rgba(227,224,215,.9);border-right:0;border-bottom:0;padding:10px 0 0 10px;box-shadow:0 -20px 60px -30px rgba(20,34,55,.25);transform:${P3.vt};transition:transform .9s cubic-bezier(.2,.8,.2,1)`)}>
             <div style={s(`height:100%;border-radius:16px 0 0 0;background:#FBFAF7;border:1px solid #E3E0D7;border-right:0;border-bottom:0;padding:24px;overflow:hidden`)}>
               <div style={s(`width:100%;max-width:640px;display:flex;flex-direction:column;gap:14px`)}><article style={s(`background:#FFFFFF;border:1px solid #E3E0D7;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:12px`)}>
                   <div style={s(`display:flex;align-items:center;gap:10px;flex-wrap:wrap`)}><span style={s(`font-family:var(--font-mono),ui-monospace,monospace;font-size:12px;color:#4B5568`)}>NCT06551220</span><span style={s(`display:flex;align-items:center;gap:6px;font-size:12px;padding:3px 9px;border-radius:999px;background:#E1F2E9;color:#1F8A5B`)}><span style={s(`width:6px;height:6px;border-radius:50%;background:#1F8A5B`)}></span>Recruiting</span></div>
@@ -232,7 +232,7 @@ export function LandingView(vals: LandingVals) {
       </div>
       <div style={s(`position:relative;display:flex;flex-direction:column;gap:8px`)}>
         {crit.map((c, i) => (<Fragment key={i}>
-          <div style={s(`display:grid;grid-template-columns:86px minmax(0,1fr) auto;gap:14px;align-items:center;padding:12px 14px;border-radius:14px;background:${c.rowBg};border:1px solid rgba(247,246,242,.10);transition:background .5s ease`)}>
+          <div className="ld-critrow" style={s(`display:grid;grid-template-columns:86px minmax(0,1fr) auto;gap:14px;align-items:center;padding:12px 14px;border-radius:14px;background:${c.rowBg};border:1px solid rgba(247,246,242,.10);transition:background .5s ease`)}>
             <span style={s(`justify-self:start;font-family:var(--font-mono),ui-monospace,monospace;font-size:9.5px;letter-spacing:.06em;padding:3px 7px;border-radius:5px;border:1px solid rgba(247,246,242,.4);background:${c.kindBg};color:${c.kindFg}`)}>{c.kind}</span>
             <div style={s(`min-width:0`)}><div style={s(`font-size:14px;line-height:1.35`)}>{c.text}</div><div style={s(`font-family:var(--font-mono),ui-monospace,monospace;font-size:11px;color:#9AA3B5;margin-top:3px;opacity:${c.factO};transition:opacity .5s ease`)}>{c.fact} · {c.by}</div></div>
             <span style={s(`display:flex;align-items:center;gap:6px;font-size:12px;padding:4px 10px;border-radius:999px;white-space:nowrap;background:${c.bg};color:${c.fg};transition:background .5s ease,color .5s ease`)}><span style={s(`width:6px;height:6px;border-radius:50%;background:${c.fg}`)}></span>{c.status}</span>

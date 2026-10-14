@@ -83,7 +83,7 @@ details.more[open] > summary svg { transform: rotate(90deg); }
 .switch-track, .switch-thumb { transition: background .15s ease, transform .15s ease; }
 button[role="switch"]:focus-visible .switch-track { outline: 2px solid #0045FD; outline-offset: 2px; }
 @media (max-width: 860px) {
-  .wb { grid-template-columns: minmax(0, 1fr); }
+  .wb { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr; }
   .wb-side { height: auto; flex-direction: row; align-items: center; gap: 12px; padding: 10px 12px; overflow-x: auto; }
   .wb-tabs { flex-direction: row; }
   .wb-tab { padding: 9px 12px; }

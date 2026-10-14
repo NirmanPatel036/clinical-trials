@@ -1,6 +1,7 @@
 "use client";
 
 // Find trials: the query box, the thinking state, the results and the query plan.
+import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 import { PHASES, type Chunk, type Hit, type Plan, type SearchRequest, type SearchResponse, type Sex, type Stats } from "@/lib/api";
@@ -8,6 +9,7 @@ import { RESULTS_PER_SEARCH } from "@/lib/profile";
 import type { SavedTrial } from "@/lib/saved";
 import { s } from "@/lib/s";
 
+import { useWorkbench } from "./context";
 import { CARD, EmptyState, FIELD, Field, FlipText, human, ICON, Icon, LABEL, MONO, Notice, PHASE_LABEL, Pill, Segmented } from "./ui";
 
 export const FIXED_QUERIES = [
@@ -180,6 +182,14 @@ function TrialCard({ hit, rank, terms, saved, onToggleSave }: { hit: Hit; rank: 
   const recruiting = hit.overall_status === "RECRUITING";
   const [first, ...rest] = hit.chunks;
   const isSaved = saved.has(hit.nct_id);
+  const router = useRouter();
+  const { setAskDraft } = useWorkbench();
+  // Opens Ask with a question about this trial in the box, not sent: the NCT ID makes Ask's search look at this trial.
+  const askAI = () => {
+    const title = hit.title.length > 80 ? `${hit.title.slice(0, 80).trimEnd()}…` : hit.title;
+    setAskDraft(`Tell me about ${hit.nct_id} (${title}): what does it test, who can join, and where is it recruiting?`);
+    router.push("/workbench/ask");
+  };
   return (
     <article className="trial-card wb-in" style={s(CARD + `;gap:16px;animation-delay:${Math.min(rank, 8) * 40}ms`)}>
       <div style={s("display:flex;align-items:center;gap:8px;flex-wrap:wrap")}>
@@ -215,6 +225,10 @@ function TrialCard({ hit, rank, terms, saved, onToggleSave }: { hit: Hit; rank: 
           style={s("font-size:14px;display:flex;gap:6px;align-items:center;border:1px solid #D6D2C6;border-radius:999px;padding:8px 14px;color:#142237")}>
           View full trial on ClinicalTrials.gov<Icon d={ICON.source} size={13} />
         </a>
+        <button type="button" className="chip" onClick={askAI} title="Open Ask with a question about this trial"
+          style={s("font-size:14px;display:flex;gap:6px;align-items:center;border:1px solid #D6D2C6;border-radius:999px;padding:8px 14px;background:#FFFFFF;color:#142237")}>
+          <Icon d={ICON.sparkle} size={15} color="#0045FD" />Ask AI
+        </button>
         <span style={s("font-size:12px;color:#7A8293")}>Ask your care team whether it suits you.</span>
       </div>
     </article>

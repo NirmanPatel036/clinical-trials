@@ -29,6 +29,8 @@ export const ICON = {
   chevron: "M9 6l6 6-6 6",
   panel: "M4 5h16v14H4Z M9.5 5v14",
   chat: "M4.5 5.5h15v10h-9l-4.5 4v-4h-1.5Z",
+  // AI: one large four-point sparkle and a small one.
+  sparkle: "M10 3.5l1.7 4.8 4.8 1.7-4.8 1.7L10 16.5l-1.7-4.8L3.5 10l4.8-1.7Z M18 14l.9 2.1 2.1.9-2.1.9L18 20l-.9-2.1L15 17l2.1-.9Z",
   bookmark: "M7 4h10v16l-5-4-5 4Z",
   plus: "M12 5v14M5 12h14",
   trash: "M5 7h14M10 7V4.5h4V7M7 7l1 12.5h8L17 7",

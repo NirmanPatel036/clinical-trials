@@ -33,6 +33,7 @@ export default function WorkbenchLayout({ children }: { children: React.ReactNod
   const [saved, setSaved] = useState<SavedTrial[]>([]);
   const [chatId, setChatId] = useState<string | null>(null);
   const [match, setMatch] = useState<MatchResponse | null>(null);
+  const [askDraft, setAskDraft] = useState<string | null>(null);
   // Offer fingerprint sign-in once per device when it has a sensor and the account has no passkey yet.
   const [offerFingerprint, setOfferFingerprint] = useState(false);
   const [fingerprintNote, setFingerprintNote] = useState<{ ok: boolean; text: string } | null>(null);
@@ -116,7 +117,7 @@ export default function WorkbenchLayout({ children }: { children: React.ReactNod
       router.push("/workbench/search");
       search(request);
     },
-    match, setMatch, chatId, setChatId, signOut,
+    match, setMatch, askDraft, setAskDraft, chatId, setChatId, signOut,
   };
   // Ask lays out its own full-height column; every other page uses the reading width.
   const wide = path.startsWith("/workbench/ask");

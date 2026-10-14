@@ -36,7 +36,7 @@ const MODELS: { id: Provider; label: string; logo: string; model: string }[] = [
 const when = (iso: string) => new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "short" });
 
 export function ChatPanel() {
-  const { firstName, stats, signOut: onAuthLost, chatId: active, setChatId: setActive } = useWorkbench();
+  const { firstName, stats, signOut: onAuthLost, chatId: active, setChatId: setActive, askDraft, setAskDraft } = useWorkbench();
   const [conversations, setConversations] = useState<Conversation[]>([]);
   const [messages, setMessages] = useState<Message[]>([]);
   const [draft, setDraft] = useState("");
@@ -60,7 +60,12 @@ export function ChatPanel() {
     setError(caught instanceof Error ? caught.message : String((caught as { message?: string })?.message ?? caught));
   };
   const refresh = () => listConversations().then(setConversations, fail);
-  useEffect(() => { refresh(); if (active) open(active); }, []);
+  // A question from a trial card starts a new chat with it in the box, unsent; otherwise the last conversation reopens.
+  useEffect(() => {
+    refresh();
+    if (askDraft) { newChat(); setDraft(askDraft); setAskDraft(null); }
+    else if (active) open(active);
+  }, []);
   // A new question rises to the top of the view, with room below for its answer.
   useEffect(() => { if (pending) turn.current?.scrollIntoView({ behavior: "smooth", block: "start" }); }, [pending]);
 

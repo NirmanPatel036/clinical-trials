@@ -29,6 +29,9 @@ export type Workbench = {
   /** The last patient match, shown on /workbench/match/results until the next run or sign-out. */
   match: MatchResponse | null;
   setMatch: (match: MatchResponse | null) => void;
+  /** A question waiting in Ask's composer (set by "Ask AI" on a trial card); Ask takes it once and clears it. */
+  askDraft: string | null;
+  setAskDraft: (text: string | null) => void;
   /** Conversation open in Ask, so leaving the page and coming back reopens it. */
   chatId: string | null;
   setChatId: (id: string | null) => void;

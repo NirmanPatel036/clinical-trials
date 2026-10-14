@@ -441,3 +441,17 @@ Open work is tracked in `backend/TASKS.md`; evaluation detail is in `backend/EVA
 - Checked before pushing: the project has no repository of its own (the git root is the home folder) and
   `frontend/` holds a separate create-next-app repository that would be pushed as an empty submodule link. The
   files a push would include (136, about 4 MB) contain no API keys or tokens.
+
+### 39. "Ask AI" on trial cards
+- Each Find trials card has an "Ask AI" button (chat icon) next to the ClinicalTrials.gov link. It opens Ask,
+  starts a new chat and fills the box with "Tell me about NCT…: what does it test, who can join, and where is it
+  recruiting?" without sending it. The NCT ID makes Ask's retrieval keep to that trial (hard filter).
+- The question travels through the workbench state (`askDraft` in `context.tsx`); Ask takes it once and clears it,
+  so returning to Ask later reopens the last conversation as before. `tsc` clean.
+
+### 40. Social preview image
+- `frontend/app/opengraph-image.png`: the Orvant logo card without the tagline, made from `frontend/assets/og.png`
+  (1672×941), cropped to the 1.91:1 preview shape and resized to 1200×630, with an alt-text file. It is the only
+  shared image: there is no separate Twitter image; Next.js points `twitter:image` at the Open Graph one and sets
+  the large card (`summary_large_image`) by itself.
+- "Ask AI" on trial cards now uses a blue sparkle icon (`ICON.sparkle` in `ui.tsx`) instead of the chat bubble.

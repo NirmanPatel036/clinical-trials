@@ -1,4 +1,4 @@
-# Orvant (NexTrial): evidence-traceable clinical-trial discovery
+# Orvant: evidence-traceable clinical-trial discovery
 
 Orvant helps people and clinicians find recruiting **cancer trials** on ClinicalTrials.gov and see **why** each one
 came up, criterion by criterion, with the registry text and the patient fact behind every finding.
@@ -219,7 +219,3 @@ scanning, a clinician-adjudicated evaluation set and a held-out run of the escal
 ## License
 
 No license has been chosen yet; until one is added, all rights are reserved.
-
-## Author
-
-**Nirman Patel**: [nirmanhere.vercel.app](https://nirmanhere.vercel.app) · [GitHub @NirmanPatel036](https://github.com/NirmanPatel036) · [LinkedIn](https://linkedin.com/in/nirmanpatel) · nirman0511@gmail.com

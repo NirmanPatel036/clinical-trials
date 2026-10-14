@@ -1,0 +1,37 @@
+# Environment variables
+.env
+
+# Virtual environment
+venv/
+__pycache__/
+*.pyc
+
+# Data files
+data/embeddings/
+*.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Self Docs
+FRONTEND_BLUEPRINT.md
+ref.txt
+restructure.pdf
+
+# Backend data: raw snapshots, built indexes, downloaded corpora and audit/decision logs (holds user ids).
+# Rebuild with `python -m backend.build`. Evaluation results (labels and metrics only) stay tracked.
+backend/data/*
+!backend/data/eval/
+.pytest_cache/
+*.tsbuildinfo
+
+# Not published: trial fonts (personal-use licence) and the Supabase project files.
+frontend/polysans-font-family/
+/supabase/
+backend/tests/

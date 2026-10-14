@@ -1,0 +1,3862 @@
+[
+  {
+    "id": "patient-1e8f31fa-e6b0-4294-8af7-66ff9ae572e0",
+    "name": "Christopher Thomas",
+    "age": 61,
+    "gender": "female",
+    "birth_date": "1965-06-13",
+    "location": {
+      "city": "New York",
+      "state": "New York",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant melanoma",
+      "subtype": "Superficial spreading melanoma, Stage IV",
+      "stage": "Stage IV",
+      "biomarker": "NRAS mutation",
+      "code": "372244006",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2024-02-27T11:18:17.653858"
+    },
+    "procedures": [
+      {
+        "name": "Wide local excision",
+        "code": "64368001",
+        "date": "2025-10-07T11:18:17.653868"
+      },
+      {
+        "name": "Lymphadenectomy",
+        "code": "234262008",
+        "date": "2025-07-21T11:18:17.653873"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Dabrafenib",
+        "code": "703647006",
+        "status": "active"
+      },
+      {
+        "name": "Dabrafenib",
+        "code": "703647006",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 2
+  },
+  {
+    "id": "patient-61ddcd06-6894-4b21-ab3d-2d7e1f437a7f",
+    "name": "Carol Nelson",
+    "age": 38,
+    "gender": "female",
+    "birth_date": "1988-04-09",
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of breast",
+      "subtype": "Estrogen receptor positive breast cancer, Stage IV",
+      "stage": "Stage IV",
+      "biomarker": "PR+",
+      "code": "254837009",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2024-10-31T11:18:17.644892"
+    },
+    "procedures": [
+      {
+        "name": "Mastectomy",
+        "code": "172043006",
+        "date": "2024-09-15T11:18:17.644901"
+      },
+      {
+        "name": "Sentinel lymph node biopsy",
+        "code": "396487001",
+        "date": "2025-04-03T11:18:17.644905"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Tamoxifen",
+        "code": "373345002",
+        "status": "active"
+      },
+      {
+        "name": "Paclitaxel",
+        "code": "386914001",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 2
+  },
+  {
+    "id": "patient-175235dc-755b-4675-8afd-a205efcfcda9",
+    "name": "John Moore",
+    "age": 69,
+    "gender": "male",
+    "birth_date": "1957-01-18",
+    "location": {
+      "city": "Dallas",
+      "state": "Texas",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Acute myeloid leukemia",
+      "subtype": "Chronic lymphocytic leukemia, Refractory",
+      "stage": "Refractory",
+      "biomarker": "Philadelphia chromosome positive",
+      "code": "91861009",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2025-02-15T11:18:17.668465"
+    },
+    "procedures": [
+      {
+        "name": "Central line placement",
+        "code": "233573008",
+        "date": "2024-12-26T11:18:17.668474"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Imatinib",
+        "code": "386878007",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 0,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-86bef9e4-2d25-458c-a49b-f4b0340af678",
+    "name": "Timothy Robinson",
+    "age": 63,
+    "gender": "female",
+    "birth_date": "1963-05-23",
+    "location": {
+      "city": "San Diego",
+      "state": "California",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of breast",
+      "subtype": "HER2-positive breast cancer, Stage IIA",
+      "stage": "Stage IIA",
+      "biomarker": "ER+",
+      "code": "254837009",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2025-02-04T11:18:17.643992"
+    },
+    "procedures": [
+      {
+        "name": "Mastectomy",
+        "code": "172043006",
+        "date": "2025-05-21T11:18:17.644003"
+      },
+      {
+        "name": "Mastectomy",
+        "code": "172043006",
+        "date": "2024-09-12T11:18:17.644008"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Paclitaxel",
+        "code": "386914001",
+        "status": "active"
+      },
+      {
+        "name": "Paclitaxel",
+        "code": "386914001",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 2
+  },
+  {
+    "id": "patient-46dee13b-bcda-439d-a47b-5d22f55ffbab",
+    "name": "Sharon Williams",
+    "age": 43,
+    "gender": "male",
+    "birth_date": "1983-07-15",
+    "location": {
+      "city": "San Francisco",
+      "state": "California",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of lung",
+      "subtype": "Squamous cell carcinoma of lung, Stage IIA",
+      "stage": "Stage IIA",
+      "biomarker": "PD-L1 high",
+      "code": "363358000",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2025-04-11T11:18:17.648913"
+    },
+    "procedures": [
+      {
+        "name": "Bronchoscopy",
+        "code": "10847001",
+        "date": "2025-07-11T11:18:17.648921"
+      },
+      {
+        "name": "Bronchoscopy",
+        "code": "10847001",
+        "date": "2025-08-30T11:18:17.648925"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Carboplatin",
+        "code": "386906001",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 0,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-95c909ab-14f4-427e-a4d6-8798902dcae0",
+    "name": "Donna Brown",
+    "age": 69,
+    "gender": "male",
+    "birth_date": "1957-10-15",
+    "location": {
+      "city": "Phoenix",
+      "state": "Arizona",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of pancreas",
+      "subtype": "Adenocarcinoma of pancreas, Stage IA",
+      "stage": "Stage IA",
+      "biomarker": "BRCA1/2 mutation",
+      "code": "363418001",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2024-03-07T11:18:17.665894"
+    },
+    "procedures": [
+      {
+        "name": "Whipple procedure",
+        "code": "277132007",
+        "date": "2024-11-27T11:18:17.665905"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Gemcitabine",
+        "code": "387361005",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 1,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-5cf9441b-8920-4a78-a94f-0b31428828bd",
+    "name": "Amanda Taylor",
+    "age": 77,
+    "gender": "female",
+    "birth_date": "1949-11-11",
+    "location": {
+      "city": "Los Angeles",
+      "state": "California",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of breast",
+      "subtype": "Triple-negative breast cancer, Stage IIA",
+      "stage": "Stage IIA",
+      "biomarker": "HER2+",
+      "code": "254837009",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2024-03-18T11:18:17.646144"
+    },
+    "procedures": [
+      {
+        "name": "Sentinel lymph node biopsy",
+        "code": "396487001",
+        "date": "2025-05-02T11:18:17.646153"
+      },
+      {
+        "name": "Sentinel lymph node biopsy",
+        "code": "396487001",
+        "date": "2024-11-21T11:18:17.646157"
+      },
+      {
+        "name": "Sentinel lymph node biopsy",
+        "code": "396487001",
+        "date": "2025-03-19T11:18:17.646161"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Tamoxifen",
+        "code": "373345002",
+        "status": "active"
+      },
+      {
+        "name": "Trastuzumab",
+        "code": "386954007",
+        "status": "active"
+      },
+      {
+        "name": "Paclitaxel",
+        "code": "386914001",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 1,
+    "total_conditions": 1,
+    "medication_count": 3
+  },
+  {
+    "id": "patient-d7bac4f3-fec6-457a-8d46-082d49b3cdfc",
+    "name": "Donna Garcia",
+    "age": 40,
+    "gender": "female",
+    "birth_date": "1986-03-14",
+    "location": {
+      "city": "San Diego",
+      "state": "California",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of lung",
+      "subtype": "Adenocarcinoma of lung, Stage IB",
+      "stage": "Stage IB",
+      "biomarker": "EGFR+",
+      "code": "363358000",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2023-12-15T11:18:17.650071"
+    },
+    "procedures": [
+      {
+        "name": "Pneumonectomy",
+        "code": "48178009",
+        "date": "2025-03-01T11:18:17.650079"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Carboplatin",
+        "code": "386906001",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 0,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-c3cacd4e-a609-4e30-815c-0686227f0e1c",
+    "name": "Charles Davis",
+    "age": 63,
+    "gender": "male",
+    "birth_date": "1963-03-07",
+    "location": {
+      "city": "Dallas",
+      "state": "Texas",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of lung",
+      "subtype": "Squamous cell carcinoma of lung, Stage IIB",
+      "stage": "Stage IIB",
+      "biomarker": "ALK+",
+      "code": "363358000",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2023-02-15T11:18:17.647212"
+    },
+    "procedures": [
+      {
+        "name": "Bronchoscopy",
+        "code": "10847001",
+        "date": "2025-02-03T11:18:17.647221"
+      },
+      {
+        "name": "Pneumonectomy",
+        "code": "48178009",
+        "date": "2025-11-13T11:18:17.647225"
+      },
+      {
+        "name": "Bronchoscopy",
+        "code": "10847001",
+        "date": "2025-07-17T11:18:17.647229"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Pembrolizumab",
+        "code": "703800009",
+        "status": "active"
+      },
+      {
+        "name": "Pembrolizumab",
+        "code": "703800009",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 0,
+    "total_conditions": 1,
+    "medication_count": 2
+  },
+  {
+    "id": "patient-833397bd-c397-4559-9c24-64b94c7b41d9",
+    "name": "Andrew Mitchell",
+    "age": 62,
+    "gender": "female",
+    "birth_date": "1964-07-08",
+    "location": {
+      "city": "Houston",
+      "state": "Texas",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of pancreas",
+      "subtype": "Adenocarcinoma of pancreas, Stage IB",
+      "stage": "Stage IB",
+      "biomarker": "CA 19-9 elevated",
+      "code": "363418001",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2024-11-25T11:18:17.664704"
+    },
+    "procedures": [
+      {
+        "name": "Pancreatic biopsy",
+        "code": "62577004",
+        "date": "2025-08-19T11:18:17.664713"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Erlotinib",
+        "code": "414460008",
+        "status": "active"
+      },
+      {
+        "name": "Erlotinib",
+        "code": "414460008",
+        "status": "active"
+      },
+      {
+        "name": "Irinotecan",
+        "code": "387218008",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 3
+  },
+  {
+    "id": "patient-42365764-21d5-44fb-914a-55fef6a84aaf",
+    "name": "Matthew Robinson",
+    "age": 60,
+    "gender": "male",
+    "birth_date": "1966-07-05",
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant melanoma",
+      "subtype": "Nodular melanoma, Stage IA",
+      "stage": "Stage IA",
+      "biomarker": "NRAS mutation",
+      "code": "372244006",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2023-08-27T11:18:17.654236"
+    },
+    "procedures": [
+      {
+        "name": "Sentinel lymph node biopsy",
+        "code": "396487001",
+        "date": "2024-12-19T11:18:17.654247"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Pembrolizumab",
+        "code": "703800009",
+        "status": "active"
+      },
+      {
+        "name": "Pembrolizumab",
+        "code": "703800009",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 2
+  },
+  {
+    "id": "patient-d88cc082-b629-4332-8f00-8f860ee232c9",
+    "name": "Melissa Walker",
+    "age": 73,
+    "gender": "female",
+    "birth_date": "1953-04-10",
+    "location": {
+      "city": "Boston",
+      "state": "Massachusetts",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Acute myeloid leukemia",
+      "subtype": "Chronic lymphocytic leukemia, In remission",
+      "stage": "In remission",
+      "biomarker": "NPM1 mutation",
+      "code": "91861009",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2024-01-02T11:18:17.670561"
+    },
+    "procedures": [
+      {
+        "name": "Bone marrow biopsy",
+        "code": "127785005",
+        "date": "2024-09-07T11:18:17.670569"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Cytarabine",
+        "code": "387334007",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 0,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-74cdde35-a8f4-449f-8992-aa19e713994a",
+    "name": "Karen Walker",
+    "age": 79,
+    "gender": "male",
+    "birth_date": "1947-07-15",
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Acute myeloid leukemia",
+      "subtype": "Acute myeloid leukemia, Newly diagnosed",
+      "stage": "Newly diagnosed",
+      "biomarker": "FLT3 mutation",
+      "code": "91861009",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2025-05-15T11:18:17.669291"
+    },
+    "procedures": [
+      {
+        "name": "Bone marrow biopsy",
+        "code": "127785005",
+        "date": "2024-10-09T11:18:17.669299"
+      },
+      {
+        "name": "Bone marrow biopsy",
+        "code": "127785005",
+        "date": "2025-12-17T11:18:17.669304"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Daunorubicin",
+        "code": "386919006",
+        "status": "active"
+      },
+      {
+        "name": "Daunorubicin",
+        "code": "386919006",
+        "status": "active"
+      },
+      {
+        "name": "Daunorubicin",
+        "code": "386919006",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 3
+  },
+  {
+    "id": "patient-d078e66c-45ae-4218-a4ef-cad643e0d481",
+    "name": "Edward Brown",
+    "age": 58,
+    "gender": "male",
+    "birth_date": "1968-01-11",
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Acute myeloid leukemia",
+      "subtype": "Chronic lymphocytic leukemia, Relapsed",
+      "stage": "Relapsed",
+      "biomarker": "FLT3 mutation",
+      "code": "91861009",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2023-08-26T11:18:17.671288"
+    },
+    "procedures": [
+      {
+        "name": "Central line placement",
+        "code": "233573008",
+        "date": "2025-08-09T11:18:17.671302"
+      },
+      {
+        "name": "Central line placement",
+        "code": "233573008",
+        "date": "2025-10-12T11:18:17.671307"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Imatinib",
+        "code": "386878007",
+        "status": "active"
+      },
+      {
+        "name": "Daunorubicin",
+        "code": "386919006",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 1,
+    "total_conditions": 1,
+    "medication_count": 2
+  },
+  {
+    "id": "patient-23a213ae-6227-47b4-92f3-93c12ce04f2a",
+    "name": "Michelle Moore",
+    "age": 41,
+    "gender": "female",
+    "birth_date": "1985-08-18",
+    "location": {
+      "city": "Los Angeles",
+      "state": "California",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of pancreas",
+      "subtype": "Adenocarcinoma of pancreas, Stage IA",
+      "stage": "Stage IA",
+      "biomarker": "KRAS mutation",
+      "code": "363418001",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2023-10-26T11:18:17.665143"
+    },
+    "procedures": [
+      {
+        "name": "Pancreatic biopsy",
+        "code": "62577004",
+        "date": "2024-10-26T11:18:17.665152"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Erlotinib",
+        "code": "414460008",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-2147e8c1-58b0-4999-986c-abc10b1cf2f3",
+    "name": "Richard Ramirez",
+    "age": 50,
+    "gender": "male",
+    "birth_date": "1976-03-18",
+    "location": {
+      "city": "Dallas",
+      "state": "Texas",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of lung",
+      "subtype": "Adenocarcinoma of lung, Stage IIIB",
+      "stage": "Stage IIIB",
+      "biomarker": "KRAS mutation",
+      "code": "363358000",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2024-01-01T11:18:17.650409"
+    },
+    "procedures": [
+      {
+        "name": "Pneumonectomy",
+        "code": "48178009",
+        "date": "2025-09-22T11:18:17.650417"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Carboplatin",
+        "code": "386906001",
+        "status": "active"
+      },
+      {
+        "name": "Osimertinib",
+        "code": "703644004",
+        "status": "active"
+      },
+      {
+        "name": "Osimertinib",
+        "code": "703644004",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 3
+  },
+  {
+    "id": "patient-6e4b7841-32bc-45ad-ac5a-faf0e42206a4",
+    "name": "Anthony White",
+    "age": 36,
+    "gender": "male",
+    "birth_date": "1990-03-23",
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of pancreas",
+      "subtype": "Adenocarcinoma of pancreas, Stage IA",
+      "stage": "Stage IA",
+      "biomarker": "KRAS mutation",
+      "code": "363418001",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2023-12-03T11:18:17.665492"
+    },
+    "procedures": [
+      {
+        "name": "Whipple procedure",
+        "code": "277132007",
+        "date": "2024-12-12T11:18:17.665503"
+      },
+      {
+        "name": "Pancreatic biopsy",
+        "code": "62577004",
+        "date": "2025-08-04T11:18:17.665509"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Erlotinib",
+        "code": "414460008",
+        "status": "active"
+      },
+      {
+        "name": "Gemcitabine",
+        "code": "387361005",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 1,
+    "total_conditions": 1,
+    "medication_count": 2
+  },
+  {
+    "id": "patient-d931f954-2adc-460d-9179-677f36d2f16e",
+    "name": "Patricia Mitchell",
+    "age": 81,
+    "gender": "female",
+    "birth_date": "1945-11-03",
+    "location": {
+      "city": "Los Angeles",
+      "state": "California",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of ovary",
+      "subtype": "Serous adenocarcinoma of ovary, Stage IIA",
+      "stage": "Stage IIA",
+      "biomarker": "BRCA1 mutation",
+      "code": "363443007",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2023-11-12T11:18:17.674539"
+    },
+    "procedures": [
+      {
+        "name": "Total abdominal hysterectomy",
+        "code": "116140006",
+        "date": "2025-04-29T11:18:17.674547"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Carboplatin",
+        "code": "386906001",
+        "status": "active"
+      },
+      {
+        "name": "Carboplatin",
+        "code": "386906001",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 1,
+    "total_conditions": 1,
+    "medication_count": 2
+  },
+  {
+    "id": "patient-84a59619-fcad-4768-ac9a-59b139970afa",
+    "name": "Sandra Torres",
+    "age": 60,
+    "gender": "male",
+    "birth_date": "1966-12-15",
+    "location": {
+      "city": "San Diego",
+      "state": "California",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of pancreas",
+      "subtype": "Adenocarcinoma of pancreas, Stage IB",
+      "stage": "Stage IB",
+      "biomarker": "CA 19-9 elevated",
+      "code": "363418001",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2023-04-07T11:18:17.666702"
+    },
+    "procedures": [
+      {
+        "name": "Whipple procedure",
+        "code": "277132007",
+        "date": "2025-03-31T11:18:17.666713"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Irinotecan",
+        "code": "387218008",
+        "status": "active"
+      },
+      {
+        "name": "Irinotecan",
+        "code": "387218008",
+        "status": "active"
+      },
+      {
+        "name": "Erlotinib",
+        "code": "414460008",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 1,
+    "total_conditions": 1,
+    "medication_count": 3
+  },
+  {
+    "id": "patient-cc4d6b1a-1219-4974-a685-54813a8d4868",
+    "name": "Charles Nguyen",
+    "age": 59,
+    "gender": "male",
+    "birth_date": "1967-12-22",
+    "location": {
+      "city": "San Francisco",
+      "state": "California",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of pancreas",
+      "subtype": "Adenocarcinoma of pancreas, Stage IIA",
+      "stage": "Stage IIA",
+      "biomarker": "KRAS mutation",
+      "code": "363418001",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2025-03-08T11:18:17.667618"
+    },
+    "procedures": [
+      {
+        "name": "Pancreatic biopsy",
+        "code": "62577004",
+        "date": "2025-09-15T11:18:17.667628"
+      },
+      {
+        "name": "Distal pancreatectomy",
+        "code": "16636001",
+        "date": "2025-04-08T11:18:17.667632"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Irinotecan",
+        "code": "387218008",
+        "status": "active"
+      },
+      {
+        "name": "Erlotinib",
+        "code": "414460008",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 2
+  },
+  {
+    "id": "patient-fbd47b89-193b-4fc6-b299-4d684fdd0caf",
+    "name": "Ronald Young",
+    "age": 80,
+    "gender": "female",
+    "birth_date": "1946-09-03",
+    "location": {
+      "city": "Phoenix",
+      "state": "Arizona",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant melanoma",
+      "subtype": "Superficial spreading melanoma, Stage IV",
+      "stage": "Stage IV",
+      "biomarker": "NRAS mutation",
+      "code": "372244006",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2025-03-12T11:18:17.651281"
+    },
+    "procedures": [
+      {
+        "name": "Sentinel lymph node biopsy",
+        "code": "396487001",
+        "date": "2025-04-11T11:18:17.651290"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Dabrafenib",
+        "code": "703647006",
+        "status": "active"
+      },
+      {
+        "name": "Dabrafenib",
+        "code": "703647006",
+        "status": "active"
+      },
+      {
+        "name": "Pembrolizumab",
+        "code": "703800009",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 3
+  },
+  {
+    "id": "patient-5c1749fc-3cac-4fb7-b9fa-4684354e8301",
+    "name": "Donna Walker",
+    "age": 68,
+    "gender": "male",
+    "birth_date": "1958-05-15",
+    "location": {
+      "city": "San Francisco",
+      "state": "California",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Acute myeloid leukemia",
+      "subtype": "Chronic lymphocytic leukemia, Refractory",
+      "stage": "Refractory",
+      "biomarker": "FLT3 mutation",
+      "code": "91861009",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2024-02-03T11:18:17.668820"
+    },
+    "procedures": [
+      {
+        "name": "Central line placement",
+        "code": "233573008",
+        "date": "2025-07-11T11:18:17.668830"
+      },
+      {
+        "name": "Central line placement",
+        "code": "233573008",
+        "date": "2025-03-06T11:18:17.668834"
+      },
+      {
+        "name": "Central line placement",
+        "code": "233573008",
+        "date": "2024-09-22T11:18:17.668838"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Cytarabine",
+        "code": "387334007",
+        "status": "active"
+      },
+      {
+        "name": "Daunorubicin",
+        "code": "386919006",
+        "status": "active"
+      },
+      {
+        "name": "Daunorubicin",
+        "code": "386919006",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 1,
+    "total_conditions": 1,
+    "medication_count": 3
+  },
+  {
+    "id": "patient-523a24b3-5dad-47ab-b8fc-80d0b0f3d6ea",
+    "name": "Jennifer Flores",
+    "age": 80,
+    "gender": "male",
+    "birth_date": "1946-07-08",
+    "location": {
+      "city": "San Francisco",
+      "state": "California",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of lung",
+      "subtype": "Non-small cell lung cancer, Stage IB",
+      "stage": "Stage IB",
+      "biomarker": "PD-L1 high",
+      "code": "363358000",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2023-05-07T11:18:17.648061"
+    },
+    "procedures": [
+      {
+        "name": "Lobectomy",
+        "code": "173170005",
+        "date": "2025-11-06T11:18:17.648070"
+      },
+      {
+        "name": "Pneumonectomy",
+        "code": "48178009",
+        "date": "2025-01-24T11:18:17.648074"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Carboplatin",
+        "code": "386906001",
+        "status": "active"
+      },
+      {
+        "name": "Pembrolizumab",
+        "code": "703800009",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 2
+  },
+  {
+    "id": "patient-b543bdb2-14b0-4f07-ac99-9fe4d9bb2da3",
+    "name": "Thomas Adams",
+    "age": 72,
+    "gender": "female",
+    "birth_date": "1954-10-28",
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant melanoma",
+      "subtype": "Nodular melanoma, Stage IB",
+      "stage": "Stage IB",
+      "biomarker": "NRAS mutation",
+      "code": "372244006",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2025-06-26T11:18:17.655084"
+    },
+    "procedures": [
+      {
+        "name": "Wide local excision",
+        "code": "64368001",
+        "date": "2024-11-25T11:18:17.655094"
+      },
+      {
+        "name": "Wide local excision",
+        "code": "64368001",
+        "date": "2025-02-27T11:18:17.655098"
+      },
+      {
+        "name": "Sentinel lymph node biopsy",
+        "code": "396487001",
+        "date": "2025-02-16T11:18:17.655102"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Dabrafenib",
+        "code": "703647006",
+        "status": "active"
+      },
+      {
+        "name": "Nivolumab",
+        "code": "703801008",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 1,
+    "total_conditions": 1,
+    "medication_count": 2
+  },
+  {
+    "id": "patient-6055bdf4-9bfb-4755-8407-c45f2e8e60d6",
+    "name": "Andrew Thomas",
+    "age": 49,
+    "gender": "female",
+    "birth_date": "1977-02-05",
+    "location": {
+      "city": "Los Angeles",
+      "state": "California",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of ovary",
+      "subtype": "Serous adenocarcinoma of ovary, Stage IV",
+      "stage": "Stage IV",
+      "biomarker": "CA-125 elevated",
+      "code": "363443007",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2024-06-21T11:18:17.675574"
+    },
+    "procedures": [
+      {
+        "name": "Total abdominal hysterectomy",
+        "code": "116140006",
+        "date": "2025-10-16T11:18:17.675583"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Carboplatin",
+        "code": "386906001",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-101ae9cf-0b56-47d0-ace9-9444697362ae",
+    "name": "Edward Nguyen",
+    "age": 58,
+    "gender": "male",
+    "birth_date": "1968-02-01",
+    "location": {
+      "city": "Los Angeles",
+      "state": "California",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of prostate",
+      "subtype": "Adenocarcinoma of prostate, Stage III",
+      "stage": "Stage III",
+      "biomarker": "Gleason score 7",
+      "code": "399068003",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2024-08-22T11:18:17.661815"
+    },
+    "procedures": [
+      {
+        "name": "Radical prostatectomy",
+        "code": "176258007",
+        "date": "2025-12-08T11:18:17.661835"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Leuprolide",
+        "code": "126109000",
+        "status": "active"
+      },
+      {
+        "name": "Enzalutamide",
+        "code": "703799006",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 2
+  },
+  {
+    "id": "patient-b887623e-2a19-4613-bb94-4aa74ec75801",
+    "name": "Kimberly Martinez",
+    "age": 58,
+    "gender": "male",
+    "birth_date": "1968-04-01",
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of colon",
+      "subtype": "Adenocarcinoma of colon, Stage IIA",
+      "stage": "Stage IIA",
+      "biomarker": "KRAS mutation",
+      "code": "363406005",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2024-04-16T11:18:17.655929"
+    },
+    "procedures": [
+      {
+        "name": "Low anterior resection",
+        "code": "81568003",
+        "date": "2025-08-31T11:18:17.655940"
+      },
+      {
+        "name": "Colonoscopy",
+        "code": "73761001",
+        "date": "2025-03-07T11:18:17.655945"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Bevacizumab",
+        "code": "386905002",
+        "status": "active"
+      },
+      {
+        "name": "Bevacizumab",
+        "code": "386905002",
+        "status": "active"
+      },
+      {
+        "name": "Capecitabine",
+        "code": "386906001",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 0,
+    "total_conditions": 1,
+    "medication_count": 3
+  },
+  {
+    "id": "patient-b129e57e-f4c2-4460-911f-9207e4a0a68c",
+    "name": "Betty Thomas",
+    "age": 65,
+    "gender": "male",
+    "birth_date": "1961-11-18",
+    "location": {
+      "city": "New York",
+      "state": "New York",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of pancreas",
+      "subtype": "Adenocarcinoma of pancreas, Stage IV",
+      "stage": "Stage IV",
+      "biomarker": "KRAS mutation",
+      "code": "363418001",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2024-10-30T11:18:17.668041"
+    },
+    "procedures": [
+      {
+        "name": "Pancreatic biopsy",
+        "code": "62577004",
+        "date": "2025-09-15T11:18:17.668050"
+      },
+      {
+        "name": "Whipple procedure",
+        "code": "277132007",
+        "date": "2025-02-09T11:18:17.668054"
+      },
+      {
+        "name": "Pancreatic biopsy",
+        "code": "62577004",
+        "date": "2025-12-10T11:18:17.668058"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Gemcitabine",
+        "code": "387361005",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 1,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-25ef301b-a770-4f33-9ec7-720c53c84ca6",
+    "name": "Karen Robinson",
+    "age": 46,
+    "gender": "male",
+    "birth_date": "1980-06-27",
+    "location": {
+      "city": "Los Angeles",
+      "state": "California",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Acute myeloid leukemia",
+      "subtype": "Acute myeloid leukemia, Newly diagnosed",
+      "stage": "Newly diagnosed",
+      "biomarker": "FLT3 mutation",
+      "code": "91861009",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2024-04-18T11:18:17.670148"
+    },
+    "procedures": [
+      {
+        "name": "Bone marrow biopsy",
+        "code": "127785005",
+        "date": "2025-03-13T11:18:17.670159"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Cytarabine",
+        "code": "387334007",
+        "status": "active"
+      },
+      {
+        "name": "Imatinib",
+        "code": "386878007",
+        "status": "active"
+      },
+      {
+        "name": "Daunorubicin",
+        "code": "386919006",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 0,
+    "total_conditions": 1,
+    "medication_count": 3
+  },
+  {
+    "id": "patient-a7316e06-cdfb-4e4d-9523-afbc508b1f89",
+    "name": "Andrew Torres",
+    "age": 52,
+    "gender": "female",
+    "birth_date": "1974-10-02",
+    "location": {
+      "city": "New York",
+      "state": "New York",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of ovary",
+      "subtype": "Serous adenocarcinoma of ovary, Stage IC",
+      "stage": "Stage IC",
+      "biomarker": "BRCA2 mutation",
+      "code": "363443007",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2023-10-16T11:18:17.676452"
+    },
+    "procedures": [
+      {
+        "name": "Omentectomy",
+        "code": "26452005",
+        "date": "2025-10-14T11:18:17.676461"
+      },
+      {
+        "name": "Total abdominal hysterectomy",
+        "code": "116140006",
+        "date": "2025-06-08T11:18:17.676466"
+      },
+      {
+        "name": "Bilateral salpingo-oophorectomy",
+        "code": "86477000",
+        "date": "2025-12-19T11:18:17.676470"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Paclitaxel",
+        "code": "386914001",
+        "status": "active"
+      },
+      {
+        "name": "Olaparib",
+        "code": "703799003",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 0,
+    "total_conditions": 1,
+    "medication_count": 2
+  },
+  {
+    "id": "patient-430e668b-d4d3-4e3f-b2f7-be147fd78520",
+    "name": "George Green",
+    "age": 71,
+    "gender": "female",
+    "birth_date": "1955-04-11",
+    "location": {
+      "city": "San Francisco",
+      "state": "California",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of pancreas",
+      "subtype": "Adenocarcinoma of pancreas, Stage IA",
+      "stage": "Stage IA",
+      "biomarker": "KRAS mutation",
+      "code": "363418001",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2025-03-26T11:18:17.664279"
+    },
+    "procedures": [
+      {
+        "name": "Whipple procedure",
+        "code": "277132007",
+        "date": "2025-06-30T11:18:17.664288"
+      },
+      {
+        "name": "Pancreatic biopsy",
+        "code": "62577004",
+        "date": "2025-09-10T11:18:17.664293"
+      },
+      {
+        "name": "Pancreatic biopsy",
+        "code": "62577004",
+        "date": "2025-07-20T11:18:17.664297"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Irinotecan",
+        "code": "387218008",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-fd524c17-db4e-4135-a0fa-a6c31d25b810",
+    "name": "Emily Miller",
+    "age": 77,
+    "gender": "male",
+    "birth_date": "1949-10-12",
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant melanoma",
+      "subtype": "Nodular melanoma, Stage IIB",
+      "stage": "Stage IIB",
+      "biomarker": "BRAF V600K",
+      "code": "372244006",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2025-03-19T11:18:17.652493"
+    },
+    "procedures": [
+      {
+        "name": "Sentinel lymph node biopsy",
+        "code": "396487001",
+        "date": "2024-09-09T11:18:17.652503"
+      },
+      {
+        "name": "Wide local excision",
+        "code": "64368001",
+        "date": "2025-01-13T11:18:17.652507"
+      },
+      {
+        "name": "Lymphadenectomy",
+        "code": "234262008",
+        "date": "2024-09-10T11:18:17.652511"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Nivolumab",
+        "code": "703801008",
+        "status": "active"
+      },
+      {
+        "name": "Pembrolizumab",
+        "code": "703800009",
+        "status": "active"
+      },
+      {
+        "name": "Nivolumab",
+        "code": "703801008",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 1,
+    "total_conditions": 1,
+    "medication_count": 3
+  },
+  {
+    "id": "patient-313050cc-f76c-46a3-a2f3-84764e26caaa",
+    "name": "Daniel Martin",
+    "age": 55,
+    "gender": "male",
+    "birth_date": "1971-03-22",
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant melanoma",
+      "subtype": "Superficial spreading melanoma, Stage IIB",
+      "stage": "Stage IIB",
+      "biomarker": "BRAF V600E",
+      "code": "372244006",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2023-07-04T11:18:17.654629"
+    },
+    "procedures": [
+      {
+        "name": "Wide local excision",
+        "code": "64368001",
+        "date": "2025-08-24T11:18:17.654638"
+      },
+      {
+        "name": "Wide local excision",
+        "code": "64368001",
+        "date": "2025-10-17T11:18:17.654642"
+      },
+      {
+        "name": "Sentinel lymph node biopsy",
+        "code": "396487001",
+        "date": "2025-07-04T11:18:17.654646"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Dabrafenib",
+        "code": "703647006",
+        "status": "active"
+      },
+      {
+        "name": "Nivolumab",
+        "code": "703801008",
+        "status": "active"
+      },
+      {
+        "name": "Pembrolizumab",
+        "code": "703800009",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 1,
+    "total_conditions": 1,
+    "medication_count": 3
+  },
+  {
+    "id": "patient-9b01b94b-826d-4678-bb50-443cf84471b0",
+    "name": "Mark Clark",
+    "age": 48,
+    "gender": "female",
+    "birth_date": "1978-08-22",
+    "location": {
+      "city": "San Diego",
+      "state": "California",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of colon",
+      "subtype": "Adenocarcinoma of rectum, Stage IIIA",
+      "stage": "Stage IIIA",
+      "biomarker": "MSI-high",
+      "code": "363406005",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2024-02-27T11:18:17.657259"
+    },
+    "procedures": [
+      {
+        "name": "Colonoscopy",
+        "code": "73761001",
+        "date": "2025-09-24T11:18:17.657268"
+      },
+      {
+        "name": "Colonoscopy",
+        "code": "73761001",
+        "date": "2025-08-25T11:18:17.657272"
+      },
+      {
+        "name": "Low anterior resection",
+        "code": "81568003",
+        "date": "2025-08-04T11:18:17.657291"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Capecitabine",
+        "code": "386906001",
+        "status": "active"
+      },
+      {
+        "name": "Bevacizumab",
+        "code": "386905002",
+        "status": "active"
+      },
+      {
+        "name": "Bevacizumab",
+        "code": "386905002",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 1,
+    "total_conditions": 1,
+    "medication_count": 3
+  },
+  {
+    "id": "patient-8746498a-babf-4bc7-be0c-bf2c0d0279e2",
+    "name": "Jennifer Martin",
+    "age": 56,
+    "gender": "female",
+    "birth_date": "1970-09-25",
+    "location": {
+      "city": "Boston",
+      "state": "Massachusetts",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of breast",
+      "subtype": "HER2-positive breast cancer, Stage I",
+      "stage": "Stage I",
+      "biomarker": "HER2+",
+      "code": "254837009",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2023-11-03T11:18:17.642534"
+    },
+    "procedures": [
+      {
+        "name": "Mastectomy",
+        "code": "172043006",
+        "date": "2025-10-02T11:18:17.642554"
+      },
+      {
+        "name": "Mastectomy",
+        "code": "172043006",
+        "date": "2025-06-29T11:18:17.642561"
+      },
+      {
+        "name": "Sentinel lymph node biopsy",
+        "code": "396487001",
+        "date": "2025-05-26T11:18:17.642568"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Trastuzumab",
+        "code": "386954007",
+        "status": "active"
+      },
+      {
+        "name": "Paclitaxel",
+        "code": "386914001",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 1,
+    "total_conditions": 1,
+    "medication_count": 2
+  },
+  {
+    "id": "patient-7b837ca1-57f5-4423-8478-1c02e3d64a63",
+    "name": "Barbara Green",
+    "age": 50,
+    "gender": "male",
+    "birth_date": "1976-05-02",
+    "location": {
+      "city": "Dallas",
+      "state": "Texas",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of colon",
+      "subtype": "Adenocarcinoma of colon, Stage IV",
+      "stage": "Stage IV",
+      "biomarker": "BRAF V600E",
+      "code": "363406005",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2025-02-24T11:18:17.659687"
+    },
+    "procedures": [
+      {
+        "name": "Colonoscopy",
+        "code": "73761001",
+        "date": "2025-04-10T11:18:17.659700"
+      },
+      {
+        "name": "Colectomy",
+        "code": "26390003",
+        "date": "2025-01-20T11:18:17.659704"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Bevacizumab",
+        "code": "386905002",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-62620929-cc8b-40cb-9b53-d757c5577e22",
+    "name": "Ashley Lopez",
+    "age": 56,
+    "gender": "female",
+    "birth_date": "1970-06-11",
+    "location": {
+      "city": "Dallas",
+      "state": "Texas",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant melanoma",
+      "subtype": "Superficial spreading melanoma, Stage IIA",
+      "stage": "Stage IIA",
+      "biomarker": "BRAF V600E",
+      "code": "372244006",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2024-03-16T11:18:17.653391"
+    },
+    "procedures": [
+      {
+        "name": "Sentinel lymph node biopsy",
+        "code": "396487001",
+        "date": "2025-01-31T11:18:17.653400"
+      },
+      {
+        "name": "Lymphadenectomy",
+        "code": "234262008",
+        "date": "2025-02-01T11:18:17.653405"
+      },
+      {
+        "name": "Wide local excision",
+        "code": "64368001",
+        "date": "2025-11-08T11:18:17.653409"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Pembrolizumab",
+        "code": "703800009",
+        "status": "active"
+      },
+      {
+        "name": "Nivolumab",
+        "code": "703801008",
+        "status": "active"
+      },
+      {
+        "name": "Nivolumab",
+        "code": "703801008",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 1,
+    "total_conditions": 1,
+    "medication_count": 3
+  },
+  {
+    "id": "patient-fd2f404d-1969-4fdd-9827-c401ac7d78c0",
+    "name": "Sarah Harris",
+    "age": 74,
+    "gender": "female",
+    "birth_date": "1952-08-14",
+    "location": {
+      "city": "New York",
+      "state": "New York",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of ovary",
+      "subtype": "Serous adenocarcinoma of ovary, Stage IA",
+      "stage": "Stage IA",
+      "biomarker": "CA-125 elevated",
+      "code": "363443007",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2024-07-01T11:18:17.672567"
+    },
+    "procedures": [
+      {
+        "name": "Omentectomy",
+        "code": "26452005",
+        "date": "2024-09-10T11:18:17.672576"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Carboplatin",
+        "code": "386906001",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 1,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-d554e534-169e-4155-b2e4-76ba97eb7df0",
+    "name": "Kenneth Nguyen",
+    "age": 60,
+    "gender": "male",
+    "birth_date": "1966-08-16",
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of colon",
+      "subtype": "Adenocarcinoma of rectum, Stage IIIB",
+      "stage": "Stage IIIB",
+      "biomarker": "BRAF V600E",
+      "code": "363406005",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2025-03-24T11:18:17.656365"
+    },
+    "procedures": [
+      {
+        "name": "Low anterior resection",
+        "code": "81568003",
+        "date": "2025-08-08T11:18:17.656374"
+      },
+      {
+        "name": "Low anterior resection",
+        "code": "81568003",
+        "date": "2025-05-12T11:18:17.656379"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Capecitabine",
+        "code": "386906001",
+        "status": "active"
+      },
+      {
+        "name": "Bevacizumab",
+        "code": "386905002",
+        "status": "active"
+      },
+      {
+        "name": "Bevacizumab",
+        "code": "386905002",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 3
+  },
+  {
+    "id": "patient-fc77d32a-dd14-4d9a-bf54-3aa6c2d8e22e",
+    "name": "Donald Nguyen",
+    "age": 61,
+    "gender": "female",
+    "birth_date": "1965-06-25",
+    "location": {
+      "city": "Phoenix",
+      "state": "Arizona",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant melanoma",
+      "subtype": "Nodular melanoma, Stage IIIA",
+      "stage": "Stage IIIA",
+      "biomarker": "BRAF V600E",
+      "code": "372244006",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2023-06-28T11:18:17.652927"
+    },
+    "procedures": [
+      {
+        "name": "Sentinel lymph node biopsy",
+        "code": "396487001",
+        "date": "2024-12-07T11:18:17.652938"
+      },
+      {
+        "name": "Lymphadenectomy",
+        "code": "234262008",
+        "date": "2025-08-29T11:18:17.652944"
+      },
+      {
+        "name": "Sentinel lymph node biopsy",
+        "code": "396487001",
+        "date": "2025-06-18T11:18:17.652948"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Dabrafenib",
+        "code": "703647006",
+        "status": "active"
+      },
+      {
+        "name": "Pembrolizumab",
+        "code": "703800009",
+        "status": "active"
+      },
+      {
+        "name": "Pembrolizumab",
+        "code": "703800009",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 0,
+    "total_conditions": 1,
+    "medication_count": 3
+  },
+  {
+    "id": "patient-5978135c-c71a-463b-8cef-ef4fa642f821",
+    "name": "Anthony Jones",
+    "age": 65,
+    "gender": "female",
+    "birth_date": "1961-07-05",
+    "location": {
+      "city": "Dallas",
+      "state": "Texas",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of breast",
+      "subtype": "Triple-negative breast cancer, Stage IV",
+      "stage": "Stage IV",
+      "biomarker": "HER2+",
+      "code": "254837009",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2024-07-05T11:18:17.645317"
+    },
+    "procedures": [
+      {
+        "name": "Mastectomy",
+        "code": "172043006",
+        "date": "2025-11-09T11:18:17.645326"
+      },
+      {
+        "name": "Lumpectomy",
+        "code": "64368001",
+        "date": "2025-10-28T11:18:17.645330"
+      },
+      {
+        "name": "Lumpectomy",
+        "code": "64368001",
+        "date": "2024-12-23T11:18:17.645334"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Trastuzumab",
+        "code": "386954007",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-f4a13860-5b8b-42f7-9644-b9bd383ae25a",
+    "name": "David Gonzalez",
+    "age": 50,
+    "gender": "female",
+    "birth_date": "1976-05-09",
+    "location": {
+      "city": "New York",
+      "state": "New York",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant melanoma",
+      "subtype": "Nodular melanoma, Stage IIIA",
+      "stage": "Stage IIIA",
+      "biomarker": "BRAF V600K",
+      "code": "372244006",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2025-03-12T11:18:17.651696"
+    },
+    "procedures": [
+      {
+        "name": "Sentinel lymph node biopsy",
+        "code": "396487001",
+        "date": "2025-03-27T11:18:17.651706"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Nivolumab",
+        "code": "703801008",
+        "status": "active"
+      },
+      {
+        "name": "Nivolumab",
+        "code": "703801008",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 0,
+    "total_conditions": 1,
+    "medication_count": 2
+  },
+  {
+    "id": "patient-d4b0f79a-0ed8-4a80-bca6-acdedb68002e",
+    "name": "Daniel Walker",
+    "age": 51,
+    "gender": "male",
+    "birth_date": "1975-07-01",
+    "location": {
+      "city": "Phoenix",
+      "state": "Arizona",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Acute myeloid leukemia",
+      "subtype": "Chronic lymphocytic leukemia, In remission",
+      "stage": "In remission",
+      "biomarker": "FLT3 mutation",
+      "code": "91861009",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2025-06-11T11:18:17.671724"
+    },
+    "procedures": [
+      {
+        "name": "Central line placement",
+        "code": "233573008",
+        "date": "2024-11-13T11:18:17.671733"
+      },
+      {
+        "name": "Central line placement",
+        "code": "233573008",
+        "date": "2024-12-26T11:18:17.671737"
+      },
+      {
+        "name": "Bone marrow biopsy",
+        "code": "127785005",
+        "date": "2025-06-22T11:18:17.671741"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Daunorubicin",
+        "code": "386919006",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-5dfdd2ca-5484-4f3f-8891-6c0fb996d091",
+    "name": "Mary Harris",
+    "age": 39,
+    "gender": "male",
+    "birth_date": "1987-05-22",
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of prostate",
+      "subtype": "Adenocarcinoma of prostate, Stage I",
+      "stage": "Stage I",
+      "biomarker": "BRCA1/2 mutation",
+      "code": "399068003",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2024-01-18T11:18:17.663837"
+    },
+    "procedures": [
+      {
+        "name": "Prostate biopsy",
+        "code": "424857005",
+        "date": "2025-12-16T11:18:17.663848"
+      },
+      {
+        "name": "TURP",
+        "code": "176261008",
+        "date": "2025-01-04T11:18:17.663854"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Enzalutamide",
+        "code": "703799006",
+        "status": "active"
+      },
+      {
+        "name": "Abiraterone",
+        "code": "703796003",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 2
+  },
+  {
+    "id": "patient-ade8a929-8e89-44aa-9ade-d12da8cb600d",
+    "name": "Amanda Flores",
+    "age": 71,
+    "gender": "female",
+    "birth_date": "1955-06-19",
+    "location": {
+      "city": "Dallas",
+      "state": "Texas",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of ovary",
+      "subtype": "Serous adenocarcinoma of ovary, Stage IIB",
+      "stage": "Stage IIB",
+      "biomarker": "BRCA1 mutation",
+      "code": "363443007",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2024-10-23T11:18:17.674106"
+    },
+    "procedures": [
+      {
+        "name": "Total abdominal hysterectomy",
+        "code": "116140006",
+        "date": "2025-10-05T11:18:17.674114"
+      },
+      {
+        "name": "Bilateral salpingo-oophorectomy",
+        "code": "86477000",
+        "date": "2025-06-04T11:18:17.674118"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Olaparib",
+        "code": "703799003",
+        "status": "active"
+      },
+      {
+        "name": "Carboplatin",
+        "code": "386906001",
+        "status": "active"
+      },
+      {
+        "name": "Carboplatin",
+        "code": "386906001",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 0,
+    "total_conditions": 1,
+    "medication_count": 3
+  },
+  {
+    "id": "patient-9d899b95-2e9c-469f-afd7-ae24c0b5644e",
+    "name": "Mary Adams",
+    "age": 58,
+    "gender": "female",
+    "birth_date": "1968-07-22",
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of ovary",
+      "subtype": "Endometrioid adenocarcinoma of ovary, Stage IIB",
+      "stage": "Stage IIB",
+      "biomarker": "CA-125 elevated",
+      "code": "363443007",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2024-09-11T11:18:17.675946"
+    },
+    "procedures": [
+      {
+        "name": "Bilateral salpingo-oophorectomy",
+        "code": "86477000",
+        "date": "2025-10-13T11:18:17.675956"
+      },
+      {
+        "name": "Total abdominal hysterectomy",
+        "code": "116140006",
+        "date": "2025-11-23T11:18:17.675960"
+      },
+      {
+        "name": "Bilateral salpingo-oophorectomy",
+        "code": "86477000",
+        "date": "2024-12-17T11:18:17.675964"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Olaparib",
+        "code": "703799003",
+        "status": "active"
+      },
+      {
+        "name": "Paclitaxel",
+        "code": "386914001",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 1,
+    "total_conditions": 1,
+    "medication_count": 2
+  },
+  {
+    "id": "patient-063ca6e9-2215-4bfc-83dd-37bb2c797082",
+    "name": "John Green",
+    "age": 45,
+    "gender": "female",
+    "birth_date": "1981-07-13",
+    "location": {
+      "city": "New York",
+      "state": "New York",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of breast",
+      "subtype": "Triple-negative breast cancer, Stage IIA",
+      "stage": "Stage IIA",
+      "biomarker": "ER+",
+      "code": "254837009",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2025-04-08T11:18:17.646627"
+    },
+    "procedures": [
+      {
+        "name": "Sentinel lymph node biopsy",
+        "code": "396487001",
+        "date": "2025-08-24T11:18:17.646635"
+      },
+      {
+        "name": "Sentinel lymph node biopsy",
+        "code": "396487001",
+        "date": "2024-10-14T11:18:17.646639"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Trastuzumab",
+        "code": "386954007",
+        "status": "active"
+      },
+      {
+        "name": "Paclitaxel",
+        "code": "386914001",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 2
+  },
+  {
+    "id": "patient-b4f39f08-91b7-4d6d-8e43-818c7470c47b",
+    "name": "James Anderson",
+    "age": 72,
+    "gender": "male",
+    "birth_date": "1954-02-18",
+    "location": {
+      "city": "San Francisco",
+      "state": "California",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of prostate",
+      "subtype": "Adenocarcinoma of prostate, Stage I",
+      "stage": "Stage I",
+      "biomarker": "PSA elevated",
+      "code": "399068003",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2024-04-19T11:18:17.663099"
+    },
+    "procedures": [
+      {
+        "name": "Prostate biopsy",
+        "code": "424857005",
+        "date": "2025-09-22T11:18:17.663111"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Leuprolide",
+        "code": "126109000",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 1,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-ca59796c-fdba-473e-a0d5-ad2bffa431d9",
+    "name": "Richard Perez",
+    "age": 40,
+    "gender": "female",
+    "birth_date": "1986-07-15",
+    "location": {
+      "city": "Dallas",
+      "state": "Texas",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of breast",
+      "subtype": "HER2-positive breast cancer, Stage IIIA",
+      "stage": "Stage IIIA",
+      "biomarker": "HER2+",
+      "code": "254837009",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2024-11-13T11:18:17.643578"
+    },
+    "procedures": [
+      {
+        "name": "Sentinel lymph node biopsy",
+        "code": "396487001",
+        "date": "2025-03-18T11:18:17.643589"
+      },
+      {
+        "name": "Lumpectomy",
+        "code": "64368001",
+        "date": "2024-11-11T11:18:17.643594"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Tamoxifen",
+        "code": "373345002",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 0,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-40f0a33c-9564-4c3b-b9b0-5bea30fe4169",
+    "name": "Amanda Flores",
+    "age": 69,
+    "gender": "male",
+    "birth_date": "1957-09-14",
+    "location": {
+      "city": "Boston",
+      "state": "Massachusetts",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of prostate",
+      "subtype": "Adenocarcinoma of prostate, Stage IIA",
+      "stage": "Stage IIA",
+      "biomarker": "PSA elevated",
+      "code": "399068003",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2025-07-03T11:18:17.660889"
+    },
+    "procedures": [
+      {
+        "name": "TURP",
+        "code": "176261008",
+        "date": "2025-11-20T11:18:17.660898"
+      },
+      {
+        "name": "Radical prostatectomy",
+        "code": "176258007",
+        "date": "2025-01-22T11:18:17.660902"
+      },
+      {
+        "name": "TURP",
+        "code": "176261008",
+        "date": "2024-12-22T11:18:17.660906"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Enzalutamide",
+        "code": "703799006",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 0,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-86a59aab-b631-430a-86d3-25252c020e5d",
+    "name": "Mark Sanchez",
+    "age": 67,
+    "gender": "male",
+    "birth_date": "1959-09-21",
+    "location": {
+      "city": "New York",
+      "state": "New York",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of colon",
+      "subtype": "Adenocarcinoma of colon, Stage I",
+      "stage": "Stage I",
+      "biomarker": "KRAS mutation",
+      "code": "363406005",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2024-01-31T11:18:17.658181"
+    },
+    "procedures": [
+      {
+        "name": "Low anterior resection",
+        "code": "81568003",
+        "date": "2025-01-23T11:18:17.658190"
+      },
+      {
+        "name": "Colectomy",
+        "code": "26390003",
+        "date": "2025-12-06T11:18:17.658194"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Bevacizumab",
+        "code": "386905002",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 1,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-dfef29f9-90be-4ea9-92b0-0e146249b8ea",
+    "name": "Joshua Brown",
+    "age": 71,
+    "gender": "female",
+    "birth_date": "1955-03-06",
+    "location": {
+      "city": "Boston",
+      "state": "Massachusetts",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Acute myeloid leukemia",
+      "subtype": "Acute myeloid leukemia, Relapsed",
+      "stage": "Relapsed",
+      "biomarker": "NPM1 mutation",
+      "code": "91861009",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2023-05-13T11:18:17.672136"
+    },
+    "procedures": [
+      {
+        "name": "Lumbar puncture",
+        "code": "277762005",
+        "date": "2024-09-23T11:18:17.672145"
+      },
+      {
+        "name": "Central line placement",
+        "code": "233573008",
+        "date": "2025-11-02T11:18:17.672149"
+      },
+      {
+        "name": "Bone marrow biopsy",
+        "code": "127785005",
+        "date": "2025-02-09T11:18:17.672153"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Imatinib",
+        "code": "386878007",
+        "status": "active"
+      },
+      {
+        "name": "Imatinib",
+        "code": "386878007",
+        "status": "active"
+      },
+      {
+        "name": "Imatinib",
+        "code": "386878007",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 0,
+    "total_conditions": 1,
+    "medication_count": 3
+  },
+  {
+    "id": "patient-4ea6a7bb-3e39-4db9-96f2-b93a9fce6b98",
+    "name": "Carol Rivera",
+    "age": 49,
+    "gender": "male",
+    "birth_date": "1977-10-23",
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of prostate",
+      "subtype": "Adenocarcinoma of prostate, Stage III",
+      "stage": "Stage III",
+      "biomarker": "Gleason score 8",
+      "code": "399068003",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2025-07-24T11:18:17.662703"
+    },
+    "procedures": [
+      {
+        "name": "Prostate biopsy",
+        "code": "424857005",
+        "date": "2025-10-15T11:18:17.662712"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Abiraterone",
+        "code": "703796003",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 1,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-d71f4ab6-b238-4d3b-ac32-cae5efeb97ae",
+    "name": "Linda Mitchell",
+    "age": 59,
+    "gender": "female",
+    "birth_date": "1967-09-14",
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of colon",
+      "subtype": "Adenocarcinoma of rectum, Stage IIB",
+      "stage": "Stage IIB",
+      "biomarker": "KRAS wild-type",
+      "code": "363406005",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2024-05-07T11:18:17.656844"
+    },
+    "procedures": [
+      {
+        "name": "Low anterior resection",
+        "code": "81568003",
+        "date": "2025-04-15T11:18:17.656852"
+      },
+      {
+        "name": "Low anterior resection",
+        "code": "81568003",
+        "date": "2025-02-10T11:18:17.656857"
+      },
+      {
+        "name": "Colonoscopy",
+        "code": "73761001",
+        "date": "2025-09-17T11:18:17.656861"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Capecitabine",
+        "code": "386906001",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-753eb717-2cce-4209-9c86-8a31d70206a5",
+    "name": "Deborah Young",
+    "age": 51,
+    "gender": "male",
+    "birth_date": "1975-01-07",
+    "location": {
+      "city": "Houston",
+      "state": "Texas",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of prostate",
+      "subtype": "Adenocarcinoma of prostate, Stage IIA",
+      "stage": "Stage IIA",
+      "biomarker": "Gleason score 8",
+      "code": "399068003",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2023-12-11T11:18:17.660110"
+    },
+    "procedures": [
+      {
+        "name": "Prostate biopsy",
+        "code": "424857005",
+        "date": "2024-11-06T11:18:17.660119"
+      },
+      {
+        "name": "Prostate biopsy",
+        "code": "424857005",
+        "date": "2025-07-24T11:18:17.660124"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Leuprolide",
+        "code": "126109000",
+        "status": "active"
+      },
+      {
+        "name": "Enzalutamide",
+        "code": "703799006",
+        "status": "active"
+      },
+      {
+        "name": "Enzalutamide",
+        "code": "703799006",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 3
+  },
+  {
+    "id": "patient-a1795309-15ae-42f4-80dc-a378a6bf33d1",
+    "name": "Kenneth Hill",
+    "age": 52,
+    "gender": "female",
+    "birth_date": "1974-12-21",
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of lung",
+      "subtype": "Adenocarcinoma of lung, Stage IV",
+      "stage": "Stage IV",
+      "biomarker": "EGFR+",
+      "code": "363358000",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2025-06-10T11:18:17.648507"
+    },
+    "procedures": [
+      {
+        "name": "Bronchoscopy",
+        "code": "10847001",
+        "date": "2025-03-20T11:18:17.648515"
+      },
+      {
+        "name": "Lobectomy",
+        "code": "173170005",
+        "date": "2025-03-01T11:18:17.648520"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Pembrolizumab",
+        "code": "703800009",
+        "status": "active"
+      },
+      {
+        "name": "Pembrolizumab",
+        "code": "703800009",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 2
+  },
+  {
+    "id": "patient-7ce1f29a-3f5a-4b6d-86c6-0884ec1978f4",
+    "name": "Richard Thompson",
+    "age": 50,
+    "gender": "female",
+    "birth_date": "1976-11-20",
+    "location": {
+      "city": "Boston",
+      "state": "Massachusetts",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of ovary",
+      "subtype": "Serous adenocarcinoma of ovary, Stage IV",
+      "stage": "Stage IV",
+      "biomarker": "BRCA1 mutation",
+      "code": "363443007",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2024-12-12T11:18:17.673659"
+    },
+    "procedures": [
+      {
+        "name": "Total abdominal hysterectomy",
+        "code": "116140006",
+        "date": "2024-11-10T11:18:17.673668"
+      },
+      {
+        "name": "Bilateral salpingo-oophorectomy",
+        "code": "86477000",
+        "date": "2025-11-15T11:18:17.673672"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Olaparib",
+        "code": "703799003",
+        "status": "active"
+      },
+      {
+        "name": "Paclitaxel",
+        "code": "386914001",
+        "status": "active"
+      },
+      {
+        "name": "Olaparib",
+        "code": "703799003",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 1,
+    "total_conditions": 1,
+    "medication_count": 3
+  },
+  {
+    "id": "patient-8243abe5-807c-468a-846f-efa6e452ff1e",
+    "name": "Anthony Lopez",
+    "age": 35,
+    "gender": "male",
+    "birth_date": "1991-06-03",
+    "location": {
+      "city": "Los Angeles",
+      "state": "California",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Acute myeloid leukemia",
+      "subtype": "Acute myeloid leukemia, In remission",
+      "stage": "In remission",
+      "biomarker": "NPM1 mutation",
+      "code": "91861009",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2023-04-04T11:18:17.670902"
+    },
+    "procedures": [
+      {
+        "name": "Lumbar puncture",
+        "code": "277762005",
+        "date": "2025-05-13T11:18:17.670910"
+      },
+      {
+        "name": "Central line placement",
+        "code": "233573008",
+        "date": "2025-05-09T11:18:17.670914"
+      },
+      {
+        "name": "Central line placement",
+        "code": "233573008",
+        "date": "2025-01-22T11:18:17.670918"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Daunorubicin",
+        "code": "386919006",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 1,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-5600e922-49e8-46b8-afa3-8f5c51d7afc8",
+    "name": "Emily Walker",
+    "age": 57,
+    "gender": "male",
+    "birth_date": "1969-02-14",
+    "location": {
+      "city": "Phoenix",
+      "state": "Arizona",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of prostate",
+      "subtype": "Adenocarcinoma of prostate, Stage III",
+      "stage": "Stage III",
+      "biomarker": "BRCA1/2 mutation",
+      "code": "399068003",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2023-08-03T11:18:17.663477"
+    },
+    "procedures": [
+      {
+        "name": "TURP",
+        "code": "176261008",
+        "date": "2025-03-25T11:18:17.663490"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Enzalutamide",
+        "code": "703799006",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-75f069cc-ce33-4142-8286-5f5bfc9d234a",
+    "name": "Mary Rivera",
+    "age": 84,
+    "gender": "male",
+    "birth_date": "1942-09-18",
+    "location": {
+      "city": "San Francisco",
+      "state": "California",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of prostate",
+      "subtype": "Adenocarcinoma of prostate, Stage IV",
+      "stage": "Stage IV",
+      "biomarker": "Gleason score 8",
+      "code": "399068003",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2024-05-04T11:18:17.660523"
+    },
+    "procedures": [
+      {
+        "name": "Prostate biopsy",
+        "code": "424857005",
+        "date": "2025-08-02T11:18:17.660532"
+      },
+      {
+        "name": "Radical prostatectomy",
+        "code": "176258007",
+        "date": "2024-12-21T11:18:17.660536"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Enzalutamide",
+        "code": "703799006",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-d02ad292-7313-4989-a9cc-aa4d424ee8ab",
+    "name": "Sarah Perez",
+    "age": 78,
+    "gender": "female",
+    "birth_date": "1948-05-12",
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of colon",
+      "subtype": "Adenocarcinoma of colon, Stage IIIB",
+      "stage": "Stage IIIB",
+      "biomarker": "KRAS wild-type",
+      "code": "363406005",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2025-05-22T11:18:17.658767"
+    },
+    "procedures": [
+      {
+        "name": "Low anterior resection",
+        "code": "81568003",
+        "date": "2025-01-17T11:18:17.658781"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Capecitabine",
+        "code": "386906001",
+        "status": "active"
+      },
+      {
+        "name": "Capecitabine",
+        "code": "386906001",
+        "status": "active"
+      },
+      {
+        "name": "Bevacizumab",
+        "code": "386905002",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 0,
+    "total_conditions": 1,
+    "medication_count": 3
+  },
+  {
+    "id": "patient-5bff9cc6-b48b-46c6-b4ed-8125dc5c271c",
+    "name": "Linda Campbell",
+    "age": 72,
+    "gender": "male",
+    "birth_date": "1954-05-04",
+    "location": {
+      "city": "Houston",
+      "state": "Texas",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of lung",
+      "subtype": "Non-small cell lung cancer, Stage IIB",
+      "stage": "Stage IIB",
+      "biomarker": "PD-L1 high",
+      "code": "363358000",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2024-07-10T11:18:17.649687"
+    },
+    "procedures": [
+      {
+        "name": "Bronchoscopy",
+        "code": "10847001",
+        "date": "2025-07-08T11:18:17.649695"
+      },
+      {
+        "name": "Bronchoscopy",
+        "code": "10847001",
+        "date": "2024-09-20T11:18:17.649699"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Osimertinib",
+        "code": "703644004",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-229a3225-7cba-4740-8cbf-3f0d16f32a0c",
+    "name": "William Adams",
+    "age": 35,
+    "gender": "female",
+    "birth_date": "1991-04-22",
+    "location": {
+      "city": "Houston",
+      "state": "Texas",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of ovary",
+      "subtype": "Serous adenocarcinoma of ovary, Stage IC",
+      "stage": "Stage IC",
+      "biomarker": "BRCA2 mutation",
+      "code": "363443007",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2025-05-10T11:18:17.672918"
+    },
+    "procedures": [
+      {
+        "name": "Bilateral salpingo-oophorectomy",
+        "code": "86477000",
+        "date": "2025-10-07T11:18:17.672926"
+      },
+      {
+        "name": "Total abdominal hysterectomy",
+        "code": "116140006",
+        "date": "2025-08-26T11:18:17.672930"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Paclitaxel",
+        "code": "386914001",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 0,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-c39c3afc-425c-43ab-a47d-162d31ba9cae",
+    "name": "Margaret Adams",
+    "age": 52,
+    "gender": "female",
+    "birth_date": "1974-02-17",
+    "location": {
+      "city": "San Diego",
+      "state": "California",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of breast",
+      "subtype": "Triple-negative breast cancer, Stage IV",
+      "stage": "Stage IV",
+      "biomarker": "HER2+",
+      "code": "254837009",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2024-05-26T11:18:17.643100"
+    },
+    "procedures": [
+      {
+        "name": "Sentinel lymph node biopsy",
+        "code": "396487001",
+        "date": "2024-12-27T11:18:17.643112"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Trastuzumab",
+        "code": "386954007",
+        "status": "active"
+      },
+      {
+        "name": "Tamoxifen",
+        "code": "373345002",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 2
+  },
+  {
+    "id": "patient-2aded941-93ef-4e9e-98a8-d6a15df77cb4",
+    "name": "George White",
+    "age": 61,
+    "gender": "female",
+    "birth_date": "1965-04-10",
+    "location": {
+      "city": "Phoenix",
+      "state": "Arizona",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of colon",
+      "subtype": "Adenocarcinoma of rectum, Stage IIIB",
+      "stage": "Stage IIIB",
+      "biomarker": "KRAS wild-type",
+      "code": "363406005",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2024-07-08T11:18:17.659247"
+    },
+    "procedures": [
+      {
+        "name": "Low anterior resection",
+        "code": "81568003",
+        "date": "2024-09-13T11:18:17.659257"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Cetuximab",
+        "code": "414460008",
+        "status": "active"
+      },
+      {
+        "name": "Bevacizumab",
+        "code": "386905002",
+        "status": "active"
+      },
+      {
+        "name": "Bevacizumab",
+        "code": "386905002",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 1,
+    "total_conditions": 1,
+    "medication_count": 3
+  },
+  {
+    "id": "patient-916ce6c9-5576-4024-8e90-4b7006724dd2",
+    "name": "John Taylor",
+    "age": 76,
+    "gender": "female",
+    "birth_date": "1950-04-14",
+    "location": {
+      "city": "Boston",
+      "state": "Massachusetts",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of pancreas",
+      "subtype": "Adenocarcinoma of pancreas, Stage IA",
+      "stage": "Stage IA",
+      "biomarker": "KRAS mutation",
+      "code": "363418001",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2023-08-04T11:18:17.667114"
+    },
+    "procedures": [
+      {
+        "name": "Distal pancreatectomy",
+        "code": "16636001",
+        "date": "2025-03-19T11:18:17.667122"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Irinotecan",
+        "code": "387218008",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-b4b929b9-17d8-4530-81a2-750754ebfd24",
+    "name": "Donna Robinson",
+    "age": 47,
+    "gender": "female",
+    "birth_date": "1979-05-19",
+    "location": {
+      "city": "Los Angeles",
+      "state": "California",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of ovary",
+      "subtype": "Endometrioid adenocarcinoma of ovary, Stage IB",
+      "stage": "Stage IB",
+      "biomarker": "HRD positive",
+      "code": "363443007",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2023-10-17T11:18:17.673311"
+    },
+    "procedures": [
+      {
+        "name": "Omentectomy",
+        "code": "26452005",
+        "date": "2025-12-02T11:18:17.673321"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Carboplatin",
+        "code": "386906001",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 1,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-74ba38ff-c029-4740-a233-0d23259fa37d",
+    "name": "Ashley Moore",
+    "age": 82,
+    "gender": "male",
+    "birth_date": "1944-12-20",
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of prostate",
+      "subtype": "Adenocarcinoma of prostate, Stage III",
+      "stage": "Stage III",
+      "biomarker": "Gleason score 7",
+      "code": "399068003",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2023-12-04T11:18:17.662289"
+    },
+    "procedures": [
+      {
+        "name": "Prostate biopsy",
+        "code": "424857005",
+        "date": "2025-09-13T11:18:17.662301"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Leuprolide",
+        "code": "126109000",
+        "status": "active"
+      },
+      {
+        "name": "Abiraterone",
+        "code": "703796003",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 0,
+    "total_conditions": 1,
+    "medication_count": 2
+  },
+  {
+    "id": "patient-243cb5cf-8d67-4f7a-9b64-bf9656ff35c9",
+    "name": "Kimberly Rivera",
+    "age": 46,
+    "gender": "female",
+    "birth_date": "1980-08-15",
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of breast",
+      "subtype": "Estrogen receptor positive breast cancer, Stage I",
+      "stage": "Stage I",
+      "biomarker": "ER+",
+      "code": "254837009",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2025-04-28T11:18:17.644442"
+    },
+    "procedures": [
+      {
+        "name": "Sentinel lymph node biopsy",
+        "code": "396487001",
+        "date": "2025-09-26T11:18:17.644451"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Paclitaxel",
+        "code": "386914001",
+        "status": "active"
+      },
+      {
+        "name": "Tamoxifen",
+        "code": "373345002",
+        "status": "active"
+      },
+      {
+        "name": "Paclitaxel",
+        "code": "386914001",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 0,
+    "total_conditions": 1,
+    "medication_count": 3
+  },
+  {
+    "id": "patient-e54e3737-d90b-4494-8a3f-b72d4737a2f4",
+    "name": "Mary Smith",
+    "age": 61,
+    "gender": "female",
+    "birth_date": "1965-11-16",
+    "location": {
+      "city": "San Francisco",
+      "state": "California",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of lung",
+      "subtype": "Non-small cell lung cancer, Stage IIIA",
+      "stage": "Stage IIIA",
+      "biomarker": "PD-L1 high",
+      "code": "363358000",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2023-05-14T11:18:17.647671"
+    },
+    "procedures": [
+      {
+        "name": "Bronchoscopy",
+        "code": "10847001",
+        "date": "2024-12-07T11:18:17.647679"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Osimertinib",
+        "code": "703644004",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-a7a12ccb-aea5-48f1-9b21-4a948beb3442",
+    "name": "Ashley Smith",
+    "age": 50,
+    "gender": "female",
+    "birth_date": "1976-10-26",
+    "location": {
+      "city": "San Diego",
+      "state": "California",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of ovary",
+      "subtype": "Serous adenocarcinoma of ovary, Stage IIIB",
+      "stage": "Stage IIIB",
+      "biomarker": "BRCA1 mutation",
+      "code": "363443007",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2023-08-11T11:18:17.674928"
+    },
+    "procedures": [
+      {
+        "name": "Total abdominal hysterectomy",
+        "code": "116140006",
+        "date": "2024-10-06T11:18:17.674936"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Paclitaxel",
+        "code": "386914001",
+        "status": "active"
+      },
+      {
+        "name": "Olaparib",
+        "code": "703799003",
+        "status": "active"
+      },
+      {
+        "name": "Olaparib",
+        "code": "703799003",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 0,
+    "total_conditions": 1,
+    "medication_count": 3
+  },
+  {
+    "id": "patient-96de7a59-e51b-492f-a92e-5113e5e7507b",
+    "name": "James Allen",
+    "age": 69,
+    "gender": "male",
+    "birth_date": "1957-04-28",
+    "location": {
+      "city": "Houston",
+      "state": "Texas",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of colon",
+      "subtype": "Adenocarcinoma of rectum, Stage IIB",
+      "stage": "Stage IIB",
+      "biomarker": "KRAS mutation",
+      "code": "363406005",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2024-11-16T11:18:17.655510"
+    },
+    "procedures": [
+      {
+        "name": "Low anterior resection",
+        "code": "81568003",
+        "date": "2024-10-06T11:18:17.655519"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Capecitabine",
+        "code": "386906001",
+        "status": "active"
+      },
+      {
+        "name": "Capecitabine",
+        "code": "386906001",
+        "status": "active"
+      },
+      {
+        "name": "Bevacizumab",
+        "code": "386905002",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 1,
+    "total_conditions": 1,
+    "medication_count": 3
+  },
+  {
+    "id": "patient-5662a762-d2ab-4f2b-9319-caab3c3dc5ee",
+    "name": "Anthony Davis",
+    "age": 41,
+    "gender": "male",
+    "birth_date": "1985-10-07",
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of prostate",
+      "subtype": "Adenocarcinoma of prostate, Stage IIA",
+      "stage": "Stage IIA",
+      "biomarker": "Gleason score 8",
+      "code": "399068003",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2025-04-15T11:18:17.661393"
+    },
+    "procedures": [
+      {
+        "name": "Radical prostatectomy",
+        "code": "176258007",
+        "date": "2025-04-21T11:18:17.661407"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Enzalutamide",
+        "code": "703799006",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-4bb15a7a-4eb5-4786-bdbd-6ad7d6374c86",
+    "name": "Melissa White",
+    "age": 42,
+    "gender": "female",
+    "birth_date": "1984-11-18",
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of lung",
+      "subtype": "Non-small cell lung cancer, Stage IV",
+      "stage": "Stage IV",
+      "biomarker": "KRAS mutation",
+      "code": "363358000",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2024-08-31T11:18:17.649272"
+    },
+    "procedures": [
+      {
+        "name": "Pneumonectomy",
+        "code": "48178009",
+        "date": "2025-08-03T11:18:17.649280"
+      },
+      {
+        "name": "Lobectomy",
+        "code": "173170005",
+        "date": "2025-01-06T11:18:17.649284"
+      },
+      {
+        "name": "Pneumonectomy",
+        "code": "48178009",
+        "date": "2025-05-07T11:18:17.649289"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Carboplatin",
+        "code": "386906001",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 0,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-352ffe4d-6be8-4ed7-80c8-5db34cc57e27",
+    "name": "Daniel Young",
+    "age": 83,
+    "gender": "male",
+    "birth_date": "1943-08-25",
+    "location": {
+      "city": "Boston",
+      "state": "Massachusetts",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Acute myeloid leukemia",
+      "subtype": "Acute myeloid leukemia, Relapsed",
+      "stage": "Relapsed",
+      "biomarker": "Philadelphia chromosome positive",
+      "code": "91861009",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2024-02-17T11:18:17.669749"
+    },
+    "procedures": [
+      {
+        "name": "Lumbar puncture",
+        "code": "277762005",
+        "date": "2025-12-14T11:18:17.669757"
+      },
+      {
+        "name": "Bone marrow biopsy",
+        "code": "127785005",
+        "date": "2024-09-08T11:18:17.669761"
+      },
+      {
+        "name": "Bone marrow biopsy",
+        "code": "127785005",
+        "date": "2025-05-08T11:18:17.669765"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Cytarabine",
+        "code": "387334007",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 1,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-da733519-25c6-46bf-bae8-bdd9caf13342",
+    "name": "Michelle Smith",
+    "age": 84,
+    "gender": "male",
+    "birth_date": "1942-05-06",
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of lung",
+      "subtype": "Non-small cell lung cancer, Stage IIB",
+      "stage": "Stage IIB",
+      "biomarker": "PD-L1 high",
+      "code": "363358000",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2024-03-02T11:18:17.650815"
+    },
+    "procedures": [
+      {
+        "name": "Bronchoscopy",
+        "code": "10847001",
+        "date": "2025-10-14T11:18:17.650823"
+      },
+      {
+        "name": "Pneumonectomy",
+        "code": "48178009",
+        "date": "2025-03-10T11:18:17.650827"
+      },
+      {
+        "name": "Pneumonectomy",
+        "code": "48178009",
+        "date": "2024-12-11T11:18:17.650831"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Pembrolizumab",
+        "code": "703800009",
+        "status": "active"
+      },
+      {
+        "name": "Osimertinib",
+        "code": "703644004",
+        "status": "active"
+      },
+      {
+        "name": "Carboplatin",
+        "code": "386906001",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 0,
+    "total_conditions": 1,
+    "medication_count": 3
+  },
+  {
+    "id": "patient-a27637ea-63f9-4333-a542-2e40b0014ece",
+    "name": "Michael Campbell",
+    "age": 61,
+    "gender": "female",
+    "birth_date": "1965-06-19",
+    "location": {
+      "city": "Los Angeles",
+      "state": "California",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of breast",
+      "subtype": "HER2-positive breast cancer, Stage I",
+      "stage": "Stage I",
+      "biomarker": "Triple-negative",
+      "code": "254837009",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2023-02-10T11:18:17.645736"
+    },
+    "procedures": [
+      {
+        "name": "Sentinel lymph node biopsy",
+        "code": "396487001",
+        "date": "2025-06-28T11:18:17.645744"
+      },
+      {
+        "name": "Mastectomy",
+        "code": "172043006",
+        "date": "2025-04-01T11:18:17.645748"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Trastuzumab",
+        "code": "386954007",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 2,
+    "total_conditions": 1,
+    "medication_count": 1
+  },
+  {
+    "id": "patient-75bc0ccd-9495-4c48-91e8-26a0bc55442d",
+    "name": "David Anderson",
+    "age": 62,
+    "gender": "male",
+    "birth_date": "1964-03-09",
+    "location": {
+      "city": "Dallas",
+      "state": "Texas",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant melanoma",
+      "subtype": "Nodular melanoma, Stage IIA",
+      "stage": "Stage IIA",
+      "biomarker": "NRAS mutation",
+      "code": "372244006",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2024-11-24T11:18:17.652085"
+    },
+    "procedures": [
+      {
+        "name": "Sentinel lymph node biopsy",
+        "code": "396487001",
+        "date": "2024-10-12T11:18:17.652093"
+      },
+      {
+        "name": "Wide local excision",
+        "code": "64368001",
+        "date": "2025-04-05T11:18:17.652098"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Dabrafenib",
+        "code": "703647006",
+        "status": "active"
+      },
+      {
+        "name": "Dabrafenib",
+        "code": "703647006",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 1,
+    "total_conditions": 1,
+    "medication_count": 2
+  },
+  {
+    "id": "patient-38e59afc-5c59-4d61-8bda-6d311b666f71",
+    "name": "Robert Perez",
+    "age": 46,
+    "gender": "male",
+    "birth_date": "1980-04-18",
+    "location": {
+      "city": "Los Angeles",
+      "state": "California",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of pancreas",
+      "subtype": "Adenocarcinoma of pancreas, Stage IIA",
+      "stage": "Stage IIA",
+      "biomarker": "CA 19-9 elevated",
+      "code": "363418001",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "recurrence",
+      "diagnosis_date": "2023-09-11T11:18:17.666236"
+    },
+    "procedures": [
+      {
+        "name": "Distal pancreatectomy",
+        "code": "16636001",
+        "date": "2024-11-01T11:18:17.666245"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Gemcitabine",
+        "code": "387361005",
+        "status": "active"
+      },
+      {
+        "name": "Erlotinib",
+        "code": "414460008",
+        "status": "active"
+      },
+      {
+        "name": "Irinotecan",
+        "code": "387218008",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 0,
+    "total_conditions": 1,
+    "medication_count": 3
+  },
+  {
+    "id": "patient-e2fce10f-c1e9-4692-9e8d-298edc1df6ae",
+    "name": "Melissa King",
+    "age": 63,
+    "gender": "female",
+    "birth_date": "1963-03-21",
+    "location": {
+      "city": "Houston",
+      "state": "Texas",
+      "country": "US"
+    },
+    "cancer_diagnosis": {
+      "name": "Malignant neoplasm of colon",
+      "subtype": "Adenocarcinoma of colon, Stage IV",
+      "stage": "Stage IV",
+      "biomarker": "MSI-high",
+      "code": "363406005",
+      "system": "http://snomed.info/sct",
+      "clinical_status": "active",
+      "diagnosis_date": "2023-02-16T11:18:17.657743"
+    },
+    "procedures": [
+      {
+        "name": "Colonoscopy",
+        "code": "73761001",
+        "date": "2024-11-17T11:18:17.657753"
+      },
+      {
+        "name": "Colectomy",
+        "code": "26390003",
+        "date": "2024-10-04T11:18:17.657757"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Capecitabine",
+        "code": "386906001",
+        "status": "active"
+      },
+      {
+        "name": "Bevacizumab",
+        "code": "386905002",
+        "status": "active"
+      },
+      {
+        "name": "Bevacizumab",
+        "code": "386905002",
+        "status": "active"
+      }
+    ],
+    "ecog_score": 1,
+    "total_conditions": 1,
+    "medication_count": 3
+  }
+]

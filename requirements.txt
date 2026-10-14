@@ -1,0 +1,36 @@
+# Core AI/ML
+google-generativeai==0.8.3
+langchain-google-genai==2.0.6
+langchain==0.3.13
+langchain-community==0.3.13
+langgraph==0.2.53
+
+# MCP
+mcp==1.2.0
+
+# Vector Database & Embeddings
+chromadb==0.5.23
+sentence-transformers==3.3.1
+
+# Data Processing
+pandas==2.2.3
+numpy==1.26.4
+python-dotenv==1.0.1
+
+# API & Web
+requests==2.32.3
+fastapi==0.115.6
+uvicorn==0.34.0
+httpx==0.28.1
+
+# Medical Data
+fhir.resources==7.1.0
+
+# Utilities
+pydantic==2.10.3
+tqdm==4.67.1
+pytest==8.3.4
+dotenv
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6

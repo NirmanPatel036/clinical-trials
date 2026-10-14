@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Orvant — Visual &amp; Component Kit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&amp;family=Hanken+Grotesk:wght@200;300;400&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'PolySans Neutral';src:local('PolySans Neutral'),local('PolySans-Neutral'),url('fonts/PolySans-Neutral.woff2') format('woff2');font-weight:400 600;font-display:swap}
+@font-face{font-family:'PolySans Slim';src:local('PolySans Slim'),local('PolySans-Slim'),url('fonts/PolySans-Slim.woff2') format('woff2');font-weight:200 400;font-display:swap}
+html,body{margin:0;background:#F7F6F2;color:#142237;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#0045FD;text-decoration:none}a:hover{color:#142237;text-decoration:underline}
+mark{background:#FBE3D0;color:#142237;padding:0 2px;border-radius:3px}
+</style>
+</helmet>
+
+<div style="font-family:'PolySans Neutral','Instrument Sans',system-ui,sans-serif;font-size:15px;line-height:1.5;color:#142237;background:#F7F6F2;min-height:100vh">
+
+<!-- COVER -->
+<header data-screen-label="00 Cover" style="position:relative;overflow:hidden;min-height:620px;display:flex;flex-direction:column;justify-content:space-between;padding:32px 48px 48px;background:#F7F6F2">
+  <div style="position:absolute;width:900px;height:900px;right:-260px;top:-420px;border-radius:50%;background:radial-gradient(circle,rgba(244,170,120,.85),rgba(244,170,120,0) 62%);filter:blur(30px)"></div>
+  <div style="position:absolute;width:1100px;height:1100px;left:-380px;bottom:-760px;border-radius:50%;background:radial-gradient(circle,rgba(0,69,253,.55),rgba(0,69,253,0) 62%);filter:blur(30px)"></div>
+  <div style="position:absolute;left:50%;bottom:-560px;width:1120px;height:1120px;margin-left:-560px;border-radius:50%;border:1px solid rgba(20,34,55,.10)"></div>
+  <div style="position:absolute;left:50%;bottom:-460px;width:920px;height:920px;margin-left:-460px;border-radius:50%;border:1px solid rgba(20,34,55,.10)"></div>
+  <div style="position:absolute;left:50%;bottom:-360px;width:720px;height:720px;margin-left:-360px;border-radius:50%;border:1px solid rgba(20,34,55,.12)"></div>
+  <div style="position:absolute;inset:0;background-image:url(assets/grain.svg);opacity:.28;mix-blend-mode:multiply;pointer-events:none"></div>
+  <div style="position:relative;display:flex;justify-content:space-between;align-items:center;gap:24px">
+    <img src="assets/orvant-wordmark.png" alt="orvant" style="height:30px;width:auto;display:block">
+    <div style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12px;letter-spacing:.04em;color:#4B5568;display:flex;gap:24px;flex-wrap:wrap"><span>VISUAL + COMPONENT KIT</span><span>v1.0 · OCT 2026</span></div>
+  </div>
+  <div style="position:relative;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:48px;align-items:end">
+    <div>
+      <div style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12px;letter-spacing:.08em;color:#0045FD;margin-bottom:20px">ONE SYSTEM · LANDING · ENTRY · DISCOVERY · MATCHING · DASHBOARD</div>
+      <h1 style="margin:0;font-weight:400;font-size:88px;line-height:.98;letter-spacing:-.035em;text-wrap:balance">Every trial,<br><span style="font-family:'PolySans Slim','Hanken Grotesk',sans-serif;font-weight:300;color:#0045FD">every reason.</span></h1>
+    </div>
+    <p style="margin:0;max-width:420px;font-size:17px;color:#4B5568;text-wrap:pretty">The asterisk is our footnote: it marks the thing that needs a second look. The whole kit grows out of it — dawn fields, criteria strata, evidence orbits and a registry ledger — so every screen reads as one careful product.</p>
+  </div>
+  <img data-spin="90" src="assets/orvant-mark.png" alt="" style="position:absolute;left:50%;bottom:-120px;width:240px;margin-left:-120px;opacity:.95">
+</header>
+
+<main style="max-width:1280px;margin:0 auto;padding:0 48px 120px">
+
+<!-- 01 BRAND -->
+<section data-screen-label="01 Brand" style="padding-top:96px">
+  <div style="display:grid;grid-template-columns:120px minmax(0,1fr);gap:24px;align-items:baseline;border-top:1px solid #E3E0D7;padding-top:20px;margin-bottom:40px">
+    <div style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12px;color:#7A8293">01</div>
+    <div><h2 style="margin:0;font-weight:400;font-size:44px;letter-spacing:-.025em">Brand foundations</h2><p style="margin:8px 0 0;color:#4B5568;max-width:620px">The supplied lockup, split into wordmark and standalone mark, with light and tinted variants for dark and warm grounds.</p></div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px">
+    <div style="grid-column:span 2;background:#FFFFFF;border:1px solid #E3E0D7;border-radius:24px;aspect-ratio:2/1;display:flex;align-items:center;justify-content:center;position:relative">
+      <img src="assets/orvant-wordmark.png" alt="orvant" style="width:56%;height:auto">
+      <span style="position:absolute;left:20px;bottom:16px;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11px;color:#7A8293">orvant-wordmark.png · primary</span>
+    </div>
+    <div style="grid-column:span 2;background:#0B1424;border-radius:24px;aspect-ratio:2/1;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden">
+      <div style="position:absolute;width:520px;height:520px;left:-120px;top:-260px;border-radius:50%;background:radial-gradient(circle,rgba(0,69,253,.6),rgba(0,69,253,0) 62%)"></div>
+      <img src="assets/orvant-wordmark-light.png" alt="orvant" style="position:relative;width:56%;height:auto">
+      <span style="position:absolute;left:20px;bottom:16px;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11px;color:#9AA3B5">orvant-wordmark-light.png · on night</span>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #E3E0D7;border-radius:24px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;position:relative">
+      <div style="position:absolute;width:62%;aspect-ratio:1;border:1px dashed #C9C5BA;border-radius:8px"></div>
+      <img src="assets/orvant-mark.png" alt="" style="width:40%;position:relative">
+      <span style="position:absolute;left:16px;bottom:14px;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11px;color:#7A8293">mark · clearspace = ½ petal</span>
+    </div>
+    <div style="background:#0045FD;border-radius:24px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;position:relative">
+      <img src="assets/orvant-mark-light.png" alt="" style="width:40%">
+      <span style="position:absolute;left:16px;bottom:14px;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11px;color:#DCE5FF">mark-light · app icon</span>
+    </div>
+    <div style="background:#FBE3D0;border-radius:24px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;position:relative">
+      <img src="assets/orvant-mark-ink.png" alt="" style="width:40%">
+      <span style="position:absolute;left:16px;bottom:14px;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11px;color:#7A4A2A">mark-ink · on apricot</span>
+    </div>
+    <div style="background:#F7F6F2;border:1px solid #E3E0D7;border-radius:24px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden">
+      <img src="assets/orvant-mark-apricot.png" alt="" style="position:absolute;width:30%;left:12%;top:14%;opacity:.9">
+      <img src="assets/orvant-mark.png" alt="" style="position:absolute;width:18%;right:18%;top:40%">
+      <img src="assets/orvant-mark-ink.png" alt="" style="position:absolute;width:9%;left:40%;bottom:18%;opacity:.25">
+      <span style="position:absolute;left:16px;bottom:14px;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11px;color:#7A8293">asterism · motif use</span>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:16px;margin-top:16px">
+    <div style="background:#FFFFFF;border:1px solid #E3E0D7;border-radius:24px;padding:28px">
+      <div style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.06em;color:#7A8293;margin-bottom:18px">COLOUR</div>
+      <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px">
+        <div><div style="aspect-ratio:1;border-radius:14px;background:#0045FD"></div><div style="font-size:13px;margin-top:8px">Signal blue</div><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7A8293">#0045FD</div></div>
+        <div><div style="aspect-ratio:1;border-radius:14px;background:#142237"></div><div style="font-size:13px;margin-top:8px">Ink</div><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7A8293">#142237</div></div>
+        <div><div style="aspect-ratio:1;border-radius:14px;background:#F4AA78"></div><div style="font-size:13px;margin-top:8px">Dawn apricot</div><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7A8293">#F4AA78</div></div>
+        <div><div style="aspect-ratio:1;border-radius:14px;background:#F7F6F2;border:1px solid #E3E0D7"></div><div style="font-size:13px;margin-top:8px">Paper</div><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7A8293">#F7F6F2</div></div>
+        <div><div style="aspect-ratio:1;border-radius:14px;background:#0B1424"></div><div style="font-size:13px;margin-top:8px">Night</div><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7A8293">#0B1424</div></div>
+      </div>
+      <div style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.06em;color:#7A8293;margin:26px 0 12px">FINDING STATES · equal lightness &amp; chroma, hue varies</div>
+      <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px">
+        <sc-for list="{{ statuses }}" as="s" hint-placeholder-count="4">
+          <div style="border-radius:14px;background:{{ s.bg }};padding:12px 14px">
+            <div style="display:flex;align-items:center;gap:8px;color:{{ s.fg }};font-size:14px;font-weight:500"><span style="width:8px;height:8px;border-radius:50%;background:{{ s.fg }}"></span>{{ s.label }}</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#4B5568;margin-top:4px">{{ s.hex }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #E3E0D7;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:18px">
+      <div style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.06em;color:#7A8293">TYPE · PolySans Neutral + PolySans Slim · Plex Mono for registry data</div>
+      <div style="font-size:56px;line-height:1;letter-spacing:-.03em">Find the trial.<br><span style="font-family:'PolySans Slim','Hanken Grotesk',sans-serif;font-weight:300;color:#0045FD">See every reason.</span></div>
+      <div style="display:grid;grid-template-columns:110px minmax(0,1fr);gap:10px 16px;font-size:13px;color:#4B5568;border-top:1px solid #EEECE5;padding-top:16px">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7A8293">Display 64–96</span><span style="color:#142237">Neutral 400, −3.5% tracking. Second line in Slim 300, blue.</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7A8293">Title 24–44</span><span style="color:#142237">Neutral 400, −2.5%.</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7A8293">Body 15–17</span><span style="color:#142237">Neutral 400, 1.5 line height.</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7A8293">Marginalia 14</span><span style="font-family:'PolySans Slim','Hanken Grotesk',sans-serif;font-weight:300;font-style:italic;color:#0045FD">every line, cited</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7A8293">Data 11–13</span><span style="font-family:'IBM Plex Mono',monospace;color:#142237">NCT06551220:inclusion_criteria:2</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 ARTWORK -->
+<section data-screen-label="02 Artwork" style="padding-top:112px">
+  <div style="display:grid;grid-template-columns:120px minmax(0,1fr);gap:24px;align-items:baseline;border-top:1px solid #E3E0D7;padding-top:20px;margin-bottom:40px">
+    <div style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12px;color:#7A8293">02</div>
+    <div><h2 style="margin:0;font-weight:400;font-size:44px;letter-spacing:-.025em">Editorial artwork</h2><p style="margin:8px 0 0;color:#4B5568;max-width:640px">Six grounds, one grammar: grain, soft light, hairline geometry and the mark. No pills, helixes or stethoscopes — the art depicts what the product does: reading criteria, weighing evidence, fusing rankings.</p></div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px">
+    <!-- A Dawn -->
+    <figure style="margin:0">
+      <div style="position:relative;aspect-ratio:4/3;border-radius:24px;overflow:hidden;background:#F7F6F2;border:1px solid #E3E0D7">
+        <div style="position:absolute;width:120%;aspect-ratio:1;left:-10%;top:-75%;border-radius:50%;background:radial-gradient(circle,rgba(244,170,120,.9),rgba(244,170,120,0) 60%);filter:blur(20px)"></div>
+        <div style="position:absolute;width:110%;aspect-ratio:1;left:-5%;top:58%;border-radius:50%;background:radial-gradient(circle,rgba(0,69,253,.55),rgba(0,69,253,0) 60%);filter:blur(20px)"></div>
+        <div style="position:absolute;left:50%;top:78%;width:110%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;border:1px solid rgba(20,34,55,.12)"></div>
+        <div style="position:absolute;left:50%;top:78%;width:80%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;border:1px solid rgba(20,34,55,.12)"></div>
+        <div style="position:absolute;left:50%;top:78%;width:50%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;border:1px solid rgba(20,34,55,.14)"></div>
+        <img data-spin="70" src="assets/orvant-mark.png" alt="" style="position:absolute;left:50%;top:78%;width:20%;margin-left:-10%;margin-top:-10%">
+        <div style="position:absolute;inset:0;background-image:url(assets/grain.svg);opacity:.3;mix-blend-mode:multiply"></div>
+      </div>
+      <figcaption style="display:flex;justify-content:space-between;gap:12px;padding:12px 4px 0;font-size:14px"><span>A · Dawn field</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7A8293">Landing hero, closing CTA</span></figcaption>
+    </figure>
+    <!-- B Threshold -->
+    <figure style="margin:0">
+      <div style="position:relative;aspect-ratio:4/3;border-radius:24px;overflow:hidden;background:#0B1424">
+        <div style="position:absolute;width:110%;aspect-ratio:1;left:-55%;top:-10%;border-radius:50%;background:radial-gradient(circle,rgba(0,69,253,.85),rgba(0,69,253,0) 60%);filter:blur(16px)"></div>
+        <div style="position:absolute;width:70%;aspect-ratio:1;right:-30%;bottom:-40%;border-radius:50%;background:radial-gradient(circle,rgba(244,170,120,.55),rgba(244,170,120,0) 60%);filter:blur(16px)"></div>
+        <img data-spin="-120" src="assets/orvant-mark-light.png" alt="" style="position:absolute;width:78%;left:-18%;top:22%;opacity:.12">
+        <div style="position:absolute;left:12%;top:18%;bottom:18%;width:1px;background:linear-gradient(rgba(247,246,242,0),rgba(247,246,242,.4),rgba(247,246,242,0))"></div>
+        <div style="position:absolute;right:10%;top:50%;transform:translateY(-50%);width:44%;background:rgba(247,246,242,.08);border:1px solid rgba(247,246,242,.16);border-radius:16px;padding:14px;backdrop-filter:blur(8px)">
+          <div style="height:6px;width:50%;background:rgba(247,246,242,.5);border-radius:3px"></div>
+          <div style="height:22px;margin-top:12px;border-radius:8px;background:rgba(247,246,242,.12)"></div>
+          <div style="height:22px;margin-top:6px;border-radius:8px;background:rgba(247,246,242,.12)"></div>
+          <div style="height:22px;margin-top:12px;border-radius:999px;background:#F7F6F2"></div>
+        </div>
+        <div style="position:absolute;inset:0;background-image:url(assets/grain.svg);opacity:.35;mix-blend-mode:screen"></div>
+      </div>
+      <figcaption style="display:flex;justify-content:space-between;gap:12px;padding:12px 4px 0;font-size:14px"><span>B · Threshold</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7A8293">Entry / identity, access denied</span></figcaption>
+    </figure>
+    <!-- C Strata -->
+    <figure style="margin:0">
+      <div style="position:relative;aspect-ratio:4/3;border-radius:24px;overflow:hidden;background:#FFFFFF;border:1px solid #E3E0D7;padding:9% 10%;display:flex;flex-direction:column;justify-content:center;gap:10px">
+        <div style="position:absolute;width:90%;aspect-ratio:1;right:-40%;top:-40%;border-radius:50%;background:radial-gradient(circle,rgba(244,170,120,.45),rgba(244,170,120,0) 60%)"></div>
+        <sc-for list="{{ strata }}" as="r" hint-placeholder-count="8">
+          <div style="position:relative;display:flex;align-items:center;gap:6px">
+            <span style="width:7px;height:7px;border-radius:50%;flex:none;background:{{ r.dot }}"></span>
+            <span style="height:7px;border-radius:4px;background:#E3E0D7;width:{{ r.a }}"></span>
+            <span style="height:7px;border-radius:4px;background:{{ r.hl }};width:{{ r.b }}"></span>
+            <span style="height:7px;border-radius:4px;background:#E3E0D7;width:{{ r.c }}"></span>
+          </div>
+        </sc-for>
+        <div data-scan="1" style="position:absolute;left:0;right:0;top:30%;height:44px;background:linear-gradient(rgba(0,69,253,0),rgba(0,69,253,.10),rgba(0,69,253,0));border-bottom:1px solid rgba(0,69,253,.35)"></div>
+      </div>
+      <figcaption style="display:flex;justify-content:space-between;gap:12px;padding:12px 4px 0;font-size:14px"><span>C · Criteria strata</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7A8293">Discovery, criterion review</span></figcaption>
+    </figure>
+    <!-- D Orbit -->
+    <figure style="margin:0">
+      <div style="position:relative;aspect-ratio:4/3;border-radius:24px;overflow:hidden;background:#EEECE5">
+        <div style="position:absolute;width:90%;aspect-ratio:1;left:5%;top:-5%;border-radius:50%;background:radial-gradient(circle,rgba(0,69,253,.22),rgba(0,69,253,0) 60%)"></div>
+        <div data-spin="160" style="position:absolute;left:50%;top:50%;width:76%;aspect-ratio:1;transform:translate(-50%,-50%)">
+          <div style="position:absolute;inset:0;border-radius:50%;border:1px solid rgba(20,34,55,.16)"></div>
+          <div style="position:absolute;inset:17%;border-radius:50%;border:1px dashed rgba(20,34,55,.22)"></div>
+          <div style="position:absolute;inset:34%;border-radius:50%;border:1px solid rgba(20,34,55,.16)"></div>
+          <sc-for list="{{ orbit }}" as="o" hint-placeholder-count="7">
+            <span style="position:absolute;left:{{ o.x }};top:{{ o.y }};width:{{ o.s }};height:{{ o.s }};margin:-6px 0 0 -6px;border-radius:50%;background:{{ o.c }};box-shadow:0 0 0 4px rgba(238,236,229,1)"></span>
+          </sc-for>
+        </div>
+        <div style="position:absolute;left:50%;top:50%;width:15%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:#142237;display:flex;align-items:center;justify-content:center"><img src="assets/orvant-mark-light.png" alt="" style="width:46%"></div>
+        <div style="position:absolute;inset:0;background-image:url(assets/grain.svg);opacity:.25;mix-blend-mode:multiply"></div>
+      </div>
+      <figcaption style="display:flex;justify-content:space-between;gap:12px;padding:12px 4px 0;font-size:14px"><span>D · Evidence orbit</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7A8293">Patient match, results</span></figcaption>
+    </figure>
+    <!-- E Halftone -->
+    <figure style="margin:0">
+      <div style="position:relative;aspect-ratio:4/3;border-radius:24px;overflow:hidden;background:#F7F6F2;border:1px solid #E3E0D7">
+        <div style="position:absolute;inset:0;background-image:radial-gradient(circle,#0045FD 1.3px,rgba(0,0,0,0) 1.7px);background-size:11px 11px;-webkit-mask-image:radial-gradient(circle at 62% 56%,#000 0,rgba(0,0,0,.5) 26%,rgba(0,0,0,0) 46%);mask-image:radial-gradient(circle at 62% 56%,#000 0,rgba(0,0,0,.5) 26%,rgba(0,0,0,0) 46%)"></div>
+        <div style="position:absolute;inset:0;background-image:radial-gradient(circle,#F4AA78 2px,rgba(0,0,0,0) 2.4px);background-size:11px 11px;background-position:5px 5px;-webkit-mask-image:radial-gradient(circle at 34% 38%,#000 0,rgba(0,0,0,0) 30%);mask-image:radial-gradient(circle at 34% 38%,#000 0,rgba(0,0,0,0) 30%)"></div>
+        <div style="position:absolute;left:8%;bottom:10%;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#4B5568;line-height:1.6">dense ●<br>bm25 ●<br>→ rrf</div>
+      </div>
+      <figcaption style="display:flex;justify-content:space-between;gap:12px;padding:12px 4px 0;font-size:14px"><span>E · Fused halftone</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7A8293">Retrieval trace, evaluation</span></figcaption>
+    </figure>
+    <!-- F Ledger -->
+    <figure style="margin:0">
+      <div style="position:relative;aspect-ratio:4/3;border-radius:24px;overflow:hidden;background:#0B1424;padding:9%;display:flex;align-items:center">
+        <div style="position:absolute;width:90%;aspect-ratio:1;right:-30%;bottom:-50%;border-radius:50%;background:radial-gradient(circle,rgba(0,69,253,.6),rgba(0,69,253,0) 60%)"></div>
+        <div style="position:relative;width:100%;display:grid;grid-template-columns:repeat(16,minmax(0,1fr));gap:4px">
+          <sc-for list="{{ ledger }}" as="t" hint-placeholder-count="96">
+            <span style="aspect-ratio:1;border-radius:2px;background:{{ t }}"></span>
+          </sc-for>
+        </div>
+      </div>
+      <figcaption style="display:flex;justify-content:space-between;gap:12px;padding:12px 4px 0;font-size:14px"><span>F · Registry ledger</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7A8293">System, provenance, dashboard</span></figcaption>
+    </figure>
+  </div>
+
+  <!-- Section graphics -->
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin-top:16px">
+    <div style="background:#FFFFFF;border:1px solid #E3E0D7;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:20px">
+      <div style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.06em;color:#7A8293">SECTION GRAPHICS</div>
+      <div style="display:flex;align-items:center;gap:14px">
+        <img src="assets/orvant-mark.png" alt="" style="width:18px">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;color:#0045FD">02 — HOW A QUERY BECOMES EVIDENCE</span>
+        <span style="flex:1;height:1px;background:#E3E0D7"></span>
+      </div>
+      <div style="position:relative;height:72px;overflow:hidden">
+        <div style="position:absolute;left:50%;top:0;width:520px;height:520px;margin-left:-260px;border-radius:50%;border:1px solid #E3E0D7"></div>
+        <div style="position:absolute;left:50%;top:24px;width:420px;height:420px;margin-left:-210px;border-radius:50%;border:1px solid #E3E0D7"></div>
+        <div style="position:absolute;left:50%;top:48px;width:320px;height:320px;margin-left:-160px;border-radius:50%;border:1px solid #D6D2C6"></div>
+        <img src="assets/orvant-mark.png" alt="" style="position:absolute;left:50%;top:-11px;width:22px;margin-left:-11px">
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7A8293">Eyebrow rule · Dawn-arc divider between major sections</div>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #E3E0D7;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:20px">
+      <div style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.06em;color:#7A8293">MARGINALIA · annotate the art, never the data</div>
+      <div style="display:flex;gap:48px;align-items:flex-end;flex-wrap:wrap">
+        <div style="display:flex;flex-direction:column;align-items:flex-start;gap:4px">
+          <svg width="56" height="36" viewBox="0 0 56 36" fill="none"><path d="M4 4C18 6 34 14 46 30" stroke="#0045FD" stroke-width="1.2" stroke-linecap="round"></path><path d="M38 28l8 2 1-8" stroke="#0045FD" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          <span style="font-family:'PolySans Slim','Hanken Grotesk',sans-serif;font-weight:300;font-style:italic;font-size:17px;color:#0045FD">every line, cited</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:flex-start;gap:4px">
+          <svg width="56" height="36" viewBox="0 0 56 36" fill="none"><path d="M52 4C36 4 16 12 8 30" stroke="#142237" stroke-width="1.2" stroke-linecap="round"></path><path d="M6 21l2 9 8-3" stroke="#142237" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          <span style="font-family:'PolySans Slim','Hanken Grotesk',sans-serif;font-weight:300;font-style:italic;font-size:17px;color:#142237">unknown is never a yes</span>
+        </div>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7A8293">Slim italic + hairline arrow · landing &amp; empty states only</div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 ICONS -->
+<section data-screen-label="03 Icons" style="padding-top:112px">
+  <div style="display:grid;grid-template-columns:120px minmax(0,1fr);gap:24px;align-items:baseline;border-top:1px solid #E3E0D7;padding-top:20px;margin-bottom:40px">
+    <div style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12px;color:#7A8293">03</div>
+    <div><h2 style="margin:0;font-weight:400;font-size:44px;letter-spacing:-.025em">Icons</h2><p style="margin:8px 0 0;color:#4B5568;max-width:620px">24 grid, 1.6 stroke, round caps. One icon per workbench panel and action. The Answer icon is the mark's skeleton.</p></div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:12px">
+    <sc-for list="{{ icons }}" as="ic" hint-placeholder-count="16">
+      <div style="background:#FFFFFF;border:1px solid #E3E0D7;border-radius:18px;aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px" style-hover="border-color:#0045FD;color:#0045FD">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="{{ ic.d }}"></path></svg>
+        <span style="font-size:12px;color:#4B5568">{{ ic.name }}</span>
+      </div>
+    </sc-for>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:12px">
+    <sc-for list="{{ statuses }}" as="s" hint-placeholder-count="4">
+      <div style="background:#FFFFFF;border:1px solid #E3E0D7;border-radius:18px;padding:16px;display:flex;align-items:center;gap:14px">
+        <span style="width:32px;height:32px;border-radius:50%;background:{{ s.bg }};color:{{ s.fg }};display:flex;align-items:center;justify-content:center;flex:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="{{ s.d }}"></path></svg></span>
+        <div><div style="font-size:14px">{{ s.label }}</div><div style="font-size:12px;color:#7A8293;line-height:1.35">{{ s.meaning }}</div></div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<!-- 04 CONTROLS -->
+<section data-screen-label="04 Controls" style="padding-top:112px">
+  <div style="display:grid;grid-template-columns:120px minmax(0,1fr);gap:24px;align-items:baseline;border-top:1px solid #E3E0D7;padding-top:20px;margin-bottom:40px">
+    <div style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12px;color:#7A8293">04</div>
+    <div><h2 style="margin:0;font-weight:400;font-size:44px;letter-spacing:-.025em">Controls</h2><p style="margin:8px 0 0;color:#4B5568;max-width:620px">Pills for actions, soft squares for filters. Blue is reserved for the one action that moves the work forward.</p></div>
+  </div>
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px">
+    <div style="background:#FFFFFF;border:1px solid #E3E0D7;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:22px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;color:#7A8293">BUTTONS</div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center">
+        <button style="font:inherit;font-size:15px;border:0;border-radius:999px;padding:12px 22px;background:#0045FD;color:#FFFFFF;cursor:pointer;display:flex;align-items:center;gap:8px" style-hover="background:#0036C8">Search trials<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+        <button style="font:inherit;font-size:15px;border:0;border-radius:999px;padding:12px 22px;background:#142237;color:#F7F6F2;cursor:pointer" style-hover="background:#24344D">Match a patient</button>
+        <button style="font:inherit;font-size:15px;border:1px solid #D6D2C6;border-radius:999px;padding:11px 21px;background:#FFFFFF;color:#142237;cursor:pointer" style-hover="border-color:#142237">How scoring works</button>
+        <button style="font:inherit;font-size:15px;border:0;border-radius:999px;padding:12px 14px;background:transparent;color:#0045FD;cursor:pointer;display:flex;align-items:center;gap:6px" style-hover="background:#E3E9FF">ClinicalTrials.gov<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path></svg></button>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center">
+        <button style="font:inherit;font-size:13px;border:1px solid #D6D2C6;border-radius:999px;padding:7px 14px;background:#FFFFFF;color:#142237;display:flex;gap:6px;align-items:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7.5 10.5L12 15l4.5-4.5M5 19h14"></path></svg>Export for adjudication</button>
+        <button style="font:inherit;font-size:13px;border:1px dashed #A86F0C;border-radius:999px;padding:7px 14px;background:#F6EBD3;color:#7A500A">Run judge on 3 unknown</button>
+        <button disabled="" style="font:inherit;font-size:13px;border:0;border-radius:999px;padding:8px 14px;background:#EEECE5;color:#9AA0AC">Generate answer · key not set</button>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;color:#7A8293">CHIPS</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <span style="display:flex;align-items:center;gap:6px;font-size:13px;padding:6px 10px;border-radius:8px;background:#E3E9FF;color:#0036C8"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;opacity:.7">PHASE</span>PHASE3<span style="opacity:.6">×</span></span>
+        <span style="display:flex;align-items:center;gap:6px;font-size:13px;padding:6px 10px;border-radius:8px;background:#E3E9FF;color:#0036C8"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;opacity:.7">SEX</span>FEMALE<span style="opacity:.6">×</span></span>
+        <span style="display:flex;align-items:center;gap:6px;font-size:13px;padding:6px 10px;border-radius:8px;background:#E3E9FF;color:#0036C8"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;opacity:.7">IN</span>texas<span style="opacity:.6">×</span></span>
+        <span style="display:flex;align-items:center;gap:6px;font-size:13px;padding:6px 10px;border-radius:8px;background:#FBE3D0;color:#7A4A2A"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;opacity:.7">RANKS</span>HER2</span>
+        <span style="display:flex;align-items:center;gap:6px;font-size:13px;padding:6px 10px;border-radius:8px;border:1px dashed #A86F0C;color:#7A500A">Not applied: 'active' is ambiguous</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;padding:5px 9px;border-radius:6px;background:#EEECE5;color:#142237">NCT06551220</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;padding:5px 9px;border-radius:6px;border:1px solid #142237;color:#142237">INCLUSION</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;padding:5px 9px;border-radius:6px;background:#142237;color:#F7F6F2">EXCLUSION</span>
+      </div>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #E3E0D7;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:22px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;color:#7A8293">QUERY BAR</div>
+      <div style="border-radius:20px;background:#F7F6F2;border:1px solid #E3E0D7;padding:8px 8px 8px 18px;display:flex;align-items:center;gap:12px;box-shadow:0 20px 40px -28px rgba(0,69,253,.45)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0045FD" stroke-width="1.6" stroke-linecap="round"><path d="M17.5 11a6.5 6.5 0 1 1-13 0a6.5 6.5 0 1 1 13 0Z M16 16l4.5 4.5"></path></svg>
+        <span style="flex:1;font-size:16px;min-width:0">phase 3 recruiting HER2-positive breast cancer trials for women in Texas</span>
+        <span style="width:40px;height:40px;border-radius:14px;background:#0045FD;display:flex;align-items:center;justify-content:center;flex:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px">
+        <label style="display:flex;flex-direction:column;gap:6px;font-size:13px;color:#4B5568">Patient age
+          <span style="border:1px solid #D6D2C6;border-radius:12px;padding:10px 12px;font-size:15px;color:#142237;background:#FFFFFF;display:flex;justify-content:space-between">61<span style="color:#7A8293">years</span></span>
+        </label>
+        <label style="display:flex;flex-direction:column;gap:6px;font-size:13px;color:#4B5568">Location <span style="font-size:11px;color:#7A8293;display:none">exact</span>
+          <span style="border:1px solid #C8442F;border-radius:12px;padding:10px 12px;font-size:15px;color:#142237;background:#FFFFFF">USA</span>
+          <span style="font-size:12px;color:#C8442F">Exact site match only — try "United States".</span>
+        </label>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:center">
+        <div style="display:flex;padding:3px;border-radius:999px;background:#EEECE5;font-size:13px">
+          <span style="padding:7px 14px;border-radius:999px;background:#FFFFFF;box-shadow:0 1px 2px rgba(20,34,55,.12)">hybrid</span>
+          <span style="padding:7px 14px;color:#4B5568">dense</span>
+          <span style="padding:7px 14px;color:#4B5568">bm25</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:#4B5568">
+          <span style="width:40px;height:24px;border-radius:999px;background:#0045FD;position:relative"><span style="position:absolute;right:3px;top:3px;width:18px;height:18px;border-radius:50%;background:#FFFFFF"></span></span>Cross-encoder reranker
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="display:flex;justify-content:space-between;font-size:13px;color:#4B5568"><span>Jev confidence threshold</span><span style="font-family:'IBM Plex Mono',monospace;color:#142237">0.90</span></div>
+        <div style="position:relative;height:6px;border-radius:3px;background:#EEECE5"><div style="position:absolute;left:0;top:0;bottom:0;width:82%;border-radius:3px;background:#142237"></div><span style="position:absolute;left:82%;top:50%;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;background:#FFFFFF;border:2px solid #142237"></span></div>
+        <div style="font-size:12px;color:#7A8293">Not calibrated. A threshold of 0.90 is not "90% accurate".</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 CARDS -->
+<section data-screen-label="05 Cards" style="padding-top:112px">
+  <div style="display:grid;grid-template-columns:120px minmax(0,1fr);gap:24px;align-items:baseline;border-top:1px solid #E3E0D7;padding-top:20px;margin-bottom:40px">
+    <div style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12px;color:#7A8293">05</div>
+    <div><h2 style="margin:0;font-weight:400;font-size:44px;letter-spacing:-.025em">Cards</h2><p style="margin:8px 0 0;color:#4B5568;max-width:640px">White sheets floating on art, 20px radius, a long soft shadow. Each card is one backend object, labelled in its own words.</p></div>
+  </div>
+
+  <div style="position:relative;border-radius:32px;overflow:hidden;padding:48px;background:#EEECE5">
+    <div style="position:absolute;width:900px;height:900px;left:-300px;top:-400px;border-radius:50%;background:radial-gradient(circle,rgba(244,170,120,.55),rgba(244,170,120,0) 60%)"></div>
+    <div style="position:absolute;width:1000px;height:1000px;right:-400px;bottom:-600px;border-radius:50%;background:radial-gradient(circle,rgba(0,69,253,.35),rgba(0,69,253,0) 60%)"></div>
+    <div style="position:absolute;inset:0;background-image:url(assets/grain.svg);opacity:.3;mix-blend-mode:multiply"></div>
+
+    <div style="position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:20px">
+      <!-- Trial card -->
+      <article style="grid-column:span 7;background:#FFFFFF;border-radius:20px;padding:24px;box-shadow:0 1px 0 rgba(20,34,55,.04),0 30px 60px -36px rgba(20,34,55,.4);display:flex;flex-direction:column;gap:16px">
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#4B5568">NCT06551220</span>
+          <span style="display:flex;align-items:center;gap:6px;font-size:12px;padding:3px 9px;border-radius:999px;background:#E1F2E9;color:#1F8A5B"><span style="width:6px;height:6px;border-radius:50%;background:#1F8A5B"></span>Recruiting</span>
+          <span style="margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7A8293">fused rank #1</span>
+        </div>
+        <h3 style="margin:0;font-weight:400;font-size:21px;line-height:1.25;letter-spacing:-.01em;text-wrap:pretty">Efficacy of Trastuzumab Deruxtecan in Metastatic Breast Cancer with Different HER2 Expression Patterns</h3>
+        <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;border-top:1px solid #EEECE5;border-bottom:1px solid #EEECE5;padding:12px 0">
+          <div><div style="font-size:11px;color:#7A8293">Phase</div><div style="font-size:14px">NA</div></div>
+          <div><div style="font-size:11px;color:#7A8293">Sex accepted</div><div style="font-size:14px">Female</div></div>
+          <div><div style="font-size:11px;color:#7A8293">Age</div><div style="font-size:14px">18–80</div></div>
+          <div><div style="font-size:11px;color:#7A8293">First site</div><div style="font-size:14px">Fuzhou, China</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;gap:8px;align-items:center"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.06em;padding:3px 7px;border-radius:5px;background:#EEECE5">INCLUSION_CRITERIA</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7A8293">:2</span></div>
+          <p style="margin:0;font-size:14px;color:#4B5568;line-height:1.55">“Treated with T-DXd regardless of line of therapy, HR, and <mark>HER2 expression level</mark>; <mark>HER2 immunohistochemistry staining information</mark> of the primary lesion…”</p>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+          <button style="font:inherit;font-size:14px;border:0;border-radius:999px;padding:9px 18px;background:#142237;color:#F7F6F2">Open record</button>
+          <a href="https://clinicaltrials.gov/study/NCT06551220" style="font-size:14px;display:flex;gap:5px;align-items:center">ClinicalTrials.gov<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9"></path></svg></a>
+          <span style="margin-left:auto;font-size:12px;color:#7A8293">Ranking signal, not confidence</span>
+        </div>
+      </article>
+
+      <!-- Score card -->
+      <article style="grid-column:span 5;background:#FFFFFF;border-radius:20px;padding:24px;box-shadow:0 1px 0 rgba(20,34,55,.04),0 30px 60px -36px rgba(20,34,55,.4);display:flex;flex-direction:column;gap:16px">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><span style="font-size:13px;color:#4B5568">Trial score</span><span style="font-size:12px;padding:4px 10px;border-radius:999px;background:#F6EBD3;color:#7A500A">Potential match — review required</span></div>
+        <div style="display:flex;align-items:baseline;gap:6px"><span style="font-family:'PolySans Slim','Hanken Grotesk',sans-serif;font-weight:200;font-size:96px;line-height:.9;letter-spacing:-.04em">67</span><span style="font-size:28px;color:#7A8293">%</span></div>
+        <div style="display:flex;gap:3px;height:10px">
+          <span style="flex:6;border-radius:3px;background:#1F8A5B"></span>
+          <span style="flex:3;border-radius:3px;background:#E3C27F"></span>
+          <span style="flex:1;border-radius:3px;background:#D5D7DC"></span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;font-size:12px;color:#4B5568">
+          <div><div style="font-size:20px;color:#142237">6</div>satisfied</div>
+          <div><div style="font-size:20px;color:#142237">0</div>blocking</div>
+          <div><div style="font-size:20px;color:#142237">3</div>unknown</div>
+          <div><div style="font-size:20px;color:#142237">1</div>n/a</div>
+        </div>
+        <p style="margin:0;font-size:12px;line-height:1.5;color:#7A8293;border-top:1px solid #EEECE5;padding-top:12px">6 satisfied, 0 blocking, 3 unknown of 9 applicable criteria; 1 not applicable. Unknown never counts as satisfied, and any blocking criterion cuts the score to a fifth. A share of criteria, not a probability of eligibility.</p>
+      </article>
+
+      <!-- Criterion review -->
+      <article style="grid-column:span 12;background:#FFFFFF;border-radius:20px;box-shadow:0 1px 0 rgba(20,34,55,.04),0 30px 60px -36px rgba(20,34,55,.4);overflow:hidden">
+        <div style="display:flex;align-items:center;gap:12px;padding:18px 24px;border-bottom:1px solid #EEECE5;flex-wrap:wrap">
+          <span style="font-size:17px">Criterion review</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#7A8293">NCT06551220 · 4 of 10</span>
+          <span style="margin-left:auto;font-size:12px;color:#7A8293">For an exclusion, “Met” means the exclusion applies.</span>
+        </div>
+        <sc-for list="{{ findings }}" as="f" hint-placeholder-count="4">
+          <div style="display:grid;grid-template-columns:110px minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr) 140px;gap:20px;padding:18px 24px;border-bottom:1px solid #EEECE5;align-items:start">
+            <span style="justify-self:start;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.06em;padding:4px 8px;border-radius:5px;border:1px solid #142237;background:{{ f.kindBg }};color:{{ f.kindFg }}">{{ f.kind }}</span>
+            <div style="font-size:14px;line-height:1.45">{{ f.criterion }}</div>
+            <div><div style="font-size:11px;color:#7A8293;margin-bottom:4px">Trial evidence</div><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#4B5568;line-height:1.5">{{ f.trial }}</div></div>
+            <div><div style="font-size:11px;color:#7A8293;margin-bottom:4px">Patient fact</div><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.5;color:{{ f.factColor }}">{{ f.fact }}</div></div>
+            <div style="display:flex;flex-direction:column;gap:6px;align-items:flex-start">
+              <span style="display:flex;align-items:center;gap:6px;font-size:12px;padding:4px 10px;border-radius:999px;background:{{ f.bg }};color:{{ f.fg }}"><span style="width:6px;height:6px;border-radius:50%;background:{{ f.fg }}"></span>{{ f.status }}</span>
+              <span style="font-size:11px;color:#7A8293">{{ f.by }}</span>
+            </div>
+          </div>
+        </sc-for>
+        <div style="padding:14px 24px;font-size:12px;color:#7A8293;background:#FBFAF7">Not an eligibility decision. A clinician must review every criterion against the current registry record.</div>
+      </article>
+
+      <!-- Patient facts -->
+      <article style="grid-column:span 4;background:#142237;color:#F7F6F2;border-radius:20px;padding:24px;box-shadow:0 30px 60px -36px rgba(20,34,55,.6);display:flex;flex-direction:column;gap:14px;position:relative;overflow:hidden">
+        <img src="assets/orvant-mark-light.png" alt="" style="position:absolute;right:-40px;top:-40px;width:160px;opacity:.07">
+        <div style="font-size:13px;color:#9AA3B5">patient-3f9a1c… · facts used</div>
+        <div style="font-size:12px;color:#9AA3B5;margin-top:-10px">No identifiers sent anywhere</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;line-height:1.9;border-top:1px solid rgba(247,246,242,.12);padding-top:12px">
+          <sc-for list="{{ facts }}" as="l" hint-placeholder-count="8"><div>{{ l }}</div></sc-for>
+          <div style="color:#E3C27F">labs: not recorded</div>
+        </div>
+        <div style="font-size:12px;color:#9AA3B5;line-height:1.45">Missing facts are why criteria come back Unknown.</div>
+      </article>
+
+      <!-- Query plan -->
+      <article style="grid-column:span 4;background:#FFFFFF;border-radius:20px;padding:24px;box-shadow:0 30px 60px -36px rgba(20,34,55,.4);display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;justify-content:space-between;font-size:13px;color:#4B5568"><span>Query plan</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px">intent: search</span></div>
+        <div style="font-size:15px;line-height:1.4">“phase 3 recruiting HER2-positive breast cancer trials for women in Texas”</div>
+        <div><div style="font-size:11px;color:#7A8293;margin-bottom:6px">Hard filters</div><div style="display:flex;flex-wrap:wrap;gap:6px">
+          <span style="font-size:12px;padding:4px 8px;border-radius:7px;background:#E3E9FF;color:#0036C8">PHASE3</span><span style="font-size:12px;padding:4px 8px;border-radius:7px;background:#E3E9FF;color:#0036C8">RECRUITING</span><span style="font-size:12px;padding:4px 8px;border-radius:7px;background:#E3E9FF;color:#0036C8">FEMALE</span><span style="font-size:12px;padding:4px 8px;border-radius:7px;background:#E3E9FF;color:#0036C8">texas</span></div></div>
+        <div><div style="font-size:11px;color:#7A8293;margin-bottom:6px">Steers ranking only</div><div style="display:flex;flex-wrap:wrap;gap:6px">
+          <span style="font-size:12px;padding:4px 8px;border-radius:7px;background:#FBE3D0;color:#7A4A2A">breast cancer</span><span style="font-size:12px;padding:4px 8px;border-radius:7px;background:#FBE3D0;color:#7A4A2A">HER2</span></div></div>
+        <div style="font-size:12px;color:#7A8293;border-top:1px solid #EEECE5;padding-top:10px">Live lookups: not used</div>
+      </article>
+
+      <!-- Provenance -->
+      <article style="grid-column:span 4;background:#FFFFFF;border-radius:20px;padding:24px;box-shadow:0 30px 60px -36px rgba(20,34,55,.4);display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;color:#4B5568"><span>Index provenance</span><span style="display:flex;align-items:center;gap:6px;font-size:12px;color:#1F8A5B"><span style="width:6px;height:6px;border-radius:50%;background:#1F8A5B"></span>1 day old</span></div>
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px">
+          <div><div style="font-family:'PolySans Slim','Hanken Grotesk',sans-serif;font-weight:300;font-size:36px;line-height:1;letter-spacing:-.02em">1,788</div><div style="font-size:12px;color:#7A8293">recruiting trials</div></div>
+          <div><div style="font-family:'PolySans Slim','Hanken Grotesk',sans-serif;font-weight:300;font-size:36px;line-height:1;letter-spacing:-.02em">10,676</div><div style="font-size:12px;color:#7A8293">evidence chunks</div></div>
+        </div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;line-height:1.8;color:#4B5568;border-top:1px solid #EEECE5;padding-top:10px">
+          <div>registry · ClinicalTrials.gov API v2 (2.0.5)</div>
+          <div>data as of · 2026-10-09 09:00</div>
+          <div>snapshot · 2026-10-12</div>
+          <div>unsplit criteria · 42 trials</div>
+        </div>
+      </article>
+
+      <!-- Answer card -->
+      <article style="grid-column:span 7;background:#FFFFFF;border-radius:20px;padding:24px;box-shadow:0 30px 60px -36px rgba(20,34,55,.4);display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;align-items:center;gap:10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0045FD" stroke-width="1.8" stroke-linecap="round"><path d="M12 4v16M5 8l14 8M19 8L5 16"></path></svg><span style="font-size:13px;color:#4B5568">Structured answer · Gemini</span></div>
+        <p style="margin:0;font-size:16px;line-height:1.55;text-wrap:pretty">Two retrieved trials enrol metastatic breast cancer with HER2 expression recorded at any level. Neither states a Texas site in the snapshot.</p>
+        <div style="border-left:2px solid #F4AA78;padding:2px 0 2px 14px;font-size:14px;color:#4B5568">“HER2 immunohistochemistry staining information of the primary lesion or metastatic/recurrent lesion” <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7A8293">— NCT06551220</span></div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><span style="font-size:11px;color:#7A8293">Limitations</span><span style="font-size:12px;padding:4px 9px;border-radius:7px;background:#EEECE5">1 quoted span not found in evidence and removed</span></div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:13px;padding:10px 12px;border-radius:12px;background:#F6EBD3;color:#7A500A"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7.5 3v6c0 4.5-3.2 7.8-7.5 9-4.3-1.2-7.5-4.5-7.5-9V6Z M12 9v4M12 16v.01"></path></svg>Clinical review required before acting on this answer.</div>
+      </article>
+
+      <!-- Retrieval trace -->
+      <article style="grid-column:span 5;background:#FFFFFF;border-radius:20px;padding:24px;box-shadow:0 30px 60px -36px rgba(20,34,55,.4);display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;justify-content:space-between;font-size:13px;color:#4B5568"><span>Retrieval trace</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px">hybrid · rerank off</span></div>
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:10px">
+          <div style="border-radius:12px;background:#E3E9FF;padding:12px"><div style="font-size:24px;line-height:1">100</div><div style="font-size:11px;color:#0036C8">dense hits</div></div>
+          <div style="border-radius:12px;background:#FBE3D0;padding:12px"><div style="font-size:24px;line-height:1">100</div><div style="font-size:11px;color:#7A4A2A">BM25 hits</div></div>
+          <div style="border-radius:12px;background:#142237;color:#F7F6F2;padding:12px"><div style="font-size:24px;line-height:1">10</div><div style="font-size:11px;color:#9AA3B5">trials fused</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <sc-for list="{{ trace }}" as="t" hint-placeholder-count="4">
+            <div style="display:grid;grid-template-columns:20px 104px minmax(0,1fr) 48px;gap:10px;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:11.5px">
+              <span style="color:#7A8293">{{ t.r }}</span><span>{{ t.id }}</span>
+              <span style="height:6px;border-radius:3px;background:#EEECE5;position:relative;overflow:hidden"><span style="position:absolute;left:0;top:0;bottom:0;border-radius:3px;background:#0045FD;width:{{ t.w }}"></span></span>
+              <span style="color:#4B5568;text-align:right">{{ t.s }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <div style="font-size:12px;color:#7A8293">These are ranking signals, not confidence or eligibility probabilities.</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 06 EMPTY STATES -->
+<section data-screen-label="06 Empty states" style="padding-top:112px">
+  <div style="display:grid;grid-template-columns:120px minmax(0,1fr);gap:24px;align-items:baseline;border-top:1px solid #E3E0D7;padding-top:20px;margin-bottom:40px">
+    <div style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12px;color:#7A8293">06</div>
+    <div><h2 style="margin:0;font-weight:400;font-size:44px;letter-spacing:-.025em">Empty &amp; system states</h2><p style="margin:8px 0 0;color:#4B5568;max-width:640px">Each state borrows a fragment of the artwork and says plainly what happened. Copy is taken verbatim from the backend where it exists.</p></div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px">
+    <div style="background:#FFFFFF;border:1px solid #E3E0D7;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:14px">
+      <div style="height:110px;position:relative;display:flex;flex-direction:column;justify-content:center;gap:9px;padding:0 16%">
+        <div style="height:6px;width:70%;border-radius:3px;background:#EEECE5"></div><div style="height:6px;width:90%;border-radius:3px;background:#EEECE5"></div><div style="height:6px;width:55%;border-radius:3px;background:#E3E9FF"></div><div style="height:6px;width:80%;border-radius:3px;background:#EEECE5"></div>
+        <img src="assets/orvant-mark.png" alt="" style="position:absolute;right:12%;top:8px;width:30px">
+      </div>
+      <div style="font-size:19px">Ask in a sentence.</div>
+      <p style="margin:0;font-size:14px;color:#4B5568">Enter a query for the search tabs. Index: 1,788 trials, 10,676 chunks, snapshot 1 day old.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:6px"><span style="font-size:12px;padding:5px 10px;border-radius:999px;border:1px solid #D6D2C6">HER2-positive breast cancer</span><span style="font-size:12px;padding:5px 10px;border-radius:999px;border:1px solid #D6D2C6">KRAS G12C colorectal cancer</span></div>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #E3E0D7;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:14px">
+      <div style="height:110px;position:relative;display:flex;align-items:center;justify-content:center">
+        <div style="width:96px;height:96px;border-radius:50%;border:1px dashed #D6D2C6;position:absolute"></div>
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#142237" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16l-6 7.5V19l-4 1.5v-8Z"></path></svg>
+        <span style="position:absolute;left:58%;top:62%;width:10px;height:10px;border-radius:50%;background:#C8442F"></span>
+      </div>
+      <div style="font-size:19px">No trial passes the hard filters.</div>
+      <p style="margin:0;font-size:14px;color:#4B5568">Nothing was retrieved; there is no unfiltered fallback. Status, phase, sex, age, location and NCT IDs are strict.</p>
+      <button style="align-self:flex-start;font:inherit;font-size:13px;border:1px solid #D6D2C6;border-radius:999px;padding:7px 14px;background:#FFFFFF">Review filters</button>
+    </div>
+    <div style="background:#0B1424;color:#F7F6F2;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:14px;position:relative;overflow:hidden">
+      <div style="position:absolute;width:300px;height:300px;left:-100px;top:-160px;border-radius:50%;background:radial-gradient(circle,rgba(0,69,253,.7),rgba(0,69,253,0) 60%)"></div>
+      <div style="height:110px;position:relative;display:flex;align-items:center;justify-content:center"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F7F6F2" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7.5 3v6c0 4.5-3.2 7.8-7.5 9-4.3-1.2-7.5-4.5-7.5-9V6Z M9.5 9.5l5 5M14.5 9.5l-5 5"></path></svg></div>
+      <div style="position:relative;font-size:19px">Access denied and logged</div>
+      <p style="position:relative;margin:0;font-size:14px;color:#B5BDCC"><span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#F7F6F2">unassigned-demo</span> is not authorised for <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#F7F6F2">patient-3f9a1c…</span>. No patient facts are shown.</p>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #E3E0D7;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:14px">
+      <div style="height:110px;display:grid;grid-template-columns:repeat(10,14px);gap:4px;align-content:center;justify-content:center">
+        <sc-for list="{{ brokenLedger }}" as="t" hint-placeholder-count="30"><span style="width:14px;height:14px;border-radius:2px;background:{{ t }}"></span></sc-for>
+      </div>
+      <div style="font-size:19px">Index unavailable</div>
+      <p style="margin:0;font-size:14px;color:#4B5568;font-family:'IBM Plex Mono',monospace;font-size:12.5px">records file changed after build</p>
+      <p style="margin:0;font-size:14px;color:#4B5568">The workbench is blocked until the index is rebuilt.</p>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #E3E0D7;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:14px">
+      <div style="height:110px;position:relative;overflow:hidden;border-radius:14px;background:#F6EBD3">
+        <div style="position:absolute;left:50%;top:100%;width:180px;height:180px;margin:-90px 0 0 -90px;border-radius:50%;border:1px solid rgba(122,80,10,.25)"></div>
+        <div style="position:absolute;left:50%;top:100%;width:120px;height:120px;margin:-60px 0 0 -60px;border-radius:50%;border:1px solid rgba(122,80,10,.3)"></div>
+        <img src="assets/orvant-mark-ink.png" alt="" style="position:absolute;left:50%;bottom:-14px;width:36px;margin-left:-18px;opacity:.5">
+      </div>
+      <div style="font-size:19px">Snapshot is 9 days old</div>
+      <p style="margin:0;font-size:14px;color:#4B5568">Limit is 7. Rebuild before relying on status or recruitment facts.</p>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #E3E0D7;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:14px">
+      <div style="height:110px;position:relative;display:flex;align-items:center;justify-content:center">
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#D6D2C6" stroke-width="1.2" stroke-linecap="round"><path d="M12 4v16M5 8l14 8M19 8L5 16"></path></svg>
+      </div>
+      <div style="font-size:19px">Answer generation is off</div>
+      <p style="margin:0;font-size:14px;color:#4B5568">Set <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px">GOOGLE_API_KEY</span> in the environment to enable it. Evidence and ranking work without it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 07 ENTRY -->
+<section data-screen-label="07 Entry screen" style="padding-top:112px">
+  <div style="display:grid;grid-template-columns:120px minmax(0,1fr);gap:24px;align-items:baseline;border-top:1px solid #E3E0D7;padding-top:20px;margin-bottom:40px">
+    <div style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12px;color:#7A8293">07</div>
+    <div><h2 style="margin:0;font-weight:400;font-size:44px;letter-spacing:-.025em">Entry screen</h2><p style="margin:8px 0 0;color:#4B5568;max-width:660px">The backend has no accounts, only demo identities with patient grants. The entry screen uses the Threshold artwork and says what it is: a choice of identity, not a sign-in.</p></div>
+  </div>
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-radius:32px;overflow:hidden;min-height:620px;background:#F7F6F2;border:1px solid #E3E0D7">
+    <div style="position:relative;overflow:hidden;background:#0B1424;padding:40px;display:flex;flex-direction:column;justify-content:space-between;color:#F7F6F2">
+      <div style="position:absolute;width:900px;height:900px;left:-420px;top:-200px;border-radius:50%;background:radial-gradient(circle,rgba(0,69,253,.85),rgba(0,69,253,0) 60%);filter:blur(10px)"></div>
+      <div style="position:absolute;width:520px;height:520px;right:-220px;bottom:-280px;border-radius:50%;background:radial-gradient(circle,rgba(244,170,120,.55),rgba(244,170,120,0) 60%)"></div>
+      <img data-spin="-140" src="assets/orvant-mark-light.png" alt="" style="position:absolute;width:520px;left:-150px;top:120px;opacity:.10">
+      <div style="position:absolute;inset:0;background-image:url(assets/grain.svg);opacity:.35;mix-blend-mode:screen"></div>
+      <img src="assets/orvant-word-light.png" alt="orvant" style="position:relative;height:24px;width:auto;align-self:flex-start">
+      <div style="position:relative">
+        <div style="font-size:42px;line-height:1.05;letter-spacing:-.03em">Every criterion,<br><span style="font-family:'PolySans Slim','Hanken Grotesk',sans-serif;font-weight:300;color:#A9BEFF">both sides cited.</span></div>
+        <p style="margin:16px 0 0;max-width:340px;color:#B5BDCC;font-size:14px">Trial discovery aid only. Nothing here is an eligibility decision.</p>
+      </div>
+    </div>
+    <div style="padding:56px;display:flex;flex-direction:column;justify-content:center;gap:22px;max-width:520px;width:100%;justify-self:center">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;color:#0045FD">ENTER THE WORKBENCH</div>
+      <h3 style="margin:0;font-weight:400;font-size:32px;letter-spacing:-.02em;line-height:1.1">Choose who you're acting as</h3>
+      <p style="margin:0;color:#4B5568;font-size:14px">Searching needs no identity. Patient matching checks your grants and logs every attempt.</p>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;gap:14px;align-items:flex-start;padding:16px;border-radius:16px;background:#FFFFFF;border:1.5px solid #0045FD;box-shadow:0 18px 30px -24px rgba(0,69,253,.6)">
+          <span style="width:18px;height:18px;border-radius:50%;border:5px solid #0045FD;flex:none;margin-top:2px"></span>
+          <div><div style="font-family:'IBM Plex Mono',monospace;font-size:14px">clinician-demo</div><div style="font-size:13px;color:#4B5568">Granted all 80 synthetic patients</div></div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:flex-start;padding:16px;border-radius:16px;background:#FFFFFF;border:1px solid #E3E0D7">
+          <span style="width:18px;height:18px;border-radius:50%;border:1.5px solid #B8B3A6;flex:none;margin-top:2px"></span>
+          <div><div style="font-family:'IBM Plex Mono',monospace;font-size:14px">unassigned-demo</div><div style="font-size:13px;color:#4B5568">Granted none — shows how a denial looks</div></div>
+        </div>
+      </div>
+      <button style="font:inherit;font-size:15px;border:0;border-radius:999px;padding:14px 22px;background:#0045FD;color:#FFFFFF;display:flex;justify-content:center;align-items:center;gap:8px">Enter workbench<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+      <div style="display:flex;gap:10px;align-items:flex-start;font-size:12px;color:#7A8293;border-top:1px solid #E3E0D7;padding-top:16px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M12 21a9 9 0 1 0 0-18a9 9 0 0 0 0 18Z M12 7v5l3 2"></path></svg>This is a demo identity, not a login. Accounts are not part of this build.</div>
+    </div>
+  </div>
+</section>
+
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    this._anims = [];
+    document.querySelectorAll('[data-spin]').forEach(el => {
+      const s = parseFloat(el.getAttribute('data-spin')) || 90;
+      const base = getComputedStyle(el).transform; const pre = el.style.transform || '';
+      this._anims.push(el.animate([{ transform: pre + ' rotate(0deg)' }, { transform: pre + ' rotate(' + (s < 0 ? -360 : 360) + 'deg)' }], { duration: Math.abs(s) * 1000, iterations: Infinity }));
+    });
+    document.querySelectorAll('[data-scan]').forEach(el => {
+      this._anims.push(el.animate([{ top: '4%' }, { top: '78%' }], { duration: 5200, iterations: Infinity, direction: 'alternate', easing: 'ease-in-out' }));
+    });
+  }
+  componentWillUnmount() { (this._anims || []).forEach(a => a.cancel()); }
+  renderVals() {
+    const S = {
+      met: { label: 'Met', fg: '#1F8A5B', bg: '#E1F2E9', hex: '#1F8A5B', d: 'M7 12.5l3.2 3.2L17 9', meaning: 'Statement true of the patient' },
+      not: { label: 'Not met', fg: '#C8442F', bg: '#F8E2DC', hex: '#C8442F', d: 'M8 8l8 8M16 8l-8 8', meaning: 'Facts contradict the statement' },
+      unk: { label: 'Unknown', fg: '#A86F0C', bg: '#F6EBD3', hex: '#A86F0C', d: 'M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6M12 16.5v.01', meaning: 'No fact decides it — abstain' },
+      na: { label: 'Not applicable', fg: '#6F7684', bg: '#ECECEE', hex: '#6F7684', d: 'M7 12h10', meaning: 'Does not apply to this patient' }
+    };
+    const strata = [];
+    const hls = ['#1F8A5B', '#E3E0D7', '#A86F0C', '#1F8A5B', '#C8442F', '#E3E0D7', '#0045FD', '#1F8A5B', '#A86F0C'];
+    for (let i = 0; i < 9; i++) {
+      const a = 10 + ((i * 37) % 30), b = 12 + ((i * 23) % 22), c = 8 + ((i * 41) % 26);
+      strata.push({ a: a + '%', b: b + '%', c: c + '%', hl: hls[i], dot: hls[i] === '#E3E0D7' ? '#D6D2C6' : hls[i] });
+    }
+    const orbit = [[0, 50, '#1F8A5B'], [40, 50, '#1F8A5B'], [110, 50, '#A86F0C'], [200, 33, '#1F8A5B'], [260, 33, '#C8442F'], [320, 33, '#6F7684'], [150, 16, '#0045FD']].map(([deg, r, c]) => {
+      const t = deg * Math.PI / 180; return { x: (50 + r * Math.cos(t)) + '%', y: (50 + r * Math.sin(t)) + '%', c, s: '12px' };
+    });
+    const ledger = []; for (let i = 0; i < 96; i++) { const h = (i * 73 + 11) % 97; ledger.push(h < 9 ? '#0045FD' : h < 13 ? '#F4AA78' : h < 40 ? 'rgba(247,246,242,.22)' : 'rgba(247,246,242,.09)'); }
+    const brokenLedger = []; for (let i = 0; i < 30; i++) { const h = (i * 53 + 7) % 31; brokenLedger.push(h < 4 ? '#C8442F' : h < 16 ? '#EEECE5' : '#E3E0D7'); }
+    return {
+      statuses: [S.met, S.not, S.unk, S.na],
+      strata, orbit, ledger, brokenLedger,
+      icons: [
+        { name: 'Query', d: 'M17.5 11a6.5 6.5 0 1 1-13 0a6.5 6.5 0 1 1 13 0Z M16 16l4.5 4.5' },
+        { name: 'Query plan', d: 'M4 7h9M17 7h3M4 17h3M11 17h9M15 5v4M9 15v4' },
+        { name: 'Retrieval', d: 'M5 4v3a5 5 0 0 0 5 5h4a5 5 0 0 0 5-5V4M12 12v8' },
+        { name: 'Evidence', d: 'M6 3h9l4 4v14H6Z M14 3v5h5 M9 13h7 M9 17h5' },
+        { name: 'Answer', d: 'M12 4v16M5 8l14 8M19 8L5 16' },
+        { name: 'Patient', d: 'M12 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8Z M4.5 20a7.5 7.5 0 0 1 15 0' },
+        { name: 'Match', d: 'M14 12a5 5 0 1 1-10 0a5 5 0 1 1 10 0Z M20 12a5 5 0 1 1-10 0a5 5 0 1 1 10 0Z' },
+        { name: 'Evaluation', d: 'M4 20V10M10 20V4M16 20v-7M21 20H3' },
+        { name: 'System', d: 'M4 6c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3Z M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6 M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3' },
+        { name: 'Export', d: 'M12 4v11M7.5 10.5L12 15l4.5-4.5M5 19h14' },
+        { name: 'Audit log', d: 'M12 21a9 9 0 1 0 0-18a9 9 0 0 0 0 18Z M12 7v5l3 2' },
+        { name: 'Source', d: 'M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5' },
+        { name: 'Hard filter', d: 'M4 5h16l-6 7.5V19l-4 1.5v-8Z' },
+        { name: 'Location', d: 'M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0C18.5 15.4 12 21 12 21Z M12 12.5a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5Z' },
+        { name: 'Access', d: 'M12 3l7.5 3v6c0 4.5-3.2 7.8-7.5 9-4.3-1.2-7.5-4.5-7.5-9V6Z M9 12l2 2 4-4' },
+        { name: 'Freshness', d: 'M20 12a8 8 0 1 1-2.3-5.7M20 4v4.5h-4.5' }
+      ],
+      findings: [
+        { kind: 'INCLUSION', kindBg: '#FFFFFF', kindFg: '#142237', criterion: 'Age 18 to 80 years (registry field)', trial: 'minimumAge=18.0, maximumAge=80.0', fact: 'age: 61', factColor: '#142237', ...pick(S.met), by: 'Rule' },
+        { kind: 'INCLUSION', kindBg: '#FFFFFF', kindFg: '#142237', criterion: 'Measurable lesions with treatment response results that can be evaluated through imaging', trial: '“Measurable lesions with treatment response…”', fact: 'no patient evidence', factColor: '#A86F0C', ...pick(S.unk), by: 'Not judged · abstained' },
+        { kind: 'EXCLUSION', kindBg: '#142237', kindFg: '#F7F6F2', criterion: 'Discontinue T-DXd therapy for unacceptable adverse events or other reasons', trial: '“Discontinue T-DXd therapy for…”', fact: 'medications: Trastuzumab', factColor: '#142237', ...pick(S.not), status: 'Not met · satisfied', by: 'Jev · confidence 0.94' },
+        { kind: 'EXCLUSION', kindBg: '#142237', kindFg: '#F7F6F2', criterion: 'Patients lost to follow-up after T-DXd treatment', trial: '“Patients lost to follow-up…”', fact: 'not applicable: no prior T-DXd', factColor: '#6F7684', ...pick(S.na), by: 'Gemini' }
+      ],
+      facts: ['age: 61', 'sex: FEMALE', 'diagnosis: Malignant neoplasm of breast', 'stage: Stage IV', 'disease_status: active', 'biomarkers: HER2 positive', 'ecog: 1', 'medications: Trastuzumab'],
+      trace: [
+        { r: '1', id: 'NCT06551220', w: '100%', s: '.0331' },
+        { r: '2', id: 'NCT05318274', w: '78%', s: '.0259' },
+        { r: '3', id: 'NCT0•••••••', w: '64%', s: '.0213' },
+        { r: '4', id: 'NCT0•••••••', w: '51%', s: '.0170' }
+      ]
+    };
+    function pick(s) { return { status: s.label, fg: s.fg, bg: s.bg }; }
+  }
+}
+</script>
+</body>
+</html>

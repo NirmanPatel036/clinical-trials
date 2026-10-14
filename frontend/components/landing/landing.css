@@ -1,0 +1,30 @@
+/* Hover states from the landing design. */
+.hv0:hover{background:rgba(20,34,55,.06) !important}
+.hv1:hover{background:#0045FD !important;color:#FFFFFF !important}
+.hv2:hover{background:#0036C8 !important;color:#FFFFFF !important}
+.hv3:hover{border-color:#142237 !important;color:#142237 !important}
+.hv4:hover{box-shadow:0 30px 60px -36px rgba(20,34,55,.45) !important}
+/* Limits bento: twelve columns on wide screens, one card per row on narrow ones. */
+@media (max-width:860px){.bento>*{grid-column:span 12 !important}}
+/* Bento loops: switch flicks on, a code row is highlighted in turn, the arrow nudges, personal words are struck out. */
+.ld-switch{background:#D6D2C6;animation:ld-track 6s infinite}
+.ld-thumb{animation:ld-thumb 6s infinite}
+@keyframes ld-track{0%,15%{background:#D6D2C6}25%,90%{background:#0045FD}100%{background:#D6D2C6}}
+@keyframes ld-thumb{0%,15%{transform:none}25%,90%{transform:translateX(11px)}100%{transform:none}}
+.ld-paper{animation:ld-paper 6s infinite}
+@keyframes ld-paper{0%,25%{opacity:.35;transform:translateY(6px)}35%,90%{opacity:1;transform:none}100%{opacity:.35;transform:translateY(6px)}}
+.ld-rowlight{animation:ld-rows 4.5s infinite steps(1)}
+@keyframes ld-rows{0%{transform:translateY(0)}33%{transform:translateY(24px)}66%{transform:translateY(48px)}}
+.ld-nudge{animation:ld-nudge 1.8s ease-in-out infinite}
+@keyframes ld-nudge{0%,100%{transform:translateX(-3px)}50%{transform:translateX(4px)}}
+.ld-generic{animation:ld-generic 3.6s infinite}
+@keyframes ld-generic{0%,20%{opacity:.3}40%,100%{opacity:1}}
+.ld-strike{color:#142237;background:linear-gradient(#C8442F,#C8442F) no-repeat 0 58%/0% 1.5px;animation:ld-strike 7s infinite}
+@keyframes ld-strike{0%,12%{background-size:0% 1.5px;color:#142237}30%,88%{background-size:100% 1.5px;color:#9AA3B5}100%{background-size:0% 1.5px;color:#142237}}
+.ld-pill{animation:ld-pill 3.6s ease-in-out infinite}
+@keyframes ld-pill{0%,100%{transform:none}50%{transform:translateY(-3px)}}
+@media (prefers-reduced-motion:reduce){
+  .ld-switch,.ld-thumb,.ld-paper,.ld-rowlight,.ld-nudge,.ld-generic,.ld-pill{animation:none}
+  .ld-switch{background:#0045FD}.ld-thumb{transform:translateX(11px)}
+  .ld-strike{animation:none;background-size:100% 1.5px;color:#9AA3B5}
+}

@@ -31,7 +31,9 @@ backend/data/*
 .pytest_cache/
 *.tsbuildinfo
 
-# Not published: trial fonts (personal-use licence) and the Supabase project files.
-frontend/polysans-font-family/
+# Not published: the Supabase project files, and every PolySans file except the two the app loads.
+frontend/polysans-font-family/*
+!frontend/polysans-font-family/polysanstrial-neutral.otf
+!frontend/polysans-font-family/polysanstrial-slim.otf
 /supabase/
 backend/tests/

@@ -1,0 +1,7 @@
+# Allowlist: only what the API image copies. Keeps .env, frontend, raw snapshots, old logs and tests out of the build.
+*
+!backend/*.py
+!backend/requirements-api.lock
+!backend/data/normalized/
+!backend/data/indexes/
+!data/patients/processed/patients.json

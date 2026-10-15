@@ -1,0 +1,64 @@
+# Build the API image on Google's amd64 machines, prove it starts with no network at Cloud Run's limits, then push.
+#   gcloud builds submit --config deploy/cloudbuild.yaml --region REGION \
+#     --substitutions=_INDEX_VERSION=$(cat backend/data/indexes/ACTIVE),_REGION=REGION .
+# .gcloudignore decides what is uploaded (the index is git-ignored, so it is listed there explicitly).
+substitutions:
+  _REGION: asia-south1
+  _INDEX_VERSION: ""
+# The default build machine (2 vCPU, inside Cloud Build's free minutes) also matches the service's 2 vCPU.
+options:
+  automapSubstitutions: true
+timeout: 3600s
+steps:
+  - id: build
+    name: gcr.io/cloud-builders/docker
+    args: [build, --platform, linux/amd64, --build-arg, "INDEX_VERSION=${_INDEX_VERSION}",
+           -t, "${_REGION}-docker.pkg.dev/${PROJECT_ID}/orvant/orvant-backend:${_INDEX_VERSION}", .]
+
+  # No network, 2 CPUs, 2 GiB, K_SERVICE set so the Cloud Run audit-log check applies: /ready must reach 200,
+  # then signed searches and rules-only matches must succeed. Any failure stops the build before the push.
+  - id: offline-check
+    name: gcr.io/cloud-builders/docker
+    script: |
+      #!/usr/bin/env bash
+      set -euo pipefail
+      IMAGE="${_REGION}-docker.pkg.dev/${PROJECT_ID}/orvant/orvant-backend:${_INDEX_VERSION}"
+      start=$(date +%s.%N)
+      docker run -d --name check --network none --cpus 2 --memory 2g -e K_SERVICE=orvant-backend \
+        -e SUPABASE_JWT_SECRET=build-check-only-secret-of-32-bytes "$IMAGE"
+      ready=""
+      for i in $(seq 1 360); do
+        if body=$(docker exec check python -c "import urllib.request as u; print(u.urlopen('http://127.0.0.1:8080/ready', timeout=5).read().decode())" 2>/dev/null); then
+          ready="$body"; break
+        fi
+        if [ "$(docker inspect -f '{{.State.Running}}' check)" != "true" ]; then docker logs check; exit 1; fi
+        sleep 0.5
+      done
+      [ -n "$ready" ] || { echo "not ready after 180 s"; docker logs check; exit 1; }
+      echo "READY_AFTER_SECONDS=$(awk -v a="$start" -v b="$(date +%s.%N)" 'BEGIN{printf "%.1f", b-a}')"
+      echo "READY_BODY=$ready"
+      docker exec check python -c '
+      import json, time, urllib.request as u, jwt
+      tok = jwt.encode({"sub": "build-check", "aud": "authenticated", "exp": int(time.time()) + 600, "aal": "aal2", "app_metadata": {}},
+                       "build-check-only-secret-of-32-bytes", algorithm="HS256")
+      def post(path, body):
+          req = u.Request("http://127.0.0.1:8080" + path, json.dumps(body).encode(), {"Content-Type": "application/json", "Authorization": "Bearer " + tok})
+          t = time.perf_counter(); r = json.load(u.urlopen(req, timeout=120)); return r, (time.perf_counter() - t) * 1000
+      lat = sorted(post("/api/search", {"query": q, "final_k": 30})[1] for q in
+                   ["HER2-positive breast cancer", "phase 3 recruiting melanoma trials in Texas for women", "KRAS G12C colorectal cancer", "BRCA ovarian cancer PARP inhibitor"] * 5)
+      demo = json.load(u.urlopen("http://127.0.0.1:8080/api/stats"))["demo_patient"]
+      m, mms = post("/api/match", {"patient_id": demo, "k": 10})
+      s, sms = post("/api/match", {"profile": {"age": 52, "sex": "FEMALE", "diagnosis": "Breast cancer", "stage": "Stage II", "biomarkers": ["HER2"]}, "k": 10})
+      assert m["matches"] and s["matches"], "matching returned nothing"
+      import os
+      # cgroup v2 names first, then v1 (Cloud Build machines use v1).
+      mem = lambda *files: next(round(int(open(f).read()) / 2**20) for f in files if os.path.exists(f))
+      print("CHECK=" + json.dumps({"search_ms_p50": round(lat[10]), "search_ms_max": round(lat[-1]), "match_demo_ms": round(mms), "match_self_ms": round(sms),
+                                   "memory_peak_mb": mem("/sys/fs/cgroup/memory.peak", "/sys/fs/cgroup/memory/memory.max_usage_in_bytes"),
+                                   "memory_now_mb": mem("/sys/fs/cgroup/memory.current", "/sys/fs/cgroup/memory/memory.usage_in_bytes")}))'
+      docker logs check 2>&1 | grep -c '"log": "audit"' | sed 's/^/AUDIT_LINES_ON_STDOUT=/'
+      docker rm -f check >/dev/null
+      docker image inspect "$IMAGE" -f 'IMAGE_BYTES={{.Size}}'
+
+images:
+  - "${_REGION}-docker.pkg.dev/${PROJECT_ID}/orvant/orvant-backend:${_INDEX_VERSION}"

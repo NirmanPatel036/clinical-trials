@@ -491,3 +491,48 @@ Open work is tracked in `backend/TASKS.md`; evaluation detail is in `backend/EVA
   no selling or advertising use, and retention as long as the account exists. Encryption and compliance are still not
   claimed. The placeholder component and its CSS were removed. `PRIVACY_PAGE_REVIEW.md` section 4 lists the commitments
   these create.
+
+### 44. Deployment readiness (backend)
+- Startup preloads the active index and the embedding model and runs one warm-up encode, so the first user no longer
+  waits about 10 s. `GET /ready` returns 200 only when the index, the model and the audit log are all usable, and 503
+  with the reason otherwise. It retries a failed load on each call. `/health` is unchanged.
+- Offline loading: the API defaults `HF_HUB_OFFLINE=1`, and `python -m backend.fetch_model` fills the cache at build
+  time. The model's main revision ships only `pytorch_model.bin`, not safetensors, which corrects the deployment
+  audit. `ORVANT_DATA_DIR` lets the versioned index live outside the repo.
+- Audit and decision logs: `ORVANT_LOG_DIR` sends them to persistent storage, and `ORVANT_AUDIT_SINK=stdout` sends them
+  to a log collector instead. On Cloud Run (`K_SERVICE` set) with neither set, the server is not ready rather than
+  logging to a disk that disappears.
+- `backend/requirements-api.txt`: the runtime-only subset (no Streamlit, pandas, pyarrow or pytest), with the
+  CPU-torch install note. Matching behaviour is unchanged.
+- `backend/tests/test_deploy.py`: 13 offline tests, including the real model loading from cache with sockets blocked.
+
+### 45. Cloud Run hardening
+- Tests are tracked again: `backend/tests/` was in `.gitignore` from the first commit, with no stated reason, and holds no secrets.
+- Model weights are pinned: `EMBED_REVISION` (commit `96786c7…`) is used by fetch, build and serving, and new builds
+  record it in the manifest as `embedding_model_revision`. Older manifests fall back to it. The current index's stored
+  vectors match these weights (max abs diff 2.2e-6).
+- `backend/requirements-api.txt` adds `torch==2.14.1+cpu`. `backend/requirements-api.lock` has 113 packages pinned with
+  hashes for Linux x86_64 and no CUDA, with versions consistent with `requirements.lock`.
+- `Dockerfile` (one worker, offline model, one baked index version, non-root, audit events on stdout),
+  `.dockerignore` (an allowlist), `deploy/cloudrun.yaml` (0–3 instances, 2 vCPU / 2 GiB, startup probe on `/ready`,
+  CPU boost) and `DEPLOY.md`.
+- Audit logs on Cloud Run go to a dedicated Cloud Logging bucket kept for 365 days. Privacy pages updated: no earlier
+  deletion of single entries, and 30-day Google Cloud request logs (time, page, IP address, browser).
+- The amd64 BuildKit build passed the hashed install and `pip check` (image 1.0 GB). The container run was not measured:
+  the host disk filled up during the build. 296 offline tests pass.
+
+### 46. Deployed to Cloud Run
+- New project `orvant-backend` with billing linked, a ₹450 (about $5) monthly budget alert, and only the needed APIs.
+  A dedicated runtime service account can read four secrets: the Gemini, Groq, Hugging Face and OpenRouter keys.
+  Audit and decision logs route to a 365-day bucket and are excluded from `_Default`.
+- `.gcloudignore` (an allowlist, so the git-ignored index is uploaded) and `deploy/cloudbuild.yaml`: build on amd64,
+  then a no-network check at 2 CPUs / 2 GiB (`/ready` in 15.5 s, peak 636 MB), then push.
+- Service `orvant-backend` (asia-south1): 0–3 instances, 2 vCPU / 2 GiB, one worker, `/ready` startup probe, pinned by
+  digest, public invoker. Data routes still require a two-factor token. Cold start on Cloud Run is about 36 s.
+- During setup, API key values were printed into the session output by a faulty shell command. The owner chose to keep
+  the existing keys.
+
+### 47. CORS for the Vercel frontend
+- `CORS_ORIGINS` on `orvant-backend` is now `https://orvant-trials.vercel.app` only (new revision `-00002-pzs`, 100% of
+  traffic). Preflight from that origin is allowed; `localhost:3000` and other origins are refused. `deploy/cloudrun.yaml`
+  matches. The build VM profile `orvant-amd64` and its data disk were deleted, freeing about 7.4 GB.

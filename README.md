@@ -118,10 +118,15 @@ Create `.env` in the project root (never commit it):
 | `PUBMED_EMAIL`, `NCBI_API_KEY` | PubMed in Ask (key raises NCBI's limit from 3 to 10 requests/s) |
 | `TYPESAFE_API_KEY` | Jev, the selective judge |
 | `NEXTRIAL_ALLOW_PAID_JUDGES=1` | switches the paid selective judge on (off by default) |
+| `ORVANT_DATA_DIR` | where snapshots, records and index versions live (default `backend/data`); point it at a persistent disk or a copied index |
+| `ORVANT_LOG_DIR` | where `audit.jsonl` and `decisions.jsonl` are appended (default: the data directory). Must be persistent storage |
+| `ORVANT_AUDIT_SINK=stdout` | write audit and decision events as JSON lines to stdout instead of files, for a log collector (Cloud Run) |
+| `HF_HUB_OFFLINE` | the API sets it to `1`: model weights load from the local cache only. `HF_HOME` picks the cache directory |
 
 Build the index (fetches ClinicalTrials.gov, about 2,000 studies), then start the API:
 
 ```bash
+python -m backend.fetch_model           # once: downloads the embedding model into the Hugging Face cache
 python -m backend.build                 # --per-condition N, or --snapshot <id> to reuse a raw snapshot
 uvicorn backend.api:app --reload --port 8000
 streamlit run backend/streamlit_app.py  # optional developer workbench
@@ -170,6 +175,12 @@ npm run dev     # http://localhost:3000
 | `POST /api/chat` | aal2 token | cited answer from the index; `literature: true` adds PubMed; returns `sources`, `articles`, `codes`, `drugs`, `limitations` |
 
 Every response carries `clinical_review_required: true` and the snapshot's freshness.
+
+`GET /ready` (no auth) answers 200 only after startup has loaded the index and embedding model, run one warm-up encode
+and checked that the audit log can be written; otherwise 503 with the reason, retrying the load on each call. Use it as
+the readiness or startup probe. The server's dependencies are `backend/requirements-api.txt` (Linux, CPU-only torch),
+locked with hashes in `backend/requirements-api.lock`. Container image and Cloud Run setup: `Dockerfile`,
+`deploy/cloudrun.yaml` and `DEPLOY.md`.
 
 ---
 

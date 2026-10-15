@@ -1,0 +1,64 @@
+# Cloud Run service for the Orvant API: scale to zero, one instance = one uvicorn worker on 2 vCPU / 2 GiB.
+# Replace PROJECT_ID, REGION, INDEX_VERSION and the two URLs, then: gcloud run services replace deploy/cloudrun.yaml --region REGION
+# Steps, secrets and log retention: DEPLOY.md.
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: orvant-backend
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/minScale: "0"
+        autoscaling.knative.dev/maxScale: "3"
+        # Faster cold starts: most of the ~10 s preload is importing torch, which is CPU-bound.
+        run.googleapis.com/startup-cpu-boost: "true"
+        run.googleapis.com/execution-environment: gen2
+    spec:
+      # Requests one instance handles at once. Unmeasured beyond single requests: tune after a load test.
+      containerConcurrency: 8
+      # Ask and the selective judge wait on outside models; the slowest recorded took tens of seconds.
+      timeoutSeconds: 300
+      serviceAccountName: orvant-backend@PROJECT_ID.iam.gserviceaccount.com
+      containers:
+        - image: REGION-docker.pkg.dev/PROJECT_ID/orvant/orvant-backend:INDEX_VERSION
+          ports:
+            - containerPort: 8080
+          resources:
+            limits:
+              cpu: "2"
+              memory: 2Gi
+          env:
+            - name: SUPABASE_URL
+              value: https://YOUR-PROJECT.supabase.co
+            - name: CORS_ORIGINS
+              value: https://orvant-trials.vercel.app
+            - name: GROQ_MODEL
+              value: openai/gpt-oss-120b
+            # Paid judges stay off unless you also set NEXTRIAL_ALLOW_PAID_JUDGES=1 and TYPESAFE_API_KEY.
+            - name: GOOGLE_API_KEY
+              valueFrom:
+                secretKeyRef: {name: orvant-google-api-key, key: latest}
+            - name: GROQ_API_KEYS
+              valueFrom:
+                secretKeyRef: {name: orvant-groq-api-keys, key: latest}
+            - name: HF_MODEL
+              value: meta-llama/Llama-3.1-8B-Instruct
+            - name: HF_API_KEYS
+              valueFrom:
+                secretKeyRef: {name: orvant-hf-api-keys, key: latest}
+            - name: OPENROUTER_MODEL
+              value: meta-llama/llama-3.1-8b-instruct
+            - name: OPENROUTER_API_KEY
+              valueFrom:
+                secretKeyRef: {name: orvant-openrouter-api-key, key: latest}
+          # Traffic arrives only after /ready answers 200: index and model loaded, one warm-up encode done,
+          # audit destination set. The port opens when loading finishes; up to 5 + 36 x 5 = 185 s is allowed.
+          startupProbe:
+            httpGet:
+              path: /ready
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            timeoutSeconds: 3
+            failureThreshold: 36

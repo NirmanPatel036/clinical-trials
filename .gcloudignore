@@ -1,0 +1,20 @@
+# Allowlist for `gcloud builds submit`, matching .dockerignore: without this file gcloud applies .gitignore,
+# which drops the index the image bakes in. Keeps .env, the frontend, raw snapshots and logs out of the upload.
+/*
+!/Dockerfile
+!/.dockerignore
+!/backend/
+/backend/*
+!/backend/*.py
+!/backend/requirements-api.lock
+!/backend/data/
+/backend/data/*
+!/backend/data/normalized/
+!/backend/data/indexes/
+!/data/
+/data/*
+!/data/patients/
+/data/patients/*
+!/data/patients/processed/
+/data/patients/processed/*
+!/data/patients/processed/patients.json

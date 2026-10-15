@@ -27,6 +27,7 @@ restructure.pdf
 # Backend data: raw snapshots, built indexes, downloaded corpora and audit/decision logs (holds user ids).
 # Rebuild with `python -m backend.build`. Evaluation results (labels and metrics only) stay tracked.
 backend/data/*
+backend/tests/
 !backend/data/eval/
 .pytest_cache/
 *.tsbuildinfo
@@ -36,4 +37,3 @@ frontend/polysans-font-family/*
 !frontend/polysans-font-family/polysanstrial-neutral.otf
 !frontend/polysans-font-family/polysanstrial-slim.otf
 /supabase/
-backend/tests/

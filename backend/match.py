@@ -1,7 +1,9 @@
 """Criterion-level patient matching: met / not_met / unknown / not_applicable with evidence, never a yes/no verdict."""
 
 import json
+import os
 import re
+import sys
 from datetime import date, datetime, timezone
 from pathlib import Path
 
@@ -83,10 +85,18 @@ class Judgement(BaseModel):
 
 
 def audit(data_dir: Path, file: str = "audit.jsonl", **event) -> None:
-    """Append an access event. Callers pass identifiers and outcomes only, never clinical facts."""
+    """Append an access event. Callers pass identifiers and outcomes only, never clinical facts.
+
+    ORVANT_AUDIT_SINK=stdout writes the line to stdout instead, for a host whose own disk is temporary (Cloud Run);
+    the log collector keeps it, and "log" names the file it would have gone to."""
+    line = {"at": datetime.now(timezone.utc).isoformat(), **event}
+    if os.getenv("ORVANT_AUDIT_SINK") == "stdout":
+        sys.stdout.write(json.dumps({"log": file.removesuffix(".jsonl"), **line}) + "\n")
+        sys.stdout.flush()
+        return
     data_dir.mkdir(parents=True, exist_ok=True)
     with open(data_dir / file, "a") as f:
-        f.write(json.dumps({"at": datetime.now(timezone.utc).isoformat(), **event}) + "\n")
+        f.write(json.dumps(line) + "\n")
 
 
 def authorize(user_id: str, patient_id: str, grants: dict[str, set[str]], data_dir: Path = DATA_DIR) -> None:

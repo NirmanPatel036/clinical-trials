@@ -1,0 +1,17 @@
+# Direct runtime dependencies of the API server on Linux (uvicorn backend.api:app): no Streamlit, pandas, pyarrow or pytest.
+# Same pins as requirements.txt (a test checks), plus CPU-only torch so pip doesn't pull several GB of CUDA.
+# The image installs requirements-api.lock, every transitive package pinned with hashes. After changing this file, regenerate it:
+#   uv pip compile backend/requirements-api.txt --python-version 3.11 --python-platform x86_64-manylinux_2_28 \
+#     --index-url https://pypi.org/simple --extra-index-url https://download.pytorch.org/whl/cpu --index-strategy unsafe-best-match \
+#     --generate-hashes --emit-index-url -o backend/requirements-api.lock
+chromadb==1.5.9
+fastapi==0.136.3
+google-genai==1.57.0
+pydantic==2.13.4
+PyJWT[crypto]==2.13.0
+python-dotenv==1.0.1
+rank-bm25==0.2.2
+requests==2.34.2
+sentence-transformers==5.5.1
+torch==2.14.1+cpu
+uvicorn==0.51.0

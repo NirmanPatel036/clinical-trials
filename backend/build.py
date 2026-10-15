@@ -3,7 +3,7 @@
 import argparse
 from pathlib import Path
 
-from .index import EMBED_MODEL, Index, activate, build_index, open_index, set_status, st_embedder
+from .index import EMBED_MODEL, EMBED_REVISION, Index, activate, build_index, open_index, set_status, st_embedder
 from .ingest import DATA_DIR, fetch_snapshot, normalize_snapshot
 from .query_plan import parse_query
 from .retrieve import search
@@ -35,7 +35,7 @@ def run(data_dir: Path = DATA_DIR, per_condition: int = 250, snapshot_id: str | 
     embed = embed or st_embedder()
     snapshot_id = snapshot_id or fetch_snapshot(data_dir, per_condition=per_condition, **fetch_args)
     meta = normalize_snapshot(snapshot_id, data_dir)
-    path = build_index(meta, embed, data_dir, EMBED_MODEL)
+    path = build_index(meta, embed, data_dir, EMBED_MODEL, EMBED_REVISION)
     checks = smoke_checks(open_index(path, data_dir), embed)
     passed = all(c["passed"] for c in checks)
     set_status(path, "passed" if passed else "failed", checks)

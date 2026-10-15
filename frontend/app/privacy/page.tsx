@@ -54,7 +54,7 @@ export default function PrivacyPolicy() {
           ["PubMed (NCBI)", "When PubMed is switched on in Ask, or a question asks for papers: topic words from the question. Ages, emails, long numbers, pronouns, family words and place names in the trial index are removed first. This is an automatic filter, so unusual wording can slip through."],
           ["ICD-10-CM (NLM Clinical Tables)", "When a question asks about diagnosis codes: the condition names, or the filtered topic words."],
           ["RxNorm (NLM RxNav)", "When a question names prior treatment, such as “after Tagrisso”: up to three words that follow phrases like “after” or “progressed on”, to look up generic drug names."],
-          ["Google Cloud", "Hosts the Orvant website and API. Your requests, and the access log, pass through and are stored on its servers."],
+          ["Google Cloud", "Hosts the Orvant website and API and keeps the access log. Like any web host, it also records each request: the time, the page asked for, your IP address and your browser. These request records are kept for 30 days."],
         ]} />
         <p>The app has no advertising or analytics code. Apart from the services above, the application code does not send your information anywhere.</p>
         <p>We do not sell your information, and we do not share it for advertising.</p>
@@ -66,10 +66,10 @@ export default function PrivacyPolicy() {
           ["Ask conversations", "In Supabase until you delete them or your account is deleted."],
           ["Saved trials", "In Supabase until you remove them or your account is deleted."],
           ["Match results", "Not stored on our server. They stay in your browser tab until you run another match, reload or sign out. An export file you download stays on your device."],
-          ["Access log", "A file on the API server. Entries are not removed automatically; they are kept until you ask us to delete them, or until Orvant shuts down."],
+          ["Access log", "In a restricted Google Cloud log store for 365 days, then deleted automatically. Entries can’t be removed one by one before then, and deleting your account doesn’t remove them. They hold your account ID but no health details."],
           ["This browser", "Your sign-in session and a few settings (answer model, PubMed switch, sidebar layout). Signing out ends the session. You can clear the settings on the Consent & preferences page."],
         ]} />
-        <p>Nothing is deleted on a timer: we keep your data for as long as your account exists, unless you delete it sooner. Supabase’s database backups may hold copies of deleted data until those backups are replaced on Supabase’s normal schedule.</p>
+        <p>Apart from the access log and request records, nothing is deleted on a timer: we keep your data for as long as your account exists, unless you delete it sooner. Supabase’s database backups may hold copies of deleted data until those backups are replaced on Supabase’s normal schedule.</p>
       </Section>
 
       <Section id="rights" title="Your choices and rights">

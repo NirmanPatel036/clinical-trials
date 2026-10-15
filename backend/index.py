@@ -14,6 +14,9 @@ from .ingest import DATA_DIR, load_records, sha256_file
 from .schema import SCHEMA_VERSION, TrialRecord
 
 EMBED_MODEL = "pritamdeka/S-PubMedBert-MS-MARCO"
+# The exact weights: the model's main commit, which ships pytorch_model.bin. Builds record it in the manifest; serving
+# loads what the manifest says. Indexes built before it was recorded used these weights (vectors checked 2026-10-15).
+EMBED_REVISION = "96786c7024f95c5aac7f2b9a18086c7b97b23036"
 INDEX_FORMAT = "1"
 CHUNK_CHARS = 1200
 
@@ -48,10 +51,10 @@ def weighted_bm25(index: "Index", title_weight: int, eligibility_weight: int) ->
     return BM25Okapi([bm25_tokens(c, index.records[c["nct_id"]].title, title_weight, eligibility_weight) for c in index.chunks])
 
 
-def st_embedder(model_name: str = EMBED_MODEL):
+def st_embedder(model_name: str = EMBED_MODEL, revision: str = EMBED_REVISION):
     from sentence_transformers import SentenceTransformer
 
-    model = SentenceTransformer(model_name)
+    model = SentenceTransformer(model_name, revision=revision)
     return lambda texts: model.encode(texts, normalize_embeddings=True, batch_size=32).tolist()
 
 
@@ -93,7 +96,7 @@ def make_chunks(record: TrialRecord) -> list[dict]:
     return chunks
 
 
-def build_index(snapshot_meta: dict, embed, data_dir: Path = DATA_DIR, embedding_model: str = EMBED_MODEL) -> Path:
+def build_index(snapshot_meta: dict, embed, data_dir: Path = DATA_DIR, embedding_model: str = EMBED_MODEL, embedding_revision: str = EMBED_REVISION) -> Path:
     """Write a new index version directory. It is not served until activate() points at it."""
     snapshot_id = snapshot_meta["snapshot_id"]
     records = load_records(snapshot_id, data_dir)
@@ -115,6 +118,7 @@ def build_index(snapshot_meta: dict, embed, data_dir: Path = DATA_DIR, embedding
         "index_version": version,
         "index_format": INDEX_FORMAT,
         "embedding_model": embedding_model,
+        "embedding_model_revision": embedding_revision,
         "bm25": "rank_bm25.BM25Okapi, tokenizer [a-z0-9]+",
         "chunk_count": len(chunks),
         "built_at": datetime.now(timezone.utc).isoformat(),

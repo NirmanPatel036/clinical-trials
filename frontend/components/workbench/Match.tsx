@@ -243,11 +243,12 @@ export function MatchPanel({ profile, demoPatient, paidJudges, onAuthLost, onMat
             <input className="field" type="number" min={1} max={10} required value={k} onChange={(e) => setK(Number(e.target.value))} style={s(FIELD)} />
           </Field>
         </div>
-        <div style={s("display:flex;align-items:center;gap:10px;font-size:13px;color:#4B5568;flex-wrap:wrap")}>Undecided criteria
-          {paidJudges === false
-            ? <span>Rules only. The selective judge (Jev, then Groq) is switched off on this server; an administrator turns it on with <span style={s(MONO)}>NEXTRIAL_ALLOW_PAID_JUDGES=1</span>.</span>
-            : <Segmented label="Judge" options={[["none", "Rules only"], ["selective", "Selective judge · Jev, then Groq"]] as const} value={judge} onChange={setJudge} />}
-        </div>
+        {/* Offered only when this server has the selective judge switched on; otherwise matching is rules only and there is nothing to choose. */}
+        {paidJudges !== false && (
+          <div style={s("display:flex;align-items:center;gap:10px;font-size:13px;color:#4B5568;flex-wrap:wrap")}>Undecided criteria
+            <Segmented label="Judge" options={[["none", "Rules only"], ["selective", "Selective judge · Jev, then Groq"]] as const} value={judge} onChange={setJudge} />
+          </div>
+        )}
         {judging && (
           <div style={s("display:flex;flex-direction:column;gap:12px;padding:16px;border-radius:16px;border:1px dashed #A86F0C;background:#FBF6EA")}>
             <div style={s("font-size:13px;color:#7A500A")}>How {who === "self" ? "your" : "this patient’s"} data is handled</div>

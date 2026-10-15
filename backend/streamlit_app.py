@@ -16,7 +16,7 @@ from dotenv import load_dotenv
 from backend import decide, match
 from backend.answer import generate_answer
 from backend.build import smoke_checks
-from backend.index import StaleIndexError, load_active, st_embedder
+from backend.index import EMBED_REVISION, StaleIndexError, load_active, st_embedder
 from backend.query_plan import parse_query
 from backend.retrieve import search
 from backend.schema import Phase, Sex, Status
@@ -40,7 +40,7 @@ st.warning("Trial discovery aid only. Nothing here is an eligibility decision; v
 def resources():
     index = load_active()
     places = frozenset(p.casefold() for r in index.records.values() for l in r.locations for p in (l.city, l.state, l.country) if p)
-    return index, st_embedder(index.manifest["embedding_model"]), places
+    return index, st_embedder(index.manifest["embedding_model"], index.manifest.get("embedding_model_revision") or EMBED_REVISION), places
 
 
 @st.cache_resource

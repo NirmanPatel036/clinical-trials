@@ -2,6 +2,7 @@
 
 import hashlib
 import json
+import os
 import re
 from datetime import datetime, timezone
 from pathlib import Path
@@ -14,7 +15,8 @@ from .schema import SCHEMA_VERSION, Location, TrialRecord
 
 API = "https://clinicaltrials.gov/api/v2"
 PARSER_VERSION = "1"
-DATA_DIR = Path(__file__).parent / "data"
+# Snapshots, records and index versions. A deployment points this at a persistent disk or a copied index.
+DATA_DIR = Path(os.getenv("ORVANT_DATA_DIR") or Path(__file__).parent / "data")
 CONDITIONS = [
     "breast cancer", "lung cancer", "melanoma", "colorectal cancer",
     "prostate cancer", "pancreatic cancer", "leukemia", "ovarian cancer",

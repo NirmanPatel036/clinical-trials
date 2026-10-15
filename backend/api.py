@@ -2,34 +2,52 @@
 
 import os
 import threading
+import time
+from contextlib import asynccontextmanager
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from functools import lru_cache
 from pathlib import Path
 from typing import Literal
 
-import jwt
 from dotenv import load_dotenv
-from fastapi import Depends, FastAPI, Header, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel, Field, model_validator
 
-from . import knowledge, match
-from .answer import answer_with, chat_models
-from .decide import DecisionConfig, decide
-from .index import Index, StaleIndexError, load_active, st_embedder
-from .ingest import DATA_DIR
-from .query_plan import parse_query
-from .retrieve import search
-from .schema import PatientFacts, Phase, Sex, Status
-
+# Before the package imports, so .env can set ORVANT_DATA_DIR. Serving never downloads model weights: they come from the
+# local Hugging Face cache, filled once at build time by `python -m backend.fetch_model`. Set HF_HUB_OFFLINE=0 to allow it.
 load_dotenv(Path(__file__).resolve().parent.parent / ".env")
+os.environ.setdefault("HF_HUB_OFFLINE", "1")
+
+import jwt  # noqa: E402
+from fastapi import Depends, FastAPI, Header, HTTPException  # noqa: E402
+from fastapi.middleware.cors import CORSMiddleware  # noqa: E402
+from pydantic import BaseModel, Field, model_validator  # noqa: E402
+
+from . import knowledge, match  # noqa: E402
+from .answer import answer_with, chat_models  # noqa: E402
+from .decide import DecisionConfig, decide  # noqa: E402
+from .index import EMBED_REVISION, Index, StaleIndexError, load_active, st_embedder  # noqa: E402
+from .ingest import DATA_DIR  # noqa: E402
+from .query_plan import parse_query  # noqa: E402
+from .retrieve import search  # noqa: E402
+from .schema import PatientFacts, Phase, Sex, Status  # noqa: E402
+
 PATIENTS_PATH = match.PATIENTS_PATH
 # The synthetic patient every signed-in account may match, for people who are not patients themselves.
 DEMO_PATIENT = "patient-1e8f31fa-e6b0-4294-8af7-66ff9ae572e0"
 REVIEW = "Trial discovery aid only. Not an eligibility decision; a clinician must verify every result against the current registry record."
 
-app = FastAPI(title="NexTrial API", version="0.1.0")
+# What /ready reports; preload() fills it.
+READY: dict = {"ready": False, "reason": "starting"}
+
+
+@asynccontextmanager
+async def lifespan(app):
+    # The first user would otherwise pay for loading the index and model (about 10 s, most of it importing torch).
+    preload()
+    yield
+
+
+app = FastAPI(title="NexTrial API", version="0.1.0", lifespan=lifespan)
 if os.getenv("CORS_ORIGINS"):
     app.add_middleware(CORSMiddleware, allow_origins=os.environ["CORS_ORIGINS"].split(","), allow_methods=["GET", "POST"], allow_headers=["Authorization", "Content-Type"])
 
@@ -108,13 +126,18 @@ def index_resources() -> tuple[Index, frozenset[str]]:
 
 
 @lru_cache
-def _embedder(model: str):
-    return st_embedder(model)
+def _embedder(model: str, revision: str):
+    return st_embedder(model, revision)
+
+
+def model_revision(manifest: dict) -> str:
+    """The weights the index was built with; manifests from before revisions were recorded used EMBED_REVISION."""
+    return manifest.get("embedding_model_revision") or EMBED_REVISION
 
 
 def embedder(resources=Depends(index_resources)):
     with _LOAD_LOCK:
-        return _embedder(resources[0].manifest["embedding_model"])
+        return _embedder(resources[0].manifest["embedding_model"], model_revision(resources[0].manifest))
 
 
 @lru_cache
@@ -142,10 +165,59 @@ def current_user(authorization: str = Header(default="")) -> dict:
     return claims
 
 
+def log_dir() -> Path:
+    """Where audit.jsonl and decisions.jsonl go: ORVANT_LOG_DIR (a persistent disk), else the data directory."""
+    return Path(os.getenv("ORVANT_LOG_DIR") or DATA_DIR)
+
+
+def audit_problem() -> str | None:
+    """Why access logs would be lost or unwritable, or None. Matching refuses to run unlogged, so this gates readiness."""
+    if os.getenv("ORVANT_AUDIT_SINK") == "stdout":
+        return None
+    # Cloud Run sets K_SERVICE; its container disk lives in memory and vanishes with the instance.
+    if os.getenv("K_SERVICE") and not os.getenv("ORVANT_LOG_DIR"):
+        return "the container disk is temporary here: set ORVANT_LOG_DIR to a mounted volume or ORVANT_AUDIT_SINK=stdout"
+    directory = log_dir()
+    try:
+        directory.mkdir(parents=True, exist_ok=True)
+    except OSError as error:
+        return f"audit log directory {directory} cannot be created ({type(error).__name__})"
+    return None if os.access(directory, os.W_OK) else f"audit log directory {directory} is not writable"
+
+
+def preload() -> None:
+    """Load the index and embedding model, encode once so the first search is not slow, and check the audit log; never raises."""
+    try:
+        resources = index_resources()
+        # Timed from here: importing torch, loading the weights and the first (slow) encode.
+        started = time.perf_counter()
+        embedder(resources)(["warm-up query"])
+        model_ms = round((time.perf_counter() - started) * 1000)
+        problem = audit_problem()
+        manifest = resources[0].manifest
+        READY.clear()
+        READY.update({"ready": False, "reason": problem} if problem else
+                     {"ready": True, "index_version": manifest["index_version"], "embedding_model": manifest["embedding_model"],
+                      "embedding_model_revision": model_revision(manifest), "model_ready_ms": model_ms})
+    except Exception as error:
+        READY.clear()
+        READY.update(ready=False, reason=error.detail if isinstance(error, HTTPException) else f"{type(error).__name__}: {error}")
+
+
 def _freshness(manifest: dict) -> dict:
     age = (datetime.now(timezone.utc) - datetime.fromisoformat(manifest["ingested_at"])).days if manifest.get("ingested_at") else None
     return {"index_version": manifest["index_version"], "registry_data_timestamp": manifest.get("data_timestamp"), "ingested_at": manifest.get("ingested_at"),
             "snapshot_age_days": age, "build_status": manifest["build_status"]}
+
+
+@app.get("/ready")
+def ready():
+    """200 once the index, model and audit log are usable; 503 with the reason otherwise. A failed start is retried here."""
+    if not READY["ready"]:
+        preload()
+    if not READY["ready"]:
+        raise HTTPException(503, READY["reason"])
+    return READY
 
 
 @app.get("/health")
@@ -185,12 +257,12 @@ def match_patient(request: MatchRequest, user=Depends(current_user), resources=D
     index = resources[0]
     if request.profile:
         # The user is the patient: their own facts, sent by them, audited as "self".
-        facts, matches = match.match_facts(index, embed, user["sub"], PatientFacts(patient_id="self", **request.profile.model_dump()), k=request.k, data_dir=DATA_DIR)
+        facts, matches = match.match_facts(index, embed, user["sub"], PatientFacts(patient_id="self", **request.profile.model_dump()), k=request.k, data_dir=log_dir())
     else:
         # Grants come from app_metadata, which only the Supabase service role can write; the demo patient is open to every account.
         grants = {user["sub"]: set((user.get("app_metadata") or {}).get("patient_ids") or []) | {DEMO_PATIENT}}
         try:
-            facts, matches = match.match_patient(index, embed, user["sub"], request.patient_id, grants, k=request.k, patients_path=PATIENTS_PATH, data_dir=DATA_DIR)
+            facts, matches = match.match_patient(index, embed, user["sub"], request.patient_id, grants, k=request.k, patients_path=PATIENTS_PATH, data_dir=log_dir())
         except PermissionError:
             raise HTTPException(403, "not authorised for this patient")
         except StopIteration:
@@ -205,7 +277,7 @@ def match_patient(request: MatchRequest, user=Depends(current_user), resources=D
         # Jev's escalations go to Groq. Without a Groq key and model they stay unknown, with a note.
         groq_keys = os.getenv("GROQ_API_KEYS") if chat_models()["groq"] else None
         try:
-            matches = [decide(m, facts, index.records[m.trial_id], os.environ["TYPESAFE_API_KEY"], groq_keys, config, DATA_DIR, judge_provider="groq") for m in matches]
+            matches = [decide(m, facts, index.records[m.trial_id], os.environ["TYPESAFE_API_KEY"], groq_keys, config, log_dir(), judge_provider="groq") for m in matches]
         except Exception as error:
             # A failed judge returns an error, never a half-judged result that could be mistaken for a complete one.
             raise HTTPException(502, f"model judge failed ({type(error).__name__}); no judged result returned")

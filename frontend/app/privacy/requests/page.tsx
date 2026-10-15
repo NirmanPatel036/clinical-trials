@@ -20,7 +20,7 @@ export default function DataRequests() {
         <p>These cannot be done in the app yet. Email <Contact /> from the address on your account and say what you want.</p>
         <Rows rows={[
           ["Delete your account", "Removes your sign-in record, profile, conversations and saved trials together. Your profile can’t be deleted on its own because name, year of birth, sex and diagnosis are needed for an account."],
-          ["Access-log entries", "Entries about your matches are kept on the API server and are not removed when you delete data in the app. Ask for a copy or for their deletion."],
+          ["Access-log entries", "Entries about your matches are kept for 365 days and then deleted automatically. They can’t be removed one by one before then, even when your account is deleted, but you can ask for a copy."],
           ["Data held by outside services", <>Copies that AI providers, Resend or Supabase already received are governed by their own terms. We can’t delete those copies for you; you can contact those companies directly.</>],
         ]} />
         <p>We act only on requests sent from the email address on your account, so we know it’s you. We reply within 30 days.</p>

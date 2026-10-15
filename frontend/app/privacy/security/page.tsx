@@ -34,7 +34,7 @@ export default function DataAndSecurity() {
         <Rows rows={[
           ["Access log", "Written for every patient match, allowed or refused: time, account ID, patient ID (or “self” for your own profile), outcome, trial IDs returned and index version."],
           ["Decision log", "Written when the selective judge runs: trial ID, a short fingerprint of the criterion text, the finding, which judge decided, confidence, timing and model usage. No account ID, patient ID or patient facts."],
-          ["Where", "Plain files on the API server. There is no screen to view them, no automatic rotation and no deletion schedule yet."],
+          ["Where", "A restricted Google Cloud log store, kept for 365 days and then deleted automatically. Only the administrator can read it; there is no screen for it in Orvant."],
         ]} />
       </Section>
 

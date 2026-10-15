@@ -51,6 +51,10 @@ export function Sidebar({ collapsed, onToggle, hasResults, name, email, onSignOu
             )}
           </Fragment>
         ))}
+        {/* Outside the workbench layout, so a new tab: following it here would drop the current search and match. */}
+        <a href="/privacy" target="_blank" rel="noopener" className="wb-tab" aria-label="Privacy & data (opens in a new tab)" title={collapsed ? "Privacy & data (opens in a new tab)" : "Opens in a new tab"}>
+          <Icon d={ICON.review} size={18} width={1.6} /><span className="wb-label">Privacy &amp; data</span>
+        </a>
       </nav>
       <div className="wb-user" style={s("display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:14px;background:rgba(247,246,242,.05)")}>
         <span style={s("width:32px;height:32px;border-radius:50%;background:#0045FD;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:14px;flex:none")}>

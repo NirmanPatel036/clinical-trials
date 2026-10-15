@@ -124,3 +124,22 @@ button[role="switch"]:focus-visible .switch-track { outline: 2px solid #0045FD; 
   .switch-track, .switch-thumb { transition: none; }
   .trial-card:hover, .src:hover, .src[data-on] { transform: none; }
 }
+
+/* Data & Privacy pages: section tabs, readable body text, label/value rows that stack on phones. */
+.pv-nav { display: flex; gap: 4px; padding: 4px; border-radius: 999px; background: #E3E0D7; overflow-x: auto; align-self: flex-start; max-width: 100%; }
+.pv-tab { flex: none; font-size: 14px; padding: 8px 14px; border-radius: 999px; color: #4B5568; white-space: nowrap; }
+.pv-tab:hover { color: #142237; }
+.pv-tab[aria-current="page"] { background: #FFFFFF; color: #142237; box-shadow: 0 1px 2px rgba(20, 34, 55, .12); }
+.pv-tab:focus-visible { outline: 2px solid #0045FD; outline-offset: 2px; }
+.pv-body { display: flex; flex-direction: column; gap: 12px; font-size: 15px; line-height: 1.6; color: #2A3446; }
+.pv-body p { margin: 0; }
+.pv-body ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.pv-rows { margin: 0; display: flex; flex-direction: column; }
+.pv-rows > div { display: grid; grid-template-columns: minmax(0, 200px) minmax(0, 1fr); gap: 16px; padding: 12px 0; border-top: 1px solid #EEECE5; }
+.pv-rows > div:first-child { border-top: 0; padding-top: 0; }
+.pv-rows dt { color: #142237; }
+.pv-rows dd { margin: 0; color: #4B5568; }
+@media (max-width: 640px) {
+  .pv-rows > div { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .pv-nav { border-radius: 16px; }
+}

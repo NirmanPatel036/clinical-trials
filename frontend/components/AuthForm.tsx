@@ -100,6 +100,9 @@ export function AuthForm({ mode }: { mode: Mode }) {
 
       <div style={s("font-size:13px;color:#4B5568;border-top:1px solid #E3E0D7;padding-top:16px")}>
         {mode === "login" ? <>No account? <a href="/signup">Create one</a></> : <>Already have an account? <a href="/login">Sign in</a></>}
+        <div style={s("margin-top:8px;font-size:12px;color:#7A8293")}>
+          {mode === "signup" && "The details above include health information. "}How we store and share it: <a href="/privacy" target="_blank" rel="noopener">Privacy policy</a>.
+        </div>
       </div>
     </>
   );

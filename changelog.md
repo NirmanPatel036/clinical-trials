@@ -471,3 +471,23 @@ Open work is tracked in `backend/TASKS.md`; evaluation detail is in `backend/EVA
 - Already fine on phones and unchanged: sign-in, sign-up and profile forms, Find trials (cards, filters,
   pagination), Ask (composer, source, research and code cards), Match form and data-handling checklist, Match
   results (facts card, scores, criterion review).
+
+## 2026-10-15
+
+### 42. Data & Privacy section
+- Four public pages under `/privacy`: Privacy policy, Data & security, Consent & preferences, Access & deletion
+  (`frontend/app/privacy/`, shared pieces in `frontend/components/Privacy.tsx`, `.pv-*` styles in `globals.css`).
+  Every statement was checked against the code; anything that depends on an undecided business or legal fact is an
+  amber "TO BE CONFIRMED" placeholder. No compliance, encryption or retention claims.
+- Working controls, only where the backend supports them: the PubMed switch (same device key Ask reads), clearing
+  Orvant's own browser settings, downloading your profile, conversations and saved trials as JSON, and deleting all
+  conversations or all saved trials (RLS-scoped, with confirmation). Account deletion stays a request.
+- Links: landing footer, workbench sidebar (new tab, so the open search and match survive), sign-in and sign-up.
+- `PRIVACY_PAGE_REVIEW.md`: verified claims, gaps, placeholders, tests and launch blockers.
+
+### 43. Privacy pages: owner decisions in place of placeholders
+- Every "TO BE CONFIRMED" box was replaced with the owner's decisions: Nirman Patel as the responsible person,
+  nirman0511@gmail.com as the contact, hosting mainly on Google Cloud, no minimum age, a 30-day reply to requests,
+  no selling or advertising use, and retention as long as the account exists. Encryption and compliance are still not
+  claimed. The placeholder component and its CSS were removed. `PRIVACY_PAGE_REVIEW.md` section 4 lists the commitments
+  these create.
